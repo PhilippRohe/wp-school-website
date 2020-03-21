@@ -14,11 +14,13 @@ class My_Elementor_Widgets {
 
 	protected function __construct() {
         require_once('elementor-intro.php');
+        require_once('elementor-image.php');
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
 	}
 
 	public function register_widgets() {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Intro() );
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Image() );
     }
 
 }
