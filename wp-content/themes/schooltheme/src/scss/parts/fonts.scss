@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'baloo2-regular';
+    src: url('./../../dist/fonts/baloo2/Baloo2-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'baloo2-medium';
+    src: url('./../../dist/fonts/baloo2/Baloo2-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'baloo2-semibold';
+    src: url('./../../dist/fonts/baloo2/Baloo2-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'baloo2-bold';
+    src: url('./../../dist/fonts/baloo2/Baloo2-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'baloo2-extrabold';
+    src: url('./../../dist/fonts/baloo2/Baloo2-ExtraBold.ttf') format('truetype');
+}
+
+$baloo2-regular: 'baloo2-regular';
+$baloo2-medium: 'baloo2-medium';
+$baloo2-semibold: 'baloo2-semibold';
+$baloo2-bold: 'baloo2-bold';
+$baloo2-extrabold: 'baloo2-extrabold';

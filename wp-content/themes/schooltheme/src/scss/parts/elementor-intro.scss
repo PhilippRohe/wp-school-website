@@ -1,0 +1,46 @@
+.intro--section {
+    height: 355px;
+    width: 100%;
+    border-bottom: 5px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .intro--background-image {
+        object-fit: cover;
+        height: 350px;
+        width: 100%;
+        position: absolute;
+    }
+    .headline-box {
+        h1 {
+            color: $white;
+        }
+        h2 {
+            color: $white;
+        }
+    }
+
+    .action-box {
+        align-self: flex-end;
+        .row {
+            justify-content: space-between;
+            .action {
+                height: 100px;
+                border: 5px solid $border-color;
+                border-bottom: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                background-color: red;
+                .action-text {
+                    align-self: center;
+                    margin: 0 0 0 15px;
+                    font-family: $baloo2-semibold;
+                }
+                .action-icon {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

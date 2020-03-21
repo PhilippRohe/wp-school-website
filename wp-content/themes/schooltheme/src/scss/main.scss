@@ -1,0 +1,36 @@
+/** All SCSS Files **/
+
+
+/* Basic files */
+
+// Import include media library
+@import 'vendor/_include-media';
+
+// Import the fonts
+@import 'parts/fonts';
+
+// Import the variables
+@import 'parts/variables';
+
+// Import the icons
+@import 'parts/icons';
+
+// Import the main styles
+@import 'parts/site';
+
+// Import the head
+@import 'parts/head';
+
+// Import the footer
+@import 'parts/footer';
+
+// Import the breadcrumbs
+@import 'parts/breadcrumbs';
+
+
+/* Elementor widgets and WordPress widgets */
+
+// Import the intro widget
+@import 'parts/elementor-intro';
+
+

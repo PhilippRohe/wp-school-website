@@ -1,0 +1,9 @@
+.bc--breadcrumbs {
+    .bc--breadcrumbs-navigation {
+        display: flex;
+        flex-direction: row;
+        .delimiter {
+            margin: 0px 10px;
+        }
+    }
+}

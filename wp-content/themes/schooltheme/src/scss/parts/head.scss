@@ -1,0 +1,120 @@
+.bc--header {
+    .bc--topmenu {
+        display: flex;
+        height: 40px;
+        background: $topmenu-background;
+        justify-content: space-between;
+        padding: 0 15px;
+        .left {
+            align-self: center;
+        }
+        .right {
+            align-self: center;
+            display: flex;
+            .top-menu {
+                align-self: center;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    margin: 0;
+                    li {
+                        align-self: center;
+                        a {
+                            transition: all .2s ease-in-out;
+                            text-decoration: none;
+                            color: $white;
+                            &:hover {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bc--navigation {
+        height: 110px;
+        border-bottom: 3px solid $border-color;
+        .left {
+            display: flex;
+            justify-content: center;
+            .school-logo {
+                align-self: center;
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            .navigation {
+                align-self: center;
+                .menu-hauptmenue-container {
+                    .main-menu {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        list-style-type: none;
+                        margin: 0;
+                        li {
+                            margin: 15px 25px;
+                            display: flex;
+                            .subitem-link {
+                                align-self: center;
+                                transition: all .2s ease-in-out;
+                                text-decoration: none;
+                                font-size: 18px;
+                                font-family: $baloo2-semibold;
+                                color: $list-color;
+                                cursor: pointer;
+
+                                span {
+                                    transition: all .2s ease-in-out;
+                                    margin-left: 5px;
+                                    color: $arrow-color;
+                                }
+                            }
+                            .sub-menu-container {
+                                margin-top: 30px;
+                                transition: all .2s ease-in-out;
+                                opacity: 0;
+                                .sub-menu {
+                                    display: none;
+                                }
+                            }
+                            &:hover {
+                                .sub-menu-container {
+                                    display: flex;
+                                    justify-content: center;
+                                    height: 75px;
+                                    opacity: 1;
+                                    width: 100%;
+                                    left: 0;
+                                    background: rgb(170, 170, 170);
+                                    position: fixed;
+                                    .sub-menu {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        li {
+                                            align-self: center;
+                                            a {
+                                                color: $list-color;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .subitem-link {
+                                    color: $hover-color;
+                                    span {
+                                        color: $hover-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
