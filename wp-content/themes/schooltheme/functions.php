@@ -1,4 +1,9 @@
 <?php
+
+/* Do not allow direct access to this file */
+if ( !(defined('ABSPATH')) ) exit('No direct access allowed');
+
+
 // Add theme supports
 add_theme_support( 'custom-header' );
 add_theme_support( 'post-thumbnails' );
@@ -40,3 +45,9 @@ require get_template_directory() . '/inc/elementor-widgets/load-elementor-widget
 
 // Load the custom functions
 require get_template_directory() . '/inc/custom.php';
+
+// Load the sidebars
+require get_template_directory() . '/inc/sidebar.php';
+
+// Load the admin pages
+require get_template_directory() . '/inc/admin.php';
