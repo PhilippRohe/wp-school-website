@@ -1,14 +1,14 @@
 <?php
 namespace Elementor;
 
-class Elementor_Intro extends Widget_Base {
+class Elementor_Latest_News extends Widget_Base {
 	
 	public function get_name() {
-		return 'elementor-intro-widget';
+		return 'elementor-latest-news-widget';
 	}
 	
 	public function get_title() {
-		return '[School] Intro';
+		return '[School] Letzte Blogbeiträge';
 	}
 	
 	public function get_icon() {
@@ -17,9 +17,43 @@ class Elementor_Intro extends Widget_Base {
 	
 	public function get_categories() {
 		return [ 'Schulplugins' ];
-	}
+    }
+    
+
+    protected function load_last_articles($number) {
+
+        if ($number < 1 || $number > 4) {
+            $number = 3;
+        }
+
+        $all_arcticles = [];
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => $number,
+            'orderby' => 'title',
+            'order' => 'ASC'
+        );
+           
+        $query = new \WP_Query($args); 
+           
+        if ($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+
+            $article = [];
+            $article['title'] = get_the_title();
+            $article['excerpt'] = get_the_excerpt();
+            $article['thumbnail'] = strlen(get_the_post_thumbnail_url()) ? get_the_post_thumbnail_url() : 'https://placehold.it/360x200';
+            $article['link'] = get_permalink();
+
+            array_push($all_arcticles, $article);
+
+        endwhile; else : ?>
+            <p>Keine Beiträge gefunden</p>
+        <?php endif; wp_reset_postdata();
+
+        return $all_arcticles;
+    }
 	
-	protected function _register_controls() {
+	public function _register_controls() {
 
 		$this->start_controls_section(
 			'section_title',
@@ -172,48 +206,36 @@ class Elementor_Intro extends Widget_Base {
 	
 	protected function render() {
         $settings = $this->get_settings_for_display();
-        $headline = $settings['headline'];
-        $subline = $settings['subline'];
-        $background = $settings['background'];
-        $vertical = $settings['vertical_alignment'];
-        $horizontal = $settings['horizontal_alignment'];
-        $actionbox = $settings['enable_actions'];
-        $boxes = $settings['boxes'];
 
-        $box_size = (12 / sizeof($boxes)) - 1;
-
-
-        $position = 'object-position: ' . $vertical . ' ' . $horizontal . ';';
-
-        $image_alt = get_post_meta( $background['id'], '_wp_attachment_image_alt', true );
+        $number = 3;
+        if ($number < 1 || $number > 4) {
+            $number = 3;
+        }
+        $all_arcticles = $this->load_last_articles($number);
 
         ?>
 
-        <section class="section intro--section w-100">
-            <img class="intro--background-image" src="<?php echo $background['url']; ?>" alt="<?php echo $image_alt; ?>" style="<?php echo $position; ?>">
-            <div class="headline-box container">
-                <div class="row">
-                    <h1><?php echo $headline; ?></h1>
-                    <h2><?php echo $subline; ?></h2>
-                </div>
-            </div>
-            <?php if ($actionbox) {
-                ?>
-                <div class="action-box container">
+        <section class="section last-news--section w-100 container-fluid">
+            <div class="row">
+                <div class="articles d-flex flex-row container">
                     <div class="row">
-                        <?php foreach($boxes as $box) {
-                            $box_link = $box['box_link'] ? $box['box_link'] : '';
+                        <?php foreach($all_arcticles as $article) {
                             ?>
-                            <a href="<?php echo $box_link; ?>" class="action col-<?php echo $box_size; ?>" style="background: <?php echo $box['box_color'].'cc'; ?>;">
-                                <i class="action-icon <?php echo($box['box_icon']['value']); ?>"></i>
-                                <p class="action-text"><?php echo $box['box_title']; ?></p>
-                            </a>
+                            <div class="single-article col-<?php echo (12 / $number); ?> align-self-center">
+                                <div class="article-head">
+                                    <img src="<?php echo $article['thumbnail']; ?>" alt="">
+                                </div>
+                                <div class="article-body">
+                                    <a href="<?php echo $article['link']; ?>"><h2 class="title"><?php echo $article['title']; ?></h2></a>
+                                    <p class="excerpt"><?php echo $article['excerpt']; ?></p>
+                                    <a href="<?php echo $article['link']; ?>" class="link"><button class="btn">Beitrag ansehen</button></a>
+                                </div>
+                            </div>
                             <?php
-                        }?>
+                        } ?>
                     </div>
                 </div>
-                <?php
-            }?>
+            </div>
         </section>
 
         <?php 

@@ -16,16 +16,17 @@
 
         <!--- Favicons --->
         <?php get_template_part('parts/favicons'); ?>
+
+        <script src="https://kit.fontawesome.com/c98a339e8c.js" crossorigin="anonymous"></script>
     </head>
 
     <body <?php body_class(); ?>>
-        <?php get_template_part('parts/menu'); ?>
         <div class="bc--header">
             <nav class="header-navigation">
-                
+                <?php get_template_part('parts/menu'); ?>
             </nav>
         </div>
         <?php get_template_part('parts/head'); ?>
-        <?php if ( function_exists('nav_breadcrumb') ){ nav_breadcrumb(); } ?>
+        <?php /* if ( function_exists('nav_breadcrumb') ){ nav_breadcrumb(); } */ ?>
 
         <main class="bc--main">     <!-- START OF MAIN -->

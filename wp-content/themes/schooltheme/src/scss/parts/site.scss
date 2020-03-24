@@ -1,6 +1,11 @@
 /* Main style settings, that are used overall */
 body {
+    overflow-x: hidden;
     font-family: $baloo2-regular;
+}
+
+.section {
+    width: 100%;
 }
 
 .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
