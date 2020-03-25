@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <font id="bcFont" horiz-adv-x="448">
+  <font id="bcFont" horiz-adv-x="512">
     <font-face font-family="bcFont"
       units-per-em="512" ascent="512"
       descent="0" />
@@ -13,6 +13,9 @@
     <glyph glyph-name="down"
       unicode="&#xE002;"
       horiz-adv-x="320" d="M41 224H279C300.4 224 311.1 198.1 296 183L177 64C167.6 54.6 152.4 54.6 143.1 64L24 183C8.9 198.1 19.6 224 41 224z" />
+    <glyph glyph-name="quote"
+      unicode="&#xE003;"
+      horiz-adv-x="512" d="M464 480H336C309.5 480 288 458.5 288 432V304C288 277.5 309.5 256 336 256H416V192C416 156.7 387.3 128 352 128H344C330.7 128 320 117.3 320 104V56C320 42.7 330.7 32 344 32H352C440.4 32 512 103.6 512 192V432C512 458.5 490.5 480 464 480zM176 480H48C21.5 480 0 458.5 0 432V304C0 277.5 21.5 256 48 256H128V192C128 156.7 99.3 128 64 128H56C42.7 128 32 117.3 32 104V56C32 42.7 42.7 32 56 32H64C152.4 32 224 103.6 224 192V432C224 458.5 202.5 480 176 480z" />
   </font>
 </defs>
 </svg>

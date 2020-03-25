@@ -1,0 +1,41 @@
+.footer-main {
+    background: $footer-background;
+    .row {
+        .footer-content {
+            padding: 50px 0;
+            .footer-widgets {
+                .footer-col {
+                    .widget {
+                        list-style: none;
+                        .widgettitle {
+                            color: $white;
+                        }
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            li {
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .footer-copyright {
+            .row {
+                justify-content: space-between;
+                .left-copy {
+                    color: $white;
+                }
+                .right-copy {
+                    color: $white;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.testimonials--section {
+    padding: 100px 0;
+    .row {
+        justify-content: center;
+        flex-wrap: wrap;
+        .headline {
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .testimonial {
+            .head {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .left {
+                    margin-left: 15px;
+                    width: 40%;
+                    align-self: center;
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+                .right {
+                    width: 60%;
+                    margin-left: 15px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    align-self: center;
+                    height: 100px;
+                    .name {
+                        font-weight: 800;
+                        align-self: flex-start;
+                        margin: 0;
+                    }
+                    .details {
+                        font-weight: 500;
+                        align-self: flex-start;
+                        margin: 0;
+                    }
+                }
+            }
+            .body {
+                clear: both;
+                .icon {
+                    text-align: center;
+                    margin: 0 25px 10px 0;
+                    float: left;
+                    font-size: 32px;
+                    color: $arrow-color;
+                    height: 15px;
+                }
+                p {
+                    text-align: justify;
+                    font-style: italic;
+                }
+                &::before, &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+}

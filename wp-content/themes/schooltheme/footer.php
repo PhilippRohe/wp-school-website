@@ -30,49 +30,47 @@ $column_size = "col-md-" . $col_number;
 
 <?php
 if ( is_active_sidebar( 'footer-one' ) or is_active_sidebar( 'footer-two' ) or is_active_sidebar( 'footer-three' ) or is_active_sidebar( 'footer-four' ) ) : ?>
-	<footer class="footer-main footer-widgets-wrap"> <!-- START OF FOOTER -->
-
-        <div class="container">
-            <div class="footer-widgets row"  role="complementary">
-                <!-- Check for Footer Widgets 1 -->
-                <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
-                    <aside class="footer-level-one footer-widget-column widget-area <?php echo $column_size; ?>">
-                        <?php dynamic_sidebar( 'footer-one' ); ?>
-                    </aside>
-                <?php endif; ?>
-                
-                <!-- Check for Footer Widgets 2 -->
-                <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
-                    <aside class="footer-level-two footer-widget-column widget-area <?php echo $column_size; ?>">
-                        <?php dynamic_sidebar( 'footer-two' ); ?>
-                    </aside>
-                <?php endif; ?>
-                
-                <!-- Check for Footer Widgets 3 -->
-                <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
-                    <aside class="footer-level-three footer-widget-column widget-area <?php echo $column_size; ?>">
-                        <?php dynamic_sidebar( 'footer-three' ); ?>
-                    </aside>
-                <?php endif; ?>
-                
-                <!-- Check for Footer Widgets 4 -->
-                <?php if ( is_active_sidebar( 'footer-four' ) ) : ?>
-                    <aside class="footer-level-four footer-widget-column widget-area <?php echo $column_size; ?>">
-                        <?php dynamic_sidebar( 'footer-four' ); ?>
-                    </aside>
-                <?php endif; ?>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                <div class="left-copy col-6">Theme made for Schools | 2020 &copy;</div>
-                <div class="right-copy col-6">Text</div>
+	<footer class="footer-main footer-widgets-wrap container-fluid"> <!-- START OF FOOTER -->
+        <div class="row">
+            <div class="footer-content container">
+                <div class="footer-widgets row"  role="complementary">
+                    <!-- Check for Footer Widgets 1 -->
+                    <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
+                        <aside class="footer-col footer-level-one footer-widget-column widget-area <?php echo $column_size; ?>">
+                            <?php dynamic_sidebar( 'footer-one' ); ?>
+                        </aside>
+                    <?php endif; ?>
+                    
+                    <!-- Check for Footer Widgets 2 -->
+                    <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
+                        <aside class="footer-col footer-level-two footer-widget-column widget-area <?php echo $column_size; ?>">
+                            <?php dynamic_sidebar( 'footer-two' ); ?>
+                        </aside>
+                    <?php endif; ?>
+                    
+                    <!-- Check for Footer Widgets 3 -->
+                    <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
+                        <aside class="footer-col footer-level-three footer-widget-column widget-area <?php echo $column_size; ?>">
+                            <?php dynamic_sidebar( 'footer-three' ); ?>
+                        </aside>
+                    <?php endif; ?>
+                    
+                    <!-- Check for Footer Widgets 4 -->
+                    <?php if ( is_active_sidebar( 'footer-four' ) ) : ?>
+                        <aside class="footer-col footer-level-four footer-widget-column widget-area <?php echo $column_size; ?>">
+                            <?php dynamic_sidebar( 'footer-four' ); ?>
+                        </aside>
+                    <?php endif; ?>
                 </div>
             </div>
-        </div>
 
+            <div class="footer-copyright container">
+                <div class="row">
+                    <div class="left-copy col-6">Theme made for Schools | 2020 &copy;</div>
+                    <div class="right-copy col-6">Text</div>
+                </div>
+            </div>
+        </div>          
     </footer> <!-- END OF FOOTER -->
 
 <?php endif; ?>

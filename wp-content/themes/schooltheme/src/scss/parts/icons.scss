@@ -33,6 +33,9 @@
 	@if $filename == down {
 		$char: "\E002";
 	}
+	@if $filename == quote {
+		$char: "\E003";
+	}
 
 	@return $char;
 }
@@ -53,4 +56,7 @@
 }
 .icon-down {
 	@include icon(down);
+}
+.icon-quote {
+	@include icon(quote);
 }

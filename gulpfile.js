@@ -196,6 +196,7 @@ function watch() {
     gulp.watch(theme_path + project_theme_name + 'src/js/**/*.js', concat_scripts);
     gulp.watch(theme_path + project_theme_name + 'src/img/**/*.png', minify_images);
     gulp.watch(theme_path + project_theme_name + 'src/img/**/*.jpg', minify_images);
+    gulp.watch(theme_path + project_theme_name + 'src/img/icons/*.svg', minify_images);
     gulp.watch(theme_path + project_theme_name + 'src/img/icons/*.svg', icons);
     gulp.watch(theme_path + project_theme_name + '*.html').on('change', browserSync.reload);
     gulp.watch(theme_path + project_theme_name + '*.php').on('change', browserSync.reload);
