@@ -12,21 +12,17 @@
         <?php wp_head(); ?>
         <!--- Meta data --->
         <?php get_template_part('parts/meta'); ?>
-        <!--- Scripts --->
-
         <!--- Favicons --->
         <?php get_template_part('parts/favicons'); ?>
 
+        <!-- Include font awesome script here -->
         <script src="https://kit.fontawesome.com/c98a339e8c.js" crossorigin="anonymous"></script>
     </head>
 
     <body <?php body_class(); ?>>
-        <div class="bc--header">
-            <nav class="header-navigation">
-                <?php get_template_part('parts/menu'); ?>
-            </nav>
-        </div>
+        <!-- Header Menu -->
         <?php get_template_part('parts/head'); ?>
+        <!-- Breadcrumbs -->
         <?php /* if ( function_exists('nav_breadcrumb') ){ nav_breadcrumb(); } */ ?>
 
-        <main class="bc--main">     <!-- START OF MAIN -->
+        <main class="bc--main container-fluid">     <!-- START OF MAIN -->
