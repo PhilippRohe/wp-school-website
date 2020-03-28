@@ -2,6 +2,10 @@
 body {
     overflow-x: hidden;
     font-family: $baloo2-regular;
+    .bc--main {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .section {

@@ -34,24 +34,42 @@
                 }
             }
         }
+        @include media('<=767px') {
+            display: none;
+        }
     }
 
     .bc--navigation {
         height: 110px;
         border-bottom: 3px solid $border-color;
         .left {
+            align-self: center;
             display: flex;
             justify-content: flex-start;
             .school-logo {
+                width: 250px;
+                height: auto;
+                object-fit: contain;
                 align-self: center;
+            }
+            @include media('<=767px') {
+                height: 65px;
+                .school-logo {
+                    width: 150px;
+                    height: auto;
+                    object-fit: contain;
+                }
             }
         }
 
         .right {
+            align-self: center;
             display: flex;
             justify-content: flex-end;
             .navigation {
                 display: flex;
+                width: 100%;
+                justify-content: flex-end;
                 .big-navigation {
                     display: flex;
                     align-self: center;
@@ -127,7 +145,126 @@
                         display: none;
                     }
                 }
+
+                .small-navigation {
+                    transition: all .2s ease-in-out;
+                    background: $topmenu-background;
+                    z-index: 10;
+                    display: none;
+                    width: 100%;
+                    flex: 0;
+                    position: fixed;
+                    left: 0;
+                    top: 65px;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    .menu-hauptmenue-container {
+                        width: 100%;
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                            list-style: none;
+                            li {
+                                padding: 20px 0;
+                                display: flex;
+                                justify-content: center;
+                                background: $topmenu-background;
+                                width: 100%;
+                                border-bottom: 2px solid $white;
+                                flex-direction: column;
+                                a {
+                                    align-self: center;
+                                    color: $white;
+                                    text-decoration: none;
+                                    span {
+                                        position: absolute;
+                                        margin-top: -5px;
+                                        margin-left: 10px;
+                                    }
+                                }
+                                .sub-menu-container {
+                                    margin-top: 15px;
+                                    display: none;
+                                    ul {
+                                        li {
+                                            border-bottom: unset;
+                                            padding: 8px 0;
+                                        }
+                                    }
+                                }
+                                &.open {
+                                    a {
+                                        span {
+                                            color: $hover-color;
+                                        }
+                                    }
+                                    .sub-menu-container {
+                                        display: flex;
+                                    }
+                                }
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+                                &:hover {
+                                    a {
+                                        span {
+                                            color: $hover-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .meta-nav {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        margin-top: 50px;
+                        .box {
+                            color: $white;
+                            text-decoration: none;
+                            transition: all .2s ease-in-out;
+                            cursor: pointer;
+                            width: 50px;
+                            height: 50px;
+                            background: unset;
+                            border-radius: 10px;
+                            border: 1px solid $white;
+                            padding: 5px;
+                            display: flex;
+                            justify-content: center;
+                            .logo {
+                                height: 45px;
+                                align-self: center;
+                                font-size: 30px;
+                                text-align: center;
+                            }
+                            &:hover {
+                                background: $hover-color;
+                            }
+                        }
+                    }
+                    &.show {
+                        transition: all .2s ease-in-out;
+                        display: flex;
+                        flex: 1;
+                        height: 100%;
+                        max-height: 100%;
+                    }
+                    @include media('<=767px') {
+                        display: none;
+                    }
+                }
             }
+            @include media('<=767px') {
+                height: 0px;
+            }
+        }
+        @include media('<=767px') {
+            height: auto;
+            border-bottom: unset;
         }
     }
 }

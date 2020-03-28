@@ -33,8 +33,17 @@
 	@if $filename == down {
 		$char: "\E002";
 	}
-	@if $filename == quote {
+	@if $filename == mail {
 		$char: "\E003";
+	}
+	@if $filename == map {
+		$char: "\E004";
+	}
+	@if $filename == phone {
+		$char: "\E005";
+	}
+	@if $filename == quote {
+		$char: "\E006";
 	}
 
 	@return $char;
@@ -56,6 +65,15 @@
 }
 .icon-down {
 	@include icon(down);
+}
+.icon-mail {
+	@include icon(mail);
+}
+.icon-map {
+	@include icon(map);
+}
+.icon-phone {
+	@include icon(phone);
 }
 .icon-quote {
 	@include icon(quote);

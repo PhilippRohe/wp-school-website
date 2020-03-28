@@ -3,6 +3,16 @@
 /* Do not allow direct access to this file */
 if ( !(defined('ABSPATH')) ) exit('No direct access allowed');
 
+/* Greetings message */
+function theme_start_notice() {
+    ?>
+    <div class="notice notice-success is-dismissible">
+        <p><?php _e( 'Herzlich Willkommen! Viel Spaß mit dem School-Theme. Dieses Theme eigent sich optimal für Schulen und Bildungseinrichtungen!', 'my_plugin_textdomain' ); ?></p>
+    </div>
+    <?php
+}
+add_action( 'admin_notices', 'theme_start_notice' );
+
 
 // Add theme supports
 add_theme_support( 'custom-header' );

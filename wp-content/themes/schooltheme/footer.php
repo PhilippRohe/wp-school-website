@@ -66,8 +66,8 @@ $column_size = "col-md-" . $col_number;
 
                 <div class="footer-copyright container">
                     <div class="row">
-                        <div class="left-copy col-6">Theme made for Schools | 2020 &copy;</div>
-                        <div class="right-copy col-6">Text</div>
+                        <div class="left-copy col-12 col-sm-6">Theme made for Schools | 2020 &copy;</div>
+                        <div class="right-copy col-12 col-sm-6">Text</div>
                     </div>
                 </div>
             </div>          
