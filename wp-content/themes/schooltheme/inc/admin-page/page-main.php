@@ -43,7 +43,7 @@ function school_settings() {
     <h1>Allgemeine Einstellungen im Theme ändern</h1>
     <?php settings_errors(); ?>
     <form action="options.php" method="post">
-        <?php settings_fields( 'bc_settings_group' ); ?>
+        <?php settings_fields( 'main_settings_group' ); ?>
         <?php do_settings_sections( 'school_main_settings' ); ?>
         <?php submit_button(); ?>
     </form>

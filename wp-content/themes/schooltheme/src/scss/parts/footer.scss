@@ -6,9 +6,11 @@
             .footer-widgets {
                 .footer-col {
                     .widget {
+                        padding: 15px 0;
                         list-style: none;
                         .widgettitle {
                             color: $white;
+                            font-weight: 800;
                         }
                         ul {
                             list-style: none;
@@ -16,7 +18,33 @@
                             padding: 0;
                             li {
                                 a {
+                                    color: $white;
                                     text-decoration: none;
+                                }
+                                .sub-menu {
+                                    padding-left: 15px;
+                                    li {
+                                        a {
+                                            color: $white;
+                                        }
+                                        &:hover {
+                                            a {
+                                                color: $hover-color !important;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    a {
+                                        color: $hover-color;
+                                    }
+                                    .sub-menu {
+                                        li {
+                                            a {
+                                                color: $white;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -29,11 +57,28 @@
             .row {
                 justify-content: space-between;
                 .left-copy {
+                    padding: 0;
                     color: $white;
                 }
                 .right-copy {
+                    padding: 0;
                     color: $white;
                     text-align: right;
+                    .footer-menu {
+                        .menu {
+                            list-style: none;
+                            li {
+                                a {
+                                    transition: all .2s ease-in-out;
+                                    text-decoration: none;
+                                    color: $white;
+                                    &:hover {
+                                        color: $hover-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

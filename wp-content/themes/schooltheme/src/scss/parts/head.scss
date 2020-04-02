@@ -10,6 +10,20 @@
         padding: 0 15px;
         .left {
             align-self: center;
+            .meta-nav {
+                .box {
+                    transition: all .2s ease-in-out;
+                    text-transform: none;
+                    text-decoration: none;
+                    padding: 5px;
+                    span {
+                        color: $white;
+                    }
+                    &:hover {
+                        background: $hover-color;
+                    }
+                }
+            }
         }
         .right {
             align-self: center;
@@ -21,14 +35,15 @@
                     display: flex;
                     margin: 0;
                     li {
+                        padding: 3px;
+                        transition: all .2s ease-in-out;
                         align-self: center;
                         a {
-                            transition: all .2s ease-in-out;
                             text-decoration: none;
                             color: $white;
-                            &:hover {
-                                color: $hover-color;
-                            }
+                        }
+                        &:hover {
+                            background: $hover-color;
                         }
                     }
                 }
@@ -104,11 +119,16 @@
                                 .sub-menu-container {
                                     margin-top: 30px;
                                     transition: all .2s ease-in-out;
-                                    opacity: 0;
+                                    //opacity: 0;
+                                    background: red;
+                                    position: absolute;
+                                    margin-left: -35px;
                                     .sub-menu {
-                                        display: none;
+                                        display: flex;
+                                        flex-direction: column;
                                     }
                                 }
+                                /*
                                 &:hover {
                                     .sub-menu-container {
                                         display: flex;
@@ -118,7 +138,7 @@
                                         width: 100%;
                                         left: 0;
                                         background: rgb(170, 170, 170);
-                                        position: fixed;
+                                        // position: fixed;
                                         .sub-menu {
                                             display: flex;
                                             justify-content: flex-end;
@@ -138,6 +158,7 @@
                                         }
                                     }
                                 }
+                                */
                             }
                         }
                     }

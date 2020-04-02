@@ -67,7 +67,15 @@ $column_size = "col-md-" . $col_number;
                 <div class="footer-copyright container">
                     <div class="row">
                         <div class="left-copy col-12 col-sm-6">Theme made for Schools | 2020 &copy;</div>
-                        <div class="right-copy col-12 col-sm-6">Text</div>
+                        <div class="right-copy col-12 col-sm-6">
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location'  => 'footer',
+                                'container'       => 'div',
+                                'container_class' => 'footer-menu',
+                            ));
+                        ?>
+                        </div>
                     </div>
                 </div>
             </div>          

@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+<meta name="format-detection" content="telephone=yes">
 <!--[if lt IE 8]>Please update your browser to use this website<![endif]-->
 <!-- SEO Meta Tags -->
 <!-- CHANGE: Update meta content here -->
@@ -34,8 +35,3 @@
 <meta name="twitter:image" content="" />
 <meta name="twitter:site" content="@name" />
 <meta name="twitter:creator" content="@name" />
-<!-- Colors and Apple-->
-<meta name="theme-color" content="#ff0000">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="format-detection" content="telephone=yes">

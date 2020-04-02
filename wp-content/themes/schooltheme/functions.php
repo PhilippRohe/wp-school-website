@@ -59,5 +59,8 @@ require get_template_directory() . '/inc/custom.php';
 // Load the sidebars
 require get_template_directory() . '/inc/sidebar.php';
 
+// Load the custom post types
+require get_template_directory() . '/inc/cpt.php';
+
 // Load the admin pages
 require get_template_directory() . '/inc/admin.php';
