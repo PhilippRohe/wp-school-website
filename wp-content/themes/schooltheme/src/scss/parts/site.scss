@@ -15,3 +15,8 @@ body {
 .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
     padding: 0 !important;
 }
+
+::selection {
+    background: $hover-color;
+    color: $white;
+}
