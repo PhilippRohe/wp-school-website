@@ -45,6 +45,9 @@
 	@if $filename == quote {
 		$char: "\E006";
 	}
+	@if $filename == search {
+		$char: "\E007";
+	}
 
 	@return $char;
 }
@@ -77,4 +80,7 @@
 }
 .icon-quote {
 	@include icon(quote);
+}
+.icon-search {
+	@include icon(search);
 }

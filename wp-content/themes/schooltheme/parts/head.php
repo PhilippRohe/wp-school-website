@@ -32,6 +32,7 @@ $map = get_home_url() . '/' . esc_attr(get_option( 'contact_settings_map' ));
                 );
                 wp_nav_menu($header_menu_array);
             ?>
+            <div class="box box-search"><span class="logo search-logo icon-search"></span></div>
         </div>
     </div>
 

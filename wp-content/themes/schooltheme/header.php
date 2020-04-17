@@ -23,6 +23,6 @@
         <!-- Header Menu -->
         <?php get_template_part('parts/head'); ?>
         <!-- Breadcrumbs -->
-        <?php if ( function_exists('nav_breadcrumb') && (!is_front_page()) ){ nav_breadcrumb(); } ?>
+        <?php if ( function_exists('nav_breadcrumb') && (!is_front_page()) ) { nav_breadcrumb(); } ?>
 
         <main class="bc--main container-fluid">     <!-- START OF MAIN -->

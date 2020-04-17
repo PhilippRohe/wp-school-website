@@ -69,7 +69,7 @@ function bc_create_taxonomy_subjects() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'subject', array( 'teacher' ), $args );
+	register_taxonomy( 'subject-teacher', array( 'teacher' ), $args );
 
 }
 

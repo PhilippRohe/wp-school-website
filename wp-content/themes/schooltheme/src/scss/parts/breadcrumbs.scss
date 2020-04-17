@@ -1,9 +1,28 @@
 .bc--breadcrumbs {
+    display: flex;
+    height: 30px;
+    background: $topmenu-background;
     .bc--breadcrumbs-navigation {
+        align-self: center;
         display: flex;
         flex-direction: row;
+        a {
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+            color: $hover-color;
+            font-size: 24px;
+            &:hover {
+                opacity: .75;
+            }
+        }
         .delimiter {
+            color: $white;
             margin: 0px 10px;
+            font-size: 24px;
+        }
+        .bc--breadcrumbs-page {
+            color: $white;
+            font-size: 24px;
         }
     }
 }

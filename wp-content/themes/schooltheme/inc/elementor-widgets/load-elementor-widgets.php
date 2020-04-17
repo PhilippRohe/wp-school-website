@@ -1,9 +1,10 @@
 <?php
 
 $pluginList = get_option( 'active_plugins' );
-$plugin = 'elementor'; 
+/* The elementor plugin */
+$plugin = 'elementor/elementor.php'; 
 if ( in_array( $plugin , $pluginList ) ) {
-    // Plugin 'mg-post-contributors' is Active
+
     class My_Elementor_Widgets {
 
         protected static $instance = null;
@@ -20,13 +21,14 @@ if ( in_array( $plugin , $pluginList ) ) {
             require_once('elementor-intro.php');
             require_once('elementor-latest-news.php');
             require_once('elementor-testimonials.php');
+            require_once('elementor-query.php');
             add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
         }
     
         public function register_widgets() {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Intro() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Latest_News() );
-            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Testimonials() );
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Query() );
         }
     
     }

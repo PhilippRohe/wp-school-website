@@ -9,7 +9,7 @@ function nav_breadcrumb() {
     
     if ( true /*!is_home() && !is_front_page() || is_paged() */ ) {
     
-        echo '<div class="bc--breadcrumbs"><nav class="bc--breadcrumbs-navigation">';
+        echo '<div class="bc--breadcrumbs container-fluid"><nav role="breadcrumbs" class="bc--breadcrumbs-navigation">';
         
         global $post;
         $homeLink = get_bloginfo('url');

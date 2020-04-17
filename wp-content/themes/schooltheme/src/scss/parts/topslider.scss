@@ -1,0 +1,23 @@
+.top-image-slider {
+    height: 300px;
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+        .carousel-control-prev, .carousel-control-next {
+            .carousel-control-prev-icon, .carousel-control-next-icon {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: 100% 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+}

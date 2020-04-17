@@ -1,0 +1,86 @@
+.query--section {
+    padding: 0;
+    &.boxed {
+        .row {
+            .section-headline {
+    
+            }
+        }
+        .all-entries {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .entry-box {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                transition: all .3s ease-in-out;
+                background-color: rgba(0, 0, 0, 1);
+                padding: 0;
+                .entry-image {
+                    align-self: center;
+                    transition: all .3s ease-in-out;
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+    
+                .meta-box {
+                    align-self: center;
+                    transition: all .3s ease-in-out;
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute; 
+                    left: 0; 
+                    right: 0; 
+                    top: 0;
+                    bottom: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: auto; 
+                    margin-right: auto; 
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    .title {
+                        align-self: center;
+                        color: $white;
+                        font-size: 48px;
+                        line-height: 55px;
+                    }
+                    .content {
+                        color: $white;
+                        font-size: 24px;
+                        line-height: 36px;
+                        align-self: center;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        .content-single {
+                            &::after {
+                                content: '-';
+                                margin: 0 5px;
+                            }
+                            &:last-child {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .entry-image {
+                        opacity: .5;
+                    }
+                    .meta-box {
+                        visibility: unset;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

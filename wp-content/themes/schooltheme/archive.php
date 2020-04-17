@@ -1,3 +1,5 @@
 <?php get_header(); ?>
-Some Test text
+
+Archive Text
+
 <?php get_footer(); ?>
