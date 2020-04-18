@@ -62,5 +62,14 @@ require get_template_directory() . '/inc/sidebar.php';
 // Load the custom post types
 require get_template_directory() . '/inc/cpt.php';
 
+// Load the custom meta
+require get_template_directory() . '/inc/custom-meta.php';
+
+// Load the custom column
+require get_template_directory() . '/inc/custom-column.php';
+
 // Load the admin pages
 require get_template_directory() . '/inc/admin.php';
+
+// Load the system functions
+require get_template_directory() . '/system/load.php';

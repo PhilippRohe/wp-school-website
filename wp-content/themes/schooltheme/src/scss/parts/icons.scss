@@ -30,23 +30,29 @@
 	@if $filename == arrowsingle {
 		$char: "\E001";
 	}
-	@if $filename == down {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == mail {
+	@if $filename == down {
 		$char: "\E003";
 	}
-	@if $filename == map {
+	@if $filename == download {
 		$char: "\E004";
 	}
-	@if $filename == phone {
+	@if $filename == mail {
 		$char: "\E005";
 	}
-	@if $filename == quote {
+	@if $filename == map {
 		$char: "\E006";
 	}
-	@if $filename == search {
+	@if $filename == phone {
 		$char: "\E007";
+	}
+	@if $filename == quote {
+		$char: "\E008";
+	}
+	@if $filename == search {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -66,8 +72,14 @@
 .icon-arrowsingle {
 	@include icon(arrowsingle);
 }
+.icon-close {
+	@include icon(close);
+}
 .icon-down {
 	@include icon(down);
+}
+.icon-download {
+	@include icon(download);
 }
 .icon-mail {
 	@include icon(mail);

@@ -31,5 +31,4 @@
     </div>
 </div>
 
-<?php get_template_part('inc/spacer'); ?>
 <?php get_footer(); ?>

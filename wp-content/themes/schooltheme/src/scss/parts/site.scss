@@ -20,3 +20,9 @@ body {
     background: $hover-color;
     color: $white;
 }
+
+.btn:focus, .btn, input, input:focus {
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+}

@@ -1,0 +1,89 @@
+.downloads--section {
+    padding: 30px 0;
+    .widget-headline {
+        margin-bottom: 30px;
+    }
+    .all-downloads {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .download-box {
+            padding: 30px 0;
+            align-self: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .top {
+                display: flex;
+                flex-direction: row;
+                .left-side {
+                    align-self: center;
+                    a {
+                        text-decoration: none;
+                        .download-icon {
+                            height: 150px;
+                            font-size: 100px;
+                            color: $hover-color;
+                            transition: all .3s ease-in-out;
+                            &:hover {
+                                opacity: .8;
+                            }
+                        }
+                    }
+                }
+                .right-side {
+                    margin-left: 30px;
+                    align-self: center;
+                    h2 {
+                        text-transform: uppercase;
+                    }
+                    .categories-list {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+                        padding: 0;
+                        li {
+                            font-size: 10px;
+                            margin: 0 5px;
+                            &:first-child {
+                                margin-left: 0px;
+                            }
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+                    .content {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .bottom {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                .download-container {
+                    text-decoration: none;
+                    width: 100%;
+                    .download-button {
+                        transition: all .3s ease-in-out;
+                        width: 300px;
+                        background: $topmenu-background;
+                        color: $white;
+                        padding: 10px 0;
+                        &:hover {
+                            opacity: .8;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
