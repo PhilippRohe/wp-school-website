@@ -153,7 +153,7 @@ function concat_scripts() {
     return gulp.src([
         // theme_path + project_theme_name + 'src/js/vendor/jquery/**/*.js',
         // theme_path + project_theme_name + 'src/js/vendor/bootstrap/**/*.js',
-        theme_path + project_theme_name + 'src/js/*.js',
+        theme_path + project_theme_name + 'src/js/' + name_of_script_file + '.js',
         ],
         { allowEmpty: true }
     )
@@ -192,6 +192,7 @@ function watch() {
     gulp.watch(theme_path + project_theme_name + 'src/scss/**/*.scss', styles);
     gulp.watch(theme_path + project_theme_name + 'src/scss/**/*.scss', browserSync.reload);
     gulp.watch(theme_path + project_theme_name + 'src/scss/admin.scss', admin_style);
+    gulp.watch(theme_path + project_theme_name + 'src/scss/admin.scss', browserSync.reload);
     gulp.watch(theme_path + project_theme_name + 'src/css/**/*.css', concat_styles);
     gulp.watch(theme_path + project_theme_name + 'src/js/**/*.js', concat_scripts);
     gulp.watch(theme_path + project_theme_name + 'src/img/**/*.png', minify_images);

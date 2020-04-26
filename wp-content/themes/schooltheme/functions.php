@@ -53,6 +53,9 @@ require get_template_directory() . '/inc/walker.php';
 // Load the elementor widgets
 require get_template_directory() . '/inc/elementor-widgets/load-elementor-widgets.php';
 
+// Load the wodrpess widgets
+require get_template_directory() . '/inc/wp-widgets/wp-widgets.php';
+
 // Load the custom functions
 require get_template_directory() . '/inc/custom.php';
 
@@ -63,7 +66,7 @@ require get_template_directory() . '/inc/sidebar.php';
 require get_template_directory() . '/inc/cpt.php';
 
 // Load the custom meta
-require get_template_directory() . '/inc/custom-meta.php';
+require get_template_directory() . '/inc/meta.php';
 
 // Load the custom column
 require get_template_directory() . '/inc/custom-column.php';

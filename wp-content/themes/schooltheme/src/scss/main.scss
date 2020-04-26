@@ -15,6 +15,9 @@
 // Import the icons
 @import 'parts/icons';
 
+// Import the search
+@import 'parts/search';
+
 // Import the main styles
 @import 'parts/site';
 
@@ -33,6 +36,17 @@
 // Import the breadcrumbs
 @import 'parts/breadcrumbs';
 
+// Import the article navigation
+@import 'parts/article-navigation';
+
+
+
+/* The single view pages */
+
+// Import the single-teacher
+@import 'parts/single-teacher';
+
+
 /* Elementor widgets and WordPress widgets */
 
 // Import the intro widget
@@ -50,8 +64,23 @@
 // Import the testimonials widget
 @import 'parts/elementor-testimonials';
 
+// Import the slider widget
+@import 'parts/elementor-slider';
+
 // Import the query widget
 @import 'parts/elementor-query';
+
+// Import the map widget
+@import 'parts/elementor-map';
+
+
+/* The wordpress widgets */
+
+// Import the last post widget
+@import 'parts/widget-last-posts';
+
+// Import the company widget
+@import 'parts/widget-company';
 
 
 

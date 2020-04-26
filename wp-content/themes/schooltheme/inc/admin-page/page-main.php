@@ -14,6 +14,7 @@ function main_custom_theme_settings_main() {
     register_setting( 'main_settings_group','bc_enable_to_top_arrow' );
     register_setting( 'main_settings_group','bc_clean_input' );
     register_setting( 'main_settings_group','bc_show_social_footer' );
+    register_setting( 'main_settings_group','bc_choose_slider_header' );
 
     /* Sections for main page */
     add_settings_section('main_theme_options', 'Theme Options', 'main_theme_main_options_render', 'school_main_settings' );
@@ -29,6 +30,7 @@ function main_custom_theme_settings_main() {
     add_settings_field('bc-enable-to-top-arrow', 'Enable To Top Arrow', 'main_theme_options_render_top_arrow', 'school_main_settings', 'main_theme_options');
     add_settings_field('bc-clean-input', 'Clean input search', 'main_theme_options_clean_input', 'school_main_settings', 'main_theme_options');
     add_settings_field('bc-show-social-footer', 'Show Social Bar in Footer', 'main_theme_options_social_footer', 'school_main_settings', 'main_theme_options');
+    add_settings_field('bc-choose-slider-header', 'Slider im Header auswählen', 'main_theme_options_slider_header', 'school_main_settings', 'main_theme_options');
     
 }
 
@@ -145,4 +147,19 @@ function main_theme_options_social_footer() {
    </select>
     <?php
     echo 'Current value: ' . $social_footer; 
+}
+
+function main_theme_options_slider_header() {
+    $slider_id = esc_attr(get_option( 'bc_choose_slider_header' ));
+    $all_slider = load_all_cpt_galleries();
+    ?>
+    <select name="bc_choose_slider_header">
+        <option value="-1">Slider auswählen</option>
+        <?php foreach($all_slider as $slide) {
+            ?>
+            <option value="<?php echo $slide['id']; ?>" <?php if($slider_id == $slide['id']) {echo 'selected';} ?>><?php echo $slide['title']; ?></option>
+            <?php
+        } ?>
+   </select>
+    <?php
 }

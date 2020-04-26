@@ -17,12 +17,12 @@ function bc_load_styles() {
 function bc_load_scripts() {
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/src/js/vendor/bootstrap/bootstrap.min.js', array(), 'all', 'true');
     wp_enqueue_script('jquery', get_template_directory_uri() . '/src/js/vendor/jquery/jquery-3.4.1.min.js', array('jquery'), 'all', 'true');
-    if (file_exists( get_template_directory() . '/.dev')) {
+    if (file_exists( $_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/schooltheme/.dev')) {
         // Dev
-        wp_enqueue_script('script', get_template_directory_uri() . '/dist/js/main-combined.js', array(), 'all', 'true');
+        wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/js/main-combined.js?v=' . substr(md5(date("Y-m-d_Hi")), 10, 18), array(), 'all', 'true');
     } else {
         // Live
-        wp_enqueue_script('script', get_template_directory_uri() . '/dist/js/main-combined-min.js', array(), 'all', 'true');
+        wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/js/main-combined-min.js?v=' . substr(md5(date("Y-m-d_Hi")), 10, 18), array(), 'all', 'true');
     }
 }
 

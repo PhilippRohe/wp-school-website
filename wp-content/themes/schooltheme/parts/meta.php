@@ -11,7 +11,8 @@
 <meta name="keywords" lang="en" content="wordpress, theme, school, education, website">
 <meta name="keywords" lang="fr" content="wordpress, thème, école, éducation, site web">
 <meta name="author" content="Philipp Rohe">
-<meta name="date" content="2020-03-06T17:00:00+01:00">
+<?php $date_one = date('Y-m-d'); $date_two = date('H:i:s'); $date = $date_one . 'T' . $date_two .  '+01:00'; ?>
+<meta name="date" content="<?php echo $date; ?>">
 <!-- Robots -->
 <meta name="robots" content="max-snippet:[80]" />
 <meta name="robots" content="max-video-preview:[30]" />

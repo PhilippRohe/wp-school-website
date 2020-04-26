@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'baloo2-regular';
-    src: url('./../../dist/fonts/baloo2/Baloo2-Regular.ttf') format('truetype');
+    src: url('./../../dist/fonts/include/baloo2/Baloo2-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'baloo2-medium';
-    src: url('./../../dist/fonts/baloo2/Baloo2-Medium.ttf') format('truetype');
+    src: url('./../../dist/fonts/include/baloo2/Baloo2-Medium.ttf') format('truetype');
 }
 @font-face {
     font-family: 'baloo2-semibold';
-    src: url('./../../dist/fonts/baloo2/Baloo2-SemiBold.ttf') format('truetype');
+    src: url('./../../dist/fonts/include/baloo2/Baloo2-SemiBold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'baloo2-bold';
-    src: url('./../../dist/fonts/baloo2/Baloo2-Bold.ttf') format('truetype');
+    src: url('./../../dist/fonts/include/baloo2/Baloo2-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'baloo2-extrabold';
-    src: url('./../../dist/fonts/baloo2/Baloo2-ExtraBold.ttf') format('truetype');
+    src: url('./../../dist/fonts/include/baloo2/Baloo2-ExtraBold.ttf') format('truetype');
 }
 
 $baloo2-regular: 'baloo2-regular';
@@ -24,3 +24,51 @@ $baloo2-medium: 'baloo2-medium';
 $baloo2-semibold: 'baloo2-semibold';
 $baloo2-bold: 'baloo2-bold';
 $baloo2-extrabold: 'baloo2-extrabold';
+
+
+
+
+
+
+@font-face {
+    font-family: 'avenir-book';
+    src: url('./../../dist/fonts/include/avenir/Avenir-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'avenir-medium';
+    src: url('./../../dist/fonts/include/avenir/Avenir-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'avenir-roman';
+    src: url('./../../dist/fonts/include/avenir/Avenir-Roman.otf') format('opentype');
+}
+
+$avenir-book: 'avenir-book';
+$avenir-medium: 'avenir-medium';
+$avenir-roman: 'avenir-roman';
+
+
+
+@font-face {
+    font-family: 'signika-bold';
+    src: url('./../../dist/fonts/include/signika/Signika-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'signika-light';
+    src: url('./../../dist/fonts/include/signika/Signika-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'signika-regular';
+    src: url('./../../dist/fonts/include/signika/Signika-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'signika-semibold';
+    src: url('./../../dist/fonts/include/signika/Signika-SemiBold.ttf') format('truetype');
+}
+
+$signika-bold: 'signika-bold';
+$signika-light: 'signika-light';
+$signika-regular: 'signika-regular';
+$signika-semibold: 'signika-semibold';

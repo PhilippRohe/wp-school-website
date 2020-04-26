@@ -8,8 +8,6 @@ function contact_custom_theme_settings() {
     register_setting( 'contact_settings_group','contact_settings_phone' );
     register_setting( 'contact_settings_group','contact_settings_fax' );
     register_setting( 'contact_settings_group','contact_settings_map' );
-    register_setting( 'contact_settings_group','contact_settings_geo_lang' );
-    register_setting( 'contact_settings_group','contact_settings_geo_lat' );
     register_setting( 'contact_settings_group','contact_settings_facebook' );
     register_setting( 'contact_settings_group','contact_settings_instagram' );
 
@@ -23,7 +21,6 @@ function contact_custom_theme_settings() {
     add_settings_field('contact-settings-phone', 'Telefon', 'contact_theme_options_phone', 'school_contact_settings', 'contact_theme_options_main');
     add_settings_field('contact-settings-fax', 'Fax', 'contact_theme_options_fax', 'school_contact_settings', 'contact_theme_options_main');
     add_settings_field('contact-settings-map', 'Map', 'contact_theme_options_map', 'school_contact_settings', 'contact_theme_options_map');
-    add_settings_field('contact-settings-geo', 'Geolocation', 'contact_theme_options_geo', 'school_contact_settings', 'contact_theme_options_map');
     add_settings_field('contact-settings-facebook', 'Facebook', 'contact_theme_options_facebook', 'school_contact_settings', 'contact_theme_options_social');
     add_settings_field('contact-settings-instagram', 'Instagram', 'contact_theme_options_instagram', 'school_contact_settings', 'contact_theme_options_social');
     
@@ -73,21 +70,18 @@ function contact_theme_options_fax() {
     <?php
 }
 function contact_theme_options_map() {
-    $map = esc_attr(get_option( 'contact_settings_map' )); ?>
+    $map = esc_attr(get_option( 'contact_settings_map' ));
+    $types = array('page', 'post', 'downloads', 'events', 'teacher', 'gallery');
+    $all_posts = bc_get_all_posts($types); ?>
     <div class="admin--contact-map">
-        <label for="contact_settings_map">Relativer Seitenpfad zur Map eintragen:</label>
-        <input type="text" name="contact_settings_map" class="admin-input admin-contact-map" value="<?php echo $map; ?>" id="admin_contact_map">
-    </div>
-    <?php
-}
-function contact_theme_options_geo() {
-    $geo_lang = esc_attr(get_option( 'contact_settings_geo_lang' ));
-    $geo_lat = esc_attr(get_option( 'contact_settings_geo_lat' )); ?>
-    <div class="admin--contact-geo">
-        <label for="admin_contact_geo_lang">Langitute:</label>
-        <input type="text" name="contact_settings_geo_lang" class="admin-input admin-contact-geo-lang" value="<?php echo $geo_lang; ?>" id="admin_contact_geo_lang">
-        <label for="admin_contact_geo_lat">Latitute:</label>
-        <input type="text" name="contact_settings_geo_lat" class="admin-input admin-contact-geo-lat" value="<?php echo $geo_lat; ?>" id="admin_contact_geo_lat">
+        <label for="admin_contact_map">Seite mit Karte und Standortinformationen auswählen: </label>
+        <select class="admin-input admin-contact-map" name="contact_settings_map" id="admin_contact_map">
+            <?php foreach($all_posts as $post) {
+                ?>
+                <option <?php if ($map == $post['link']) { echo 'selected';} ?> data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                <?php
+            } ?>
+        </select>
     </div>
     <?php
 }

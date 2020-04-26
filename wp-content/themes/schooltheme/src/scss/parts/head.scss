@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: $topmenu-background;
     .bc--topmenu {
         display: flex;
         height: 40px;
@@ -66,36 +67,32 @@
                 &:hover {
                     background: $hover-color;
                 }
-                .searchfield {
+                .bc-search--form {
+                    height: 26px;
+                    visibility: hidden;
                     padding: 0;
                     width: 0;
                     transition: all .3s ease-in-out;
-                    border-radius: 12px;
-                    border: 0;
                     align-self: center;
                     margin-left: 10px;
-                    font-size: 14px;
                     &:focus, &:active {
                         border: 0;
                         border-color: unset;
                         outline: 0;
                     }
-                }
-                .search-button {
-                    transition: all .3s ease-in-out;
-                    visibility: hidden;
-                    margin-left: 5px;
-                    padding: 0 10px;
+                    .search-button {
+                        display: flex;
+                        span {
+                            font-size: 10px;
+                            margin-bottom: 5px;
+                        }
+                    }
                 }
                 &.active {
                     max-width: 300px;
-                    .searchfield {
-                        width: 100%;
-                        padding: 3px 15px;
-                    }
-                    .search-button {
+                    .bc-search--form {
                         visibility: unset;
-                        width: fit-content;
+                        width: 100%;
                     }
                     &:hover {
                         background: unset;
@@ -132,33 +129,41 @@
     }
 
     .bc--navigation {
-        height: 110px;
-        border-bottom: 3px solid $border-color;
+        height: 350px;
+        border-bottom: 2px solid $border-color;
+        clip-path: polygon(0 0, 100% 0, 100% 99%, 0 99%);
         .left {
-            align-self: center;
+            align-self: flex-start;
             display: flex;
             justify-content: flex-start;
-            .school-logo {
-                width: 250px;
-                height: auto;
-                object-fit: contain;
-                align-self: center;
+            a {
+                display: flex;
+                justify-content: center;
+                .school-logo {
+                    width: 250px;
+                    height: auto;
+                    object-fit: contain;
+                    align-self: center;
+                }
             }
             @include media('<=767px') {
                 height: 65px;
-                .school-logo {
-                    width: 150px;
-                    height: auto;
-                    object-fit: contain;
+                a {
+                    .school-logo {
+                        width: 150px;
+                        height: auto;
+                        object-fit: contain;
+                    }
                 }
             }
         }
 
         .right {
-            align-self: center;
+            align-self: start;
             display: flex;
             justify-content: flex-end;
             .navigation {
+                margin-top: 15px;
                 display: flex;
                 width: 100%;
                 justify-content: flex-end;
@@ -173,6 +178,7 @@
                             list-style-type: none;
                             margin: 0;
                             li {
+                                font-weight: 700;
                                 margin: 15px 25px;
                                 display: flex;
                                 align-self: center;
@@ -181,8 +187,7 @@
                                     transition: all .2s ease-in-out;
                                     text-decoration: none;
                                     font-size: 18px;
-                                    font-family: $baloo2-semibold;
-                                    color: $list-color;
+                                    color: $white;
                                     cursor: pointer;
                                     span {
                                         margin-top: -5px;
@@ -190,7 +195,7 @@
                                         align-self: center;
                                         transition: all .2s ease-in-out;
                                         margin-left: 5px;
-                                        color: $arrow-color;
+                                        color: $white;
                                     }
                                 }
                                 .sub-menu-container {
@@ -267,7 +272,8 @@
                 .small-navigation {
                     transition: all .2s ease-in-out;
                     background: $topmenu-background;
-                    z-index: 10;
+                    z-index: 50;
+                    height: 0;
                     display: none;
                     width: 100%;
                     flex: 0;
@@ -369,20 +375,157 @@
                         display: flex;
                         flex: 1;
                         height: 100%;
-                        max-height: 100%;
+                        max-height: 1000px;
                     }
                     @include media('<=767px') {
                         display: none;
                     }
                 }
+                @include media('<=767px') {
+                    margin-top: 0px;
+                }
             }
             @include media('<=767px') {
-                height: 0px;
+                height: auto;
+                height: 100%;
             }
         }
         @include media('<=767px') {
             height: auto;
             border-bottom: unset;
+        }
+
+        .action-boxes {
+            align-self: flex-end;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            margin-top: 10px;
+            .row {
+                justify-content: space-between;
+                width: 110%;
+                .box {
+                    z-index: 0;
+                    text-decoration: none;
+                    max-width: 350px;
+                    transition: all .3s ease-in-out;
+                    padding: 10px;
+                    border: 2px solid $white;
+                    cursor: pointer;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    min-height: 100px;
+                    background: rgba(0, 0, 0, .5);
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    background-size: cover !important;
+                    .left-box {
+                        margin-left: 10px;
+                        width: 100%;
+                        align-self: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        p {
+                            transition: all .3s ease-in-out;
+                            text-decoration: none;
+                            font-weight: 900;
+                            width: 100%;
+                            text-transform: uppercase;
+                            align-self: center;
+                            color: $white;
+                            margin: 0;
+                            font-size: 26px;
+                            &.small {
+                                text-decoration: none;
+                                font-weight: 500;
+                                font-size: 14px;
+                                text-transform: unset;
+                                &::before {
+                                    content: '\2192';
+                                    margin-right: 5px;
+                                    align-self: center;
+                                }
+                            }
+                        }
+                    }
+                    .right-box {
+                        margin-right: 10px;
+                        width: 40%;
+                        align-self: center;
+                        display: flex;
+                        justify-content: center;
+                        i {
+                            transition: all .3s ease-in-out;
+                            text-decoration: none;
+                            align-self: center;
+                            font-size: 54px;
+                            color: $white;
+                        }
+                    }
+                    &:hover {
+                        background: rgba(0, 0, 0, 1);
+                        .right-box {
+                            i {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+            @include media('<=767px') {
+                display: none;
+            }
+        }
+    }
+
+    &.single-page {
+        .bc--navigation {
+            background-image: unset !important;
+            background: $white;
+            height: 110px;
+            clip-path: unset;
+            .left {
+                a {
+                    height: 110px;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        margin: 0;
+                    }
+                }
+            }
+            .right {
+                .navigation {
+                    height: 110px;
+                    margin: 0;
+                    .big-navigation {
+                        .menu-hauptmenue-container {
+                            .main-menu {
+                                li {
+                                    a {
+                                        color: #3d3d3d;
+                                        span {
+                                            color: #3d3d3d;
+                                        }
+                                    }
+                                    .sub-menu-container {
+                                        z-index: 20;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .action-boxes {
+                display: none;
+            }
         }
     }
 }

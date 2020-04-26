@@ -1,0 +1,31 @@
+/* Gallery image slider */
+.gallery_slider_list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+        cursor: pointer;
+        margin: 5px;
+        .image-inner {
+            border-radius: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 300px;
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding: 5px;
+                width: 100%;
+                text-align: right;
+                float: right;
+                span {
+                    font-size: 28px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

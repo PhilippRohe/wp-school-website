@@ -1,0 +1,180 @@
+/* Company wp widget */
+.bc-footer--company {
+    padding: 0;
+    .company-widget--body {
+        .company-content {
+            p {
+                color: #fff;
+                text-align: justify;
+            }
+        }
+        .company-phone {
+            color: #fff;
+            padding: 4px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            transition: .3s ease-in-out;
+            .icon {
+                text-align: center;
+                align-self: center;
+                font-size: 24px;
+                transition: .3s ease-in-out;
+                color: $hover-color;
+            }
+
+            a {
+                width: auto;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                text-align: left;
+                flex-direction: column;
+                color: #fff;
+                transition: .3s ease-in-out;
+                p {
+                    font-weight: 600;
+                    color: #fff;
+                    transition: .3s ease-in-out;
+                    width: 100%;
+                    text-align: left;
+                    align-self: center;
+                    padding: 0;
+                    margin: 0;
+                    width: fit-content;
+                }
+
+                span {
+                    width: fit-content;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 12px;
+                    color: white;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                background: rgb(61, 61, 61);
+                a {
+                    p {
+                        color: $hover-color; 
+                    }
+                }
+            }
+        }
+
+        .company-address {
+            color: #fff;
+            padding: 4px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            transition: .3s ease-in-out;
+            .icon {
+                margin: 0 auto;
+                text-align: center;
+                align-self: center;
+                font-size: 24px;
+                transition: .3s ease-in-out;
+                color: $hover-color;
+            }
+
+            address {
+                color: #fff;
+                margin: 0 auto;
+                padding: 0;
+                align-self: center;
+                display: flex;
+                justify-content: flex-start;
+                a {
+                    font-size: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    transition: .3s ease-in-out;
+                    font-weight: 600;
+                    color: $white;
+                    text-decoration: none;
+                    font-weight: unset;
+                    span {
+                        width: fit-content;
+                        transition: .3s ease-in-out;
+                        &:first-child {
+                            transition: .3s ease-in-out;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                background: rgb(61, 61, 61);
+                address {
+                    a {
+                        span {
+                            &:first-child {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .company-mail {
+            color: #fff;
+            padding: 4px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            transition: .3s ease-in-out;
+            .icon {
+                margin: 0 auto;
+                text-align: center;
+                align-self: center;
+                font-size: 24px;
+                transition: .3s ease-in-out;
+                color: $hover-color;
+            }
+
+            a {
+                width: auto;
+                padding: 0;
+                align-self: center;
+                margin: 0 auto;
+                padding: 0;
+                transition: .3s ease-in-out;
+                text-decoration: none;
+                p {
+                    width: fit-content;
+                    font-weight: 600;
+                    transition: .3s ease-in-out;
+                    text-align: left;
+                    align-self: center;
+                    padding: 0;
+                    margin: 0;
+                    color: #fff;
+                }
+                span {
+                    width: fit-content;
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                a {
+                    p {
+                        color: $hover-color; 
+                    }
+                }
+            }
+        }
+    }
+}

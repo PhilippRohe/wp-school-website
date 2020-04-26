@@ -35,6 +35,24 @@ function school_add_admin_page() {
         'school_contact_settings', // menu slug
         'contact_settings_page' // callable function
     );
+
+    add_submenu_page(
+        'school_main_settings', // parent slug
+        'Header Settings', // page title
+        'Header', // menu title
+        'manage_options', // capability
+        'school_header_settings', // menu slug
+        'header_settings_page' // callable function
+    );
+
+    add_submenu_page(
+        'school_main_settings', // parent slug
+        'Footer Settings', // page title
+        'Footer', // menu title
+        'manage_options', // capability
+        'school_footer_settings', // menu slug
+        'footer_settings_page' // callable function
+    );
 }
 
 /* Actions and call functions only if is admin */
@@ -52,3 +70,9 @@ require get_template_directory() . '/inc/admin-page/page-style.php';
 
 /* Load the contact settings page */
 require get_template_directory() . '/inc/admin-page/page-contact.php';
+
+/* Load the header settings page */
+require get_template_directory() . '/inc/admin-page/page-header.php';
+
+/* Load the footer settings page */
+require get_template_directory() . '/inc/admin-page/page-footer.php';

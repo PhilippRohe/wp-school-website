@@ -3,7 +3,7 @@
 /* Load breadcrumbs function */
 function nav_breadcrumb() {
     $delimiter = '<div class="delimiter">&raquo;</div>';
-    $home = 'Home'; 
+    $home = 'Startseite'; 
     $before = '<div class="bc--breadcrumbs-page">'; 
     $after = '</div>'; 
     
@@ -48,7 +48,7 @@ function nav_breadcrumb() {
                 echo $before . get_the_title() . $after;
             }
             
-        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+        } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() && !is_search() ) {
             $post_type = get_post_type_object(get_post_type());
             echo $before . $post_type->labels->singular_name . $after;
             
@@ -76,7 +76,7 @@ function nav_breadcrumb() {
             echo $before . get_the_title() . $after;
             
         } elseif ( is_search() ) {
-            echo $before . 'Ergebnisse für Ihre Suche nach "' . get_search_query() . '"' . $after;
+            echo $before . 'Ergebnisse für Ihre Suche nach: <b>"' . get_search_query() . '"</b>' . $after;
             
         } elseif ( is_tag() ) {
             echo $before . 'Beiträge mit dem Schlagwort "' . single_tag_title('', false) . '"' . $after;

@@ -1,0 +1,24 @@
+.map--section {
+    padding: 30px 15px;
+    .row {
+        .widget-headline {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .map-container {
+            .map-embed {
+                overflow: hidden;
+                padding-bottom: 30%;
+                position: relative;
+                height: 0;
+                iframe {
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

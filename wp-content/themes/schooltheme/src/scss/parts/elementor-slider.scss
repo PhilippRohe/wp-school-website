@@ -1,0 +1,103 @@
+.slider--section {
+    padding: 30px 15px;
+    .row {
+        .widget-headline {
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        .slider-container {
+            padding: 15px 0;
+            .image-slider {
+                .slick-list {
+                    .slick-track {
+                        .carousel-item {
+                            margin: 15px;
+                            img {
+                                object-fit: cover;
+                                max-height: 400px;
+                                height: 400px;
+                                max-width: 768px;
+                                width: 768px;
+                            }
+                            .carousel-caption {
+                                opacity: 0;
+                                transition: all .3s ease-in-out;
+                                visibility: hidden;
+                                .image-title {
+                                    font-weight: 800;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.slick-center {
+                                .carousel-caption {
+                                    visibility: unset;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-prev {
+                    z-index: 2;
+                    margin-left: 125px;
+                    &::before {
+                        font-size: 50px;
+                        opacity: .9;
+                        border-radius: 50%;
+                    }
+                }
+
+                .slick-next {
+                    z-index: 2;
+                    margin-right: 125px;
+                    &::before {
+                        font-size: 50px;
+                        opacity: .9;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.image-slider-modal {
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .85);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: unset;
+    .window {
+        border: 5px solid $white;
+        max-width: 75%;
+        max-height: 75%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        .modal-image {
+            align-self: center;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &.opened {
+        cursor: pointer;
+        z-index: 100;
+        opacity: 1;
+        visibility: unset;
+    }
+}

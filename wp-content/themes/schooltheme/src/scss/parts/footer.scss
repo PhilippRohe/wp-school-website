@@ -17,31 +17,91 @@
                             margin: 0;
                             padding: 0;
                             li {
+                                transition: all .3s ease-in-out;
+                                padding: 5px 0;
+                                border-bottom: 1px solid grey;
+                                color: $white;
                                 a {
+                                    width: 100%;
                                     color: $white;
                                     text-decoration: none;
                                 }
                                 .sub-menu {
+                                    background: $footer-background;
                                     padding-left: 15px;
                                     li {
+                                        border: unset;
                                         a {
+                                            width: 100%;
+                                            transition: all .3s ease-in-out;
                                             color: $white;
                                         }
                                         &:hover {
+                                            background: $hover-color;
                                             a {
-                                                color: $hover-color !important;
+                                                color: $white !important;
                                             }
                                         }
                                     }
                                 }
                                 &:hover {
+                                    background-color: $hover-color;
                                     a {
-                                        color: $hover-color;
+                                        color: $white;
                                     }
                                     .sub-menu {
                                         li {
                                             a {
                                                 color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    border: unset;
+                                }
+                                &:first-child {
+                                    border-bottom: 1px solid grey;
+                                }
+                                &.menu-item-has-children {
+                                    padding: 5px 0 0 0;
+                                }
+                            }
+                        }
+                        form {
+                            label {
+                                display: none;
+                            }
+                            select {
+                                width: 100%;
+                                padding: 5px;
+                                border-radius: 10px;
+                                option {
+                                    background-color: $footer-background;
+                                    color: $white;
+                                }
+                            }
+                        }
+                        .calendar_wrap {
+                            width: 100%;
+                            table {
+                                width: 100%;
+                                caption {
+                                    color: $white;
+                                }
+                                thead {
+                                    tr {
+                                        th {
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                                tbody, tfoot {
+                                    tr {
+                                        td {
+                                            color: $white;
+                                            a {
+                                                color: $hover-color;
                                             }
                                         }
                                     }
@@ -76,6 +136,24 @@
                                         color: $hover-color;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+            @include media('<=767px') {
+                transform: scale(.75);
+                .row {
+                    flex-direction: column-reverse;
+                    .left-copy {
+                        margin-bottom: 10px;
+                    }
+                    .right-copy {
+                        margin-bottom: 10px;
+                        text-align: center;
+                        .footer-menu {
+                            .menu {
+                                padding: 0;
                             }
                         }
                     }

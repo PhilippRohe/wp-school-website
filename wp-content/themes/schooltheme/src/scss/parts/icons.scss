@@ -27,32 +27,44 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == arrowsingle {
+	@if $filename == arrow-round-left {
 		$char: "\E001";
 	}
-	@if $filename == close {
+	@if $filename == arrow-round-right {
 		$char: "\E002";
 	}
-	@if $filename == down {
+	@if $filename == arrowsingle {
 		$char: "\E003";
 	}
-	@if $filename == download {
+	@if $filename == check {
 		$char: "\E004";
 	}
-	@if $filename == mail {
+	@if $filename == close {
 		$char: "\E005";
 	}
-	@if $filename == map {
+	@if $filename == down {
 		$char: "\E006";
 	}
-	@if $filename == phone {
+	@if $filename == download {
 		$char: "\E007";
 	}
-	@if $filename == quote {
+	@if $filename == info-circle {
 		$char: "\E008";
 	}
-	@if $filename == search {
+	@if $filename == mail {
 		$char: "\E009";
+	}
+	@if $filename == map {
+		$char: "\E00A";
+	}
+	@if $filename == phone {
+		$char: "\E00B";
+	}
+	@if $filename == quote {
+		$char: "\E00C";
+	}
+	@if $filename == search {
+		$char: "\E00D";
 	}
 
 	@return $char;
@@ -69,8 +81,17 @@
 	}
 }
 
+.icon-arrow-round-left {
+	@include icon(arrow-round-left);
+}
+.icon-arrow-round-right {
+	@include icon(arrow-round-right);
+}
 .icon-arrowsingle {
 	@include icon(arrowsingle);
+}
+.icon-check {
+	@include icon(check);
 }
 .icon-close {
 	@include icon(close);
@@ -80,6 +101,9 @@
 }
 .icon-download {
 	@include icon(download);
+}
+.icon-info-circle {
+	@include icon(info-circle);
 }
 .icon-mail {
 	@include icon(mail);

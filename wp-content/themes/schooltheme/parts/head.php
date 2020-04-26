@@ -1,9 +1,11 @@
 <?php 
 $email = esc_attr(get_option( 'contact_settings_mail' ));
 $phone = esc_attr(get_option( 'contact_settings_phone' ));
-$map = get_home_url() . '/' . esc_attr(get_option( 'contact_settings_map' ));
+$map = esc_attr(get_option( 'contact_settings_map' ));
+$header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
+$is_single = (is_single()) ? ' single-page' : '';
 ?>
-<header class="bc--header container-fluid">
+<header class="bc--header container-fluid<?php echo $is_single; ?>">
 
     <!-- Mobile toggle -->
     <div class="nav-menu mobile-menu js--mobile-menu">
@@ -35,13 +37,12 @@ $map = get_home_url() . '/' . esc_attr(get_option( 'contact_settings_map' ));
             <div class="box box-search js--search-box">
                 <span class="logo search-logo icon-search active" aria-hidden="false"></span>
                 <span class="logo close-logo icon-close" aria-hidden="true"></span>
-                <input type="text" class="searchfield">
-                <button class="btn search-button">Suchen</button>
+                <?php get_search_form(); ?>
             </div>
         </div>
     </div>
 
-    <div class="bc--navigation row">
+    <div class="bc--navigation row" style="background-image:url('<?php echo $header_background_image; ?>')">
         <div class="left col-12 col-md-4">
             <a href="<?php echo get_home_url(); ?>">
                 <img class="school-logo" src="https://www.placehold.it/250x75" alt="Schule Webseiten Logo">
@@ -79,6 +80,53 @@ $map = get_home_url() . '/' . esc_attr(get_option( 'contact_settings_map' ));
                     </div>
                 </div>
             </nav>
+        </div>
+        <div class="action-boxes container" aria-hidden="true">
+            <?php
+                $box_one_text_big = esc_attr(get_option( 'header_settings_box_one_text_big' ));
+                $box_one_text_small = esc_attr(get_option( 'header_settings_box_one_text_small' ));
+                $box_one_link = esc_attr(get_option( 'header_settings_box_one_link' ));
+                $box_one_icon = esc_attr(get_option( 'header_settings_box_one_icon' ));
+
+                $box_two_text_big = esc_attr(get_option( 'header_settings_box_two_text_big' ));
+                $box_two_text_small = esc_attr(get_option( 'header_settings_box_two_text_small' ));
+                $box_two_link = esc_attr(get_option( 'header_settings_box_two_link' ));
+                $box_two_icon = esc_attr(get_option( 'header_settings_box_two_icon' ));
+
+                $box_three_text_big = esc_attr(get_option( 'header_settings_box_three_text_big' ));
+                $box_three_text_small = esc_attr(get_option( 'header_settings_box_three_text_small' ));
+                $box_three_link = esc_attr(get_option( 'header_settings_box_three_link' ));
+                $box_three_icon = esc_attr(get_option( 'header_settings_box_three_icon' ));
+            ?>
+            <div class="row">
+                <a href="<?php echo $box_one_link; ?>" class="box col-4">
+                    <div class="left-box">
+                        <p><?php echo $box_one_text_big; ?></p>
+                        <p class="small"><?php echo $box_one_text_small; ?></p>
+                    </div>
+                    <div class="right-box">
+                        <i class="<?php echo $box_one_icon; ?>"></i>
+                    </div>
+                </a>
+                <a href="<?php echo $box_two_link; ?>" class="box col-4">
+                    <div class="left-box">
+                        <p><?php echo $box_two_text_big; ?></p>
+                        <p class="small"><?php echo $box_two_text_small; ?></p>
+                    </div>
+                    <div class="right-box">
+                        <i class="<?php echo $box_two_icon; ?>"></i>
+                    </div>
+                </a>
+                <a href="<?php echo $box_three_link; ?>" class="box col-4">
+                    <div class="left-box">
+                        <p><?php echo $box_three_text_big; ?></p>
+                        <p class="small"><?php echo $box_three_text_small; ?></p>
+                    </div>
+                    <div class="right-box">
+                        <i class="<?php echo $box_three_icon; ?>"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 

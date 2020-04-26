@@ -1,34 +1,13 @@
 <?php
 /* Register sidebars (widget area) */
 function bc_register_widget_area() {
-    register_sidebar( array(
-        'name'          => 'Sidebar Left',
-        'id'            => 'sidebar-left',
-        'description'   => 'the sidebar left',
-        'class'         => 'bc-sidebar',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => 'Sidebar Right',
-        'id'            => 'sidebar-right',
-        'description'   => 'the sidebar right',
-        'class'         => 'sidebar',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
-    ) );
-
+    
     register_sidebar( array(
         'name'          => 'Footer Level 1',
         'id'            => 'footer-one',
         'description'   => 'Footer level 1',
         'class'         => 'footer-one',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'before_widget' => '<li id="%1$s" class="col-12 widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',

@@ -24,6 +24,8 @@ if ( in_array( $plugin , $pluginList ) ) {
             require_once('elementor-query.php');
             require_once('elementor-downloads.php');
             require_once('elementor-wysiwyg.php');
+            require_once('elementor-slider.php');
+            require_once('elementor-map.php');
             add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
         }
     
@@ -33,6 +35,8 @@ if ( in_array( $plugin , $pluginList ) ) {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Query() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Downloads() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Wysiwyg() );
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Slider() );
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Map() );
         }
     
     }

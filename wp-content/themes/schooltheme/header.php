@@ -24,5 +24,7 @@
         <?php get_template_part('parts/head'); ?>
         <!-- Breadcrumbs -->
         <?php if ( function_exists('nav_breadcrumb') && (!is_front_page()) ) { nav_breadcrumb(); } ?>
+        <!-- Image carousel -->
+        <?php if (is_single()) { get_template_part('parts/carousel'); } ?>
 
         <main class="bc--main container-fluid">     <!-- START OF MAIN -->

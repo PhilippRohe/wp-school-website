@@ -1,0 +1,77 @@
+
+/* Last post wp widget */
+.bc-footer--last-posts {
+    .bc-footer--post {
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-bottom: 1px outset grey;
+        color: white;
+        .bc--foter-post-left {
+            margin: 0px;
+            align-self: center;
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .image-placeholder {
+                width: 60px;
+                height: 60px;
+                background: white;
+                border-radius: 50%;
+            }
+        }
+
+        .bc--foter-post-right {
+            transition: .3s ease-in-out;
+            margin: 0px 10px;
+            align-self: center;
+            margin-right: 50px;
+            h3 {
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                transition: .3s ease-in-out;
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+                &.small {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .icon {
+            transition: .3s ease-in-out;
+            align-self: center;
+            position: absolute;
+            right: 40px;
+            transform: rotate(270deg);
+        }
+
+        &:hover {
+            background: rgb(61, 61, 61);
+            text-decoration: none;
+            .icon {
+                right: 30px;
+            }
+            .bc--foter-post-right {
+                h3 {
+                    color: $hover-color; 
+                }
+            }
+        }
+    }
+}
