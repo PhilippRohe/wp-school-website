@@ -76,7 +76,7 @@ function nav_breadcrumb() {
             echo $before . get_the_title() . $after;
             
         } elseif ( is_search() ) {
-            echo $before . 'Ergebnisse für Ihre Suche nach: <b>"' . get_search_query() . '"</b>' . $after;
+            echo $before . 'Suche nach: <b>"' . get_search_query() . '"</b>' . $after;
             
         } elseif ( is_tag() ) {
             echo $before . 'Beiträge mit dem Schlagwort "' . single_tag_title('', false) . '"' . $after;

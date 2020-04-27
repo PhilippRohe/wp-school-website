@@ -1,0 +1,17 @@
+.notfound-container {
+    padding: 30px 15px;
+    .row {
+        .container--inner {
+            width: 100%;
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            .notice-container {
+                margin-top: 60px;
+            }
+        }
+    }
+}
