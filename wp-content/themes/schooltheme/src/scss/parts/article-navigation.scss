@@ -1,26 +1,31 @@
 .article-navigation {
-    padding: 30px 15px;
+    border-top: 1px solid #888;
+    padding: 30px 30px;
     .row {
+        .article-navigation-headline {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
         .navigation {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
             h2 {
-                align-self: center;
                 width: 100%;
                 text-align: center;
             }
             .nav-links {
+                margin: 0 auto;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: center;
+                max-width: 400px;
                 .nav-previous {
                     transition: all .2s ease-in-out;
                     background: $topmenu-background;
                     width: 100%;
                     display: flex;
                     justify-content: center;
+                    max-width: 170px;
                     a {
                         transition: all .2s ease-in-out;
                         text-decoration: none;
@@ -47,7 +52,9 @@
                     background: $topmenu-background;
                     display: flex;
                     justify-content: center;
+                    transition: all .2s ease-in-out;
                     width: 100%;
+                    max-width: 170px;
                     a {
                         display: flex;
                         justify-content: center;

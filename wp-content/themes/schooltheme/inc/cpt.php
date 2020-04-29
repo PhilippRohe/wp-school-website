@@ -188,7 +188,7 @@ function bc_create_posttype_gallery() {
             'menu_position' => 8,
             'exclude_from_search' => false,
             'menu_icon' => 'dashicons-images-alt2',
-            'supports' => array('title', 'thumbnail', 'post-formats'),
+            'supports' => array('title', 'thumbnail', 'post-formats', 'excerpt'),
         )
     );
 }

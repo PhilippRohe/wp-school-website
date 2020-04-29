@@ -16,15 +16,22 @@
         <?php get_template_part('parts/favicons'); ?>
 
         <!-- Include font awesome script here -->
-        <script src="https://kit.fontawesome.com/c98a339e8c.js" crossorigin="anonymous"></script>
+        <?php $font_awesome_code = esc_attr(get_option( 'bc_enable_font_awesome' )); ?>
+        <script src="https://kit.fontawesome.com/<?php echo $font_awesome_code; ?>.js" crossorigin="anonymous"></script>
     </head>
 
     <body <?php body_class(); ?>>
         <!-- Header Menu -->
         <?php get_template_part('parts/head'); ?>
-        <!-- Breadcrumbs -->
-        <?php if ( function_exists('nav_breadcrumb') && (!is_front_page()) ) { nav_breadcrumb(); } ?>
         <!-- Image carousel -->
         <?php if (is_single()) { get_template_part('parts/carousel'); } ?>
+        <!-- Breadcrumbs -->
+        <?php $enable_breadcrumbs = esc_attr(get_option( 'bc_enable_breadcrumbs' )); ?>
+        <?php if ( function_exists('nav_breadcrumb') && (!is_front_page()) && ($enable_breadcrumbs == 'on') ) { nav_breadcrumb(); } ?>
 
-        <main class="bc--main container-fluid">     <!-- START OF MAIN -->
+        <?php
+        $size = ( (is_single() || is_page()) && (!in_array('elementor-page elementor-page-' . get_the_ID(), get_body_class())) ) ? ' container' : ' container-fluid';
+        $border = ( (is_single() || is_page()) && (!in_array('elementor-page elementor-page-' . get_the_ID(), get_body_class())) ) ? ' bordered' : '';
+        ?>
+
+        <main class="bc--main<?php echo $size; ?><?php echo $border; ?>">     <!-- START OF MAIN -->

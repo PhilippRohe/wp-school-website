@@ -3,6 +3,7 @@ $email = esc_attr(get_option( 'contact_settings_mail' ));
 $phone = esc_attr(get_option( 'contact_settings_phone' ));
 $map = esc_attr(get_option( 'contact_settings_map' ));
 $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
+$menu_logo = esc_attr(get_option( 'bc_menu_logo' )) ? esc_attr(get_option( 'bc_menu_logo' )) : 'https://www.placehold.it/250x75';
 $is_single = (is_single()) ? ' single-page' : '';
 ?>
 <header class="bc--header container-fluid<?php echo $is_single; ?>">
@@ -45,7 +46,7 @@ $is_single = (is_single()) ? ' single-page' : '';
     <div class="bc--navigation row" style="background-image:url('<?php echo $header_background_image; ?>')">
         <div class="left col-12 col-md-4">
             <a href="<?php echo get_home_url(); ?>">
-                <img class="school-logo" src="https://www.placehold.it/250x75" alt="Schule Webseiten Logo">
+                <img width="300px" height="100px" class="school-logo" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
             </a>
         </div>
         <div class="right col-12 col-md-8">

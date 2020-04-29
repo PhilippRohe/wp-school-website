@@ -10,6 +10,11 @@ function schooltheme_customize_register_highlight( $wp_customize ) {
         'transport' => 'refresh',
     ));
 
+    $wp_customize->add_setting( $prefix . 'highlight_contrast' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
+
     /* Add the section here */
     $wp_customize->add_section( $prefix . 'schooltheme_section_highlight' , array(
         'title'      => __( 'Schooltheme Highlight', 'schooltheme' ),
@@ -22,6 +27,12 @@ function schooltheme_customize_register_highlight( $wp_customize ) {
         'label'      => __( 'Highlight-Farbe Hintergrund', 'schooltheme' ),
         'section'    => $prefix . 'schooltheme_section_highlight',
         'settings'   => $prefix . 'highlight_background',
+    )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_contrast', array(
+        'label'      => __( 'Highlight-Farbe Kontrastfarbe', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_highlight',
+        'settings'   => $prefix . 'highlight_contrast',
     )));
 }
 

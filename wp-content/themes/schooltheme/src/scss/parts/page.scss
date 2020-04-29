@@ -1,0 +1,13 @@
+.page-container {
+    padding: 30px 15px;
+    .page-content {
+        padding: 0 30px;
+        .content {
+            p {
+                a {
+                    color: unset;
+                }
+            }
+        }
+    }
+}

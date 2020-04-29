@@ -33,7 +33,7 @@
                 $gallery_cats = wp_get_post_terms( get_the_ID(), 'categories-gallery', array('fields' => 'names'));
                 $event_cats = wp_get_post_terms( get_the_ID(), 'categories-events', array('fields' => 'names'));
                 $event_location = wp_get_post_terms( get_the_ID(), 'locations-events', array('fields' => 'names'));
-                $event_date = get_post_meta($post->ID, '_event_date_value', true);
+                $event_date = get_post_meta(get_the_ID(), '_event_date_value', true);
                 ?>
                 <div class="box-head">
                     <a href="<?php echo $link; ?>">

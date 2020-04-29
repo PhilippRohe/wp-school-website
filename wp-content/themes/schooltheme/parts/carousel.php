@@ -1,5 +1,5 @@
 <?php
-$slider_id = esc_attr(get_option( 'bc_choose_slider_header' ));
+$slider_id = esc_attr(get_option( 'style_settings_header_slider' ));
 $images = load_images_from_slider($slider_id);
 ?>
 <!-- Top image carousel -->

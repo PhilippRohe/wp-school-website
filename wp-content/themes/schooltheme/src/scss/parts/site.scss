@@ -4,8 +4,33 @@ body {
     font-family: $baloo2-regular;
     .bc--main {
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
     }
+    &:not(.elementor-page) {
+        .bc--main {
+            &.bordered {
+                border: 1px solid #eee;
+                padding: 10px;
+                border-radius: 0px;
+                box-shadow: 0 0 4px 0 #aaa;
+            }
+        }
+    }
+}
+
+.sethighlight {
+    background-color: $hover-color;
+    color: #fff;
+}
+
+h1 {
+    font-weight: 800;
+}
+h2 {
+    font-weight: 600;
+}
+h3 {
+    font-weight: 500;
 }
 
 .section {
@@ -22,7 +47,7 @@ body {
 }
 
 /* Remove basic outline */
-.btn:focus, .btn, input, input:focus, select, select:focus, img:focus, img {
+.btn:focus, .btn, input, input:focus, select, select:focus, img:focus, img, textarea, textarea:focus {
     outline-style:none;
     box-shadow:none;
     border-color:transparent;

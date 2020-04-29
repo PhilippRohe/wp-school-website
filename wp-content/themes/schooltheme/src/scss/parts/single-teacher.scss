@@ -1,5 +1,5 @@
 .single-content-area {
-    padding: 30px 15px;
+    padding: 15px 0;
     .teacher-single {
         display: flex;
         flex-direction: column;
@@ -11,11 +11,14 @@
             margin: 0;
         }
         .content {
-            margin: 30px 0;
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: row;
+            display: block;
+            margin: 30px 0 0 0;
             .content-left {
+                z-index: 2;
+                margin-right: 15px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                float: left;
                 align-self: flex-start;
                 display: flex;
                 justify-content: center;
@@ -43,6 +46,7 @@
                     width: 100%;
                     margin-top: 15px;
                     li {
+                        cursor: pointer;
                         transition: all .2s ease-in-out;
                         justify-content: center;
                         align-self: center;
@@ -50,6 +54,7 @@
                         display: flex;
                         padding: 5px 0;
                         &:hover {
+                            color: #fff;
                             background: $hover-color;
                         }
                     }
@@ -57,7 +62,7 @@
             }
             .content-right {
                 .content-text {
-
+                    text-align: justify;
                 }
             }
         }

@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
         to_top_arrow(300);
         slider_modal_image();
         init_slick_slider();
+        init_single_view_slick();
         console.log('%cLoaded and initialized JavaScript file', 'background: black; color: lightgreen; font-size: 24px; padding: 5px;', 'main.js');
     });
 
@@ -76,6 +77,17 @@ jQuery(document).ready(function($) {
             slidesToScroll: 1,
             dots: true,
             arrows: true,
+            centerMode: true,
+        });
+    }
+
+    let init_single_view_slick = function() {
+        $('.js--my-single-view-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
             centerMode: true,
         });
     }

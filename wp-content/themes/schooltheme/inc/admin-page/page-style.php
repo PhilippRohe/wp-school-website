@@ -4,7 +4,6 @@
 function style_custom_theme_settings() {
 
     /* Options and settings on main settings page */
-    register_setting( 'style_settings_group','style_settings_test' );
     register_setting( 'style_settings_group','style_settings_header_background' );
     register_setting( 'style_settings_group','style_settings_header_slider' );
 
@@ -17,7 +16,6 @@ function style_custom_theme_settings() {
     add_settings_section('style_theme_options', 'Login Seite', 'style_theme_main_options_render_login', 'school_style_settings_login' );
 
     /* Fields for main page */
-    add_settings_field('style-settings-test', 'Test Settings', 'style_theme_options_test', 'school_style_settings', 'style_theme_options');
     add_settings_field('style-settings-header-background', 'Header Container Hintergrund', 'style_theme_options_header_background', 'school_style_settings', 'style_theme_options');
     add_settings_field('style-settings-header-slider', 'Header Slider auswählen', 'style_theme_options_header_slider', 'school_style_settings', 'style_theme_options');
 
@@ -55,17 +53,13 @@ function style_theme_main_options_render_login() {
     echo 'Style Einstellungen zur Loginseite';
 }
 
-function style_theme_options_test() {
-    echo 'test';
-}
-
 
 function style_theme_options_header_background() {
     $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
         <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $header_background_image; ?>">
-        <input type="button" class="button-primary" value="Upload Background Image" id="admin_upload_menu_logo">
+        <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_header_background" value="<?php echo $header_background_image; ?>" />
     </div>
     <?php
@@ -97,9 +91,23 @@ function style_theme_options_login_color() {
 }
 
 function style_theme_options_login_background() {
-    echo 'test';
+    $login_background = esc_attr(get_option( 'style_settings_login_background' ));
+    ?>
+    <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
+        <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $login_background; ?>">
+        <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
+        <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_background" value="<?php echo $login_background; ?>" />
+    </div>
+    <?php
 }
 
 function style_theme_options_login_image() {
-    echo 'test';
+    $login_image = esc_attr(get_option( 'style_settings_login_image' ));
+    ?>
+    <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
+        <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $login_image; ?>">
+        <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
+        <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_image" value="<?php echo $login_image; ?>" />
+    </div>
+    <?php
 }

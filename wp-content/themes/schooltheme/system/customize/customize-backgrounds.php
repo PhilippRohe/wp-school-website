@@ -5,6 +5,10 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
 
 
     /* Add the settings here */
+    $wp_customize->add_setting( $prefix . 'body_background' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
     $wp_customize->add_setting( $prefix . 'topbar_background' , array(
         'default'   => '#3d3d3d',
         'transport' => 'refresh',
@@ -36,6 +40,12 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
     ));
     
     /* Add the controls here */
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_body', array(
+        'label'      => __( 'Body Hintergrundfarbe', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_backgrounds',
+        'settings'   => $prefix . 'body_background',
+    )));
+
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_topbar', array(
         'label'      => __( 'Topmenü Hintergrundfarbe', 'schooltheme' ),
         'section'    => $prefix . 'schooltheme_section_backgrounds',
@@ -77,10 +87,11 @@ function customizer_output_background() {
     /* The custom CSS */
     ?>
          <style type="text/css">
+             body { background: <?php echo get_theme_mod( $prefix . 'body_background', '#fff'); ?>; }
              .bc--header .bc--topmenu { background: <?php echo get_theme_mod( $prefix . 'topbar_background', '#3d3d3d'); ?>; }
              .bc--header { background: <?php echo get_theme_mod( $prefix . 'header_background', '#3d3d3d'); ?>; }
              .bc--breadcrumbs { background: <?php echo get_theme_mod( $prefix . 'breadcrumbs_background', '#3d3d3d'); ?>; }
-             body .bc--main { background: <?php echo get_theme_mod( $prefix . 'main_background', '#fff'); ?>; }
+            body .bc--main { background: <?php echo get_theme_mod( $prefix . 'main_background', '#fff'); ?>; }
              .footer-main { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
          </style>
     <?php

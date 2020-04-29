@@ -1,0 +1,71 @@
+.comment-container {
+    padding: 30px 15px;
+    .row {
+        .comments-headline {
+            margin-bottom: 30px;
+            span {
+                border: 1px solid $topmenu-background;
+                background: $hover-color;
+                padding: 0 15px;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: 900;
+            }
+        }
+
+        .commentlist {
+            margin-bottom: 30px;
+            list-style: none;
+            li {
+                border: 1px solid #eee;
+                padding: 15px;
+                border-radius: 15px;
+                box-shadow: 0 0 10px 0 #aaa;
+                margin-bottom: 15px;
+                p {
+                    cite {
+                        font-style: normal;
+                    }
+                    a {
+                        font-weight: 700;
+                        color: $hover-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .nocommentset, .commentrssfeed {
+            a {
+                text-decoration: none;
+                color: $hover-color;
+            }
+        }
+
+        form {
+            p {
+                a {
+                    font-weight: 700;
+                    color: $hover-color;
+                    text-decoration: none;
+                }
+                textarea {
+                    padding: 10px;
+                    resize: none;
+                    width: 100%;
+                    border: 1px solid rgb(185, 185, 185);
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px 0 #aaa;
+                }
+                .comment-send-button {
+                    transition: all .2s ease-in-out;
+                    background: $topmenu-background;
+                    color: $white;
+                    &:hover {
+                        background: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+}

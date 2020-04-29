@@ -10,7 +10,10 @@
 
     /* Post navigation */
     ?>
-    <div class="article-navigation container">
+    <div class="article-navigation container-fluid">
+        <div class="row">
+            <h2 class="article-navigation-headline col-12">Navigation</h2>
+        </div>
         <div class="row">
             <?php the_post_navigation(); ?>
         </div>

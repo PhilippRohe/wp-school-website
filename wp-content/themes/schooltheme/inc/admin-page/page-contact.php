@@ -51,34 +51,36 @@ function contact_theme_main_options_render() {
 function contact_theme_options_mail() {
     $email = esc_attr(get_option( 'contact_settings_mail' )); ?>
     <div class="admin--contact-mail">
-        <input type="email" name="contact_settings_mail" class="admin-input admin-contact-email" value="<?php echo $email; ?>" id="admin_contact_email">
+        <input style="width: 100%;" type="email" name="contact_settings_mail" class="admin-input admin-contact-email" value="<?php echo $email; ?>" id="admin_contact_email">
     </div>
     <?php
 }
 function contact_theme_options_phone() {
     $phone = esc_attr(get_option( 'contact_settings_phone' )); ?>
     <div class="admin--contact-phone">
-        <input type="tel" name="contact_settings_phone" class="admin-input admin-contact-phone" value="<?php echo $phone; ?>" id="admin_contact_phone">
+        <input style="width: 100%;" type="tel" name="contact_settings_phone" class="admin-input admin-contact-phone" value="<?php echo $phone; ?>" id="admin_contact_phone">
     </div>
     <?php
 }
 function contact_theme_options_fax() {
     $fax = esc_attr(get_option( 'contact_settings_fax' )); ?>
     <div class="admin--contact-fax">
-        <input type="tel" name="contact_settings_fax" class="admin-input admin-contact-fax" value="<?php echo $fax; ?>" id="admin_contact_fax">
+        <input style="width: 100%;" type="tel" name="contact_settings_fax" class="admin-input admin-contact-fax" value="<?php echo $fax; ?>" id="admin_contact_fax">
     </div>
     <?php
 }
 function contact_theme_options_map() {
     $map = esc_attr(get_option( 'contact_settings_map' ));
+    echo $map;
     $types = array('page', 'post', 'downloads', 'events', 'teacher', 'gallery');
     $all_posts = bc_get_all_posts($types); ?>
     <div class="admin--contact-map">
         <label for="admin_contact_map">Seite mit Karte und Standortinformationen auswählen: </label>
-        <select class="admin-input admin-contact-map" name="contact_settings_map" id="admin_contact_map">
+        <select style="width: 100%;" class="admin-input admin-contact-map" name="contact_settings_map" id="admin_contact_map">
             <?php foreach($all_posts as $post) {
+                $link = strval($post['link']);
                 ?>
-                <option <?php if ($map == $post['link']) { echo 'selected';} ?> data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                <option <?php if ($map == $link) { echo 'selected';} ?> data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
                 <?php
             } ?>
         </select>
@@ -90,7 +92,7 @@ function contact_theme_options_facebook() {
     $facebook = esc_attr(get_option( 'contact_settings_facebook' )); ?>
     <div class="admin--contact-facebook">
         <p>Bitte den Link zur Facebookseite angeben:</p>
-        <input type="tel" name="contact_settings_facebook" class="admin-input admin-contact-facebook" value="<?php echo $facebook; ?>" id="admin_contact_facebook">
+        <input style="width: 100%;" type="tel" name="contact_settings_facebook" class="admin-input admin-contact-facebook" value="<?php echo $facebook; ?>" id="admin_contact_facebook">
     </div>
     <?php
 }
@@ -98,7 +100,7 @@ function contact_theme_options_instagram() {
     $instagram = esc_attr(get_option( 'contact_settings_instagram' )); ?>
     <div class="admin--contact-instagram">
         <p>Bitte den Namen auf Instagram angeben:</p>
-        <input type="tel" name="contact_settings_instagram" class="admin-input admin-contact-instagram" value="<?php echo $instagram; ?>" id="admin_contact_instagram">
+        <input style="width: 100%;" type="tel" name="contact_settings_instagram" class="admin-input admin-contact-instagram" value="<?php echo $instagram; ?>" id="admin_contact_instagram">
     </div>
     <?php
 }

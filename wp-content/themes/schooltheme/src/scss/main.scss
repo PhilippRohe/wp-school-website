@@ -40,17 +40,26 @@
 @import 'parts/article-navigation';
 
 // Import the 404 page
-@import 'parts/notfound.scss';
+@import 'parts/notfound';
 
 // Import the archive
-@import 'parts/archive.scss';
+@import 'parts/archive';
+
+// Import the comments
+@import 'parts/comments';
 
 
 
 /* The single view pages */
 
-// Import the single-teacher
+// Import the single teacher
 @import 'parts/single-teacher';
+
+// Import the single post
+@import 'parts/single-all';
+
+// Import the page
+@import 'parts/page';
 
 
 /* Elementor widgets and WordPress widgets */

@@ -2,22 +2,64 @@
     padding: 30px 15px;
     .row {
         .archive--inner {
+            width: 100%;
             padding: 0 15px;
+            h1 {
+                b {
+                    border: 1px solid $topmenu-background;
+                    background: $hover-color;
+                    padding: 0 15px;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-weight: 900;
+                }
+            }
             article {
                 border: 1px solid #eee;
                 border-radius: 15px;
                 box-shadow: 0 0 10px 0 #aaa;
                 margin: 15px 0;
                 padding: 15px;
+                width: 100%;
+                .post-inner {
+                    a {
+                        color: unset;
+                        text-decoration: none;
+                        img {
+                            margin-bottom: 10px;
+                            max-height: 300px;
+                            object-fit: cover;
+                        }
+                    }
+                    h2 {
+                        color: $hover-color;
+                    }
+                    a {
+                        .view-button {
+                            width: 100%;
+                            color: #fff;
+                            background: $hover-color;
+                        }
+                    }
+                }
             }
 
             .archive-navigation {
+                margin-bottom: 30px;
+                border-bottom: 3px solid #888;
+                padding: 15px 0;
                 ul {
+                    margin-top: 30px;
+                    margin-bottom: 0;
                     list-style: none;
                     padding: 0;
                     display: flex;
                     flex-direction: row;
+                    p {
+                        margin-right: 10px;
+                    }
                     a {
+                        font-style: italic;
                         transition: all .2s ease-in-out;
                         color: #555;
                         text-decoration: none;
@@ -39,6 +81,9 @@
                         &:hover {
                             color: $hover-color;
                         }
+                    }
+                    &:last-child {
+                        margin-top: 0px;
                     }
                 }
             }
