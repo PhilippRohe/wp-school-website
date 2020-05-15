@@ -7,11 +7,11 @@ function notice_settings_page() {
     <ul class="notice-list">
         <li>
             <h2>Hinweise zu Fonts und Schriften</h2>
-            <p>Das Schooltheme nutzt lizenufreie Google-Fonts, die unter der OFL Lizenz frei zu verwenden sind.</p>
+            <p>Das Schooltheme nutzt lizenufreie Google-Fonts, die unter der <a rel="nofollow" target="_blank" href="https://de.wikipedia.org/wiki/SIL_Open_Font_License">OFL Lizenz</a> frei zu verwenden sind.</p>
         </li>
         <li>
             <h2>Hinweise Font Awesome / Icons</h2>
-            <p>Die in diesem Theme verwendeten Icons stammen von Font Awesome. Diese dürfen ebenfalls unter der GPL Lizenz und der CC 4.0 Lizenz
+            <p>Die in diesem Theme verwendeten Icons (sowohl die, die fester Teil des Themes sind, also auch die, die nachträglich abgeändert werden können) stammen von Font Awesome. Diese dürfen ebenfalls unter der GPL Lizenz und der CC 4.0 Lizenz
                 frei verwendet werden. Ein Code zur Nutzung muss in den <a href="<?php echo admin_url() . 'admin.php?page=school_main_settings'; ?>">Einstellungen</a> dieses Themes eingetragen werden.
             </p>
         </li>
@@ -23,7 +23,7 @@ function notice_settings_page() {
         </li>
         <li>
             <h2>Hinweise zur Erstellung</h2>
-            <p>Dieses Theme wurde im Rahmen einer Projektarbeit an der Universität des Saarlandes erstellt.</p>
+            <p>Dieses WordPress Theme wurde im Rahmen einer Projektarbeit an der Universität des Saarlandes erstellt.</p>
         </li>
     </ul>
     <?php

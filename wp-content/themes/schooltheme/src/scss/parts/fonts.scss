@@ -29,28 +29,6 @@ $baloo2-extrabold: 'baloo2-extrabold';
 
 
 
-
-@font-face {
-    font-family: 'avenir-book';
-    src: url('./../../dist/fonts/include/avenir/Avenir-Book.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'avenir-medium';
-    src: url('./../../dist/fonts/include/avenir/Avenir-Medium.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'avenir-roman';
-    src: url('./../../dist/fonts/include/avenir/Avenir-Roman.otf') format('opentype');
-}
-
-$avenir-book: 'avenir-book';
-$avenir-medium: 'avenir-medium';
-$avenir-roman: 'avenir-roman';
-
-
-
 @font-face {
     font-family: 'signika-bold';
     src: url('./../../dist/fonts/include/signika/Signika-Bold.ttf') format('truetype');
@@ -72,3 +50,12 @@ $signika-bold: 'signika-bold';
 $signika-light: 'signika-light';
 $signika-regular: 'signika-regular';
 $signika-semibold: 'signika-semibold';
+
+
+
+@font-face {
+    font-family: 'viga-regular';
+    src: url('./../../dist/fonts/include/viga/Viga-Regular.ttf') format('truetype');
+}
+
+$viga-regular: 'viga-regular';

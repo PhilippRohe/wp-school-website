@@ -16,6 +16,7 @@
                 background: rgba(0, 0, 0, 0.35 );
                 width: fit-content;
                 padding: 10px;
+                padding-left: 20px;
                 align-self: center;
                 z-index: 10;
                 position: absolute;
@@ -24,6 +25,11 @@
                 margin-left: auto;
                 margin-right: auto;
                 top: 0;
+                @include media('<=1440px') {
+                    font-size: calc(24px + (60 - 24) * ((100vw - 575px) / (1440 - 575)));
+                    max-width: calc(350px + (775 - 350) * ((100vw - 575px) / (1440 - 575)));
+                    margin-top: calc(140px + (90 - 140) * ((100vw - 575px) / (1440 - 575)));
+                }
             }
             .carousel-item {
                 img {

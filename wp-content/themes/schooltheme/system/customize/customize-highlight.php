@@ -77,6 +77,7 @@ function customizer_output_highlight() {
             .downloads--section .all-downloads .download-box .top .left-side a .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             #cookie-law-info-again { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?> !important; }
             .wpcf7 form p input[type~="submit"] { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            body::-webkit-scrollbar-thumb { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             
          </style>
     <?php
