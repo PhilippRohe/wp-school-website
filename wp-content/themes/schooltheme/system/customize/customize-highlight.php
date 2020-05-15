@@ -19,7 +19,7 @@ function schooltheme_customize_register_highlight( $wp_customize ) {
 
     /* Add the controls here */
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_navigation', array(
-        'label'      => __( 'Highlight-Farbe Hintergrund', 'schooltheme' ),
+        'label'      => __( 'Highlight-Farbe setzen', 'schooltheme' ),
         'section'    => $prefix . 'schooltheme_section_highlight',
         'settings'   => $prefix . 'highlight_background',
     )));
@@ -52,7 +52,7 @@ function customizer_output_highlight() {
             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             ::selection { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
-            .a, .footer-main .row .footer-content .footer-widgets .footer-col .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .footer-main .row .footer-content .footer-widgets .footer-col .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-copyright .row .right-copy .footer-menu .menu li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .small-navigation .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
@@ -75,6 +75,8 @@ function customizer_output_highlight() {
             .last-news--section .row .articles .single-article .article-body .link button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .last-news--section .row .articles .single-article .article-head { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .downloads--section .all-downloads .download-box .top .left-side a .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            #cookie-law-info-again { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?> !important; }
+            .wpcf7 form p input[type~="submit"] { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             
          </style>
     <?php

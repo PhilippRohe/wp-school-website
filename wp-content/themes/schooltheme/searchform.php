@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Search Page
+Template Name: Such Formular
 */
 ?>
 <form class="bc-search--form" role="search" method="get" action="<?php echo home_url('/'); ?>">

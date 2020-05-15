@@ -61,14 +61,13 @@ function main_theme_options_enable_breadcrumbs() {
             <option value="off" <?php if($enable_breadcrumbs === 'off') {echo 'selected';} ?>>Nein</option>
         </select>
     <?php
-    echo 'Aktueller Wert: ' . $enable_breadcrumbs; 
 }
 
 function main_theme_options_render_font_awesome() {
     $font_awesome_code = esc_attr(get_option( 'bc_enable_font_awesome' ));
     ?>
     <input style="width: 100%;" style="width: 500px;" type="text" placeholder="Your Font Awesome Code" name="bc_enable_font_awesome" value="<?php echo $font_awesome_code; ?>" />
-    <p>Zur Nutzung vieler Icons Registrierung auf fontawesome.com, dann Code hier eintragen (zum Beispiel: https://kit.fontawesome.com/<b style="color: red;"><u>xxxxxxxxxx</u></b>.js | Nur den Teil: xxxxxxxxxx rein schreiben), um die Icons sehen zu können</p>
+    <p>Zur Nutzung vieler Icons Registrierung auf fontawesome.com, dann Code hier eintragen (zum Beispiel: https://kit.fontawesome.com/<b style="color: red;"><u>xxxxxxxxxx</u></b>.js | Nur den Teil: xxxxxxxxxx schreiben), um die Icons sehen zu können</p>
     <?php
 }
 
@@ -80,7 +79,6 @@ function main_theme_options_render_top_arrow() {
         <option value="off" <?php if($enable_top_arrow === 'off') {echo 'selected';} ?>>Nein</option>
     </select>
     <?php
-    echo 'Current value: ' . $enable_top_arrow; 
 }
 
 function main_theme_options_social_footer() {
@@ -91,5 +89,4 @@ function main_theme_options_social_footer() {
        <option value="off" <?php if($social_footer === 'off') {echo 'selected';} ?>>No</option>
    </select>
     <?php
-    echo 'Current value: ' . $social_footer; 
 }

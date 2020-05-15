@@ -1,5 +1,4 @@
 // Load all functions after window is ready
-
 jQuery(document).ready(function($) {
 
     $(document).ready(function($) {

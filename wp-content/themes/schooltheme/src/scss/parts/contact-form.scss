@@ -1,0 +1,28 @@
+.wpcf7 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    form {
+        p {
+            label {
+                width: 100%;
+                font-size: 18px;
+            }
+            span {
+                input, textarea {
+                    padding: 10px;
+                    width: 100%;
+                    border: 1px solid #b9b9b9;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px 0 #aaa;
+                }
+            }
+            input[type~="submit"] {
+                width: 100%;
+                background: $hover-color;
+                color: $white;
+                height: 40px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -11,7 +11,7 @@ class bc_company extends WP_Widget {
             'School | Einrichtung', 
             // Widget description
             array ( 
-                'description' => 'Informationen über das Unternehmen', 
+                'description' => 'Informationen über das Unternehmen bzw. die Schule', 
             ) 
         );
     }

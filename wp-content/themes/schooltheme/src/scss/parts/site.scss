@@ -13,7 +13,7 @@ body {
                 border: 1px solid #eee;
                 padding: 10px;
                 border-radius: 0px;
-                box-shadow: 0 0 4px 0 #aaa;
+                box-shadow: 0 0 1px 0 #aaa;
             }
         }
     }
@@ -54,7 +54,7 @@ h3 {
 }
 
 /* Remove basic outline */
-.btn:focus, .btn, input, input:focus, select, select:focus, img:focus, img, textarea, textarea:focus {
+.btn:focus, .btn, input, input:focus, select, select:focus, img:focus, img, textarea, textarea:focus, a, a:focus {
     outline-style:none;
     box-shadow:none;
     border-color:transparent;
@@ -84,7 +84,7 @@ input:-webkit-autofill:active  {
     cursor: pointer;
     position: fixed;
     right: 4%;
-    bottom: 4%;
+    bottom: 7%;
     width: 35px;
     height: 35px;
     border-radius: 50%;

@@ -42,7 +42,7 @@ function footer_theme_boxes_options_render() {
 function footer_text_copyright_function() {
     $footer_text = esc_attr(get_option( 'footer_text_copyright' )); ?>
     <div class="footer-text-container">
-        <input type="text" name="footer_text_copyright" class="footer-text" value="<?php echo $footer_text; ?>">
+        <input style="width: 100%;" type="text" name="footer_text_copyright" class="footer-text" value="<?php echo $footer_text; ?>">
     </div>
     <?php
 }

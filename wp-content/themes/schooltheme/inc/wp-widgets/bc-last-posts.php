@@ -8,10 +8,10 @@ class bc_last_posts extends WP_Widget {
             // Base ID of your widget
             'bc-last-posts', 
             // Widget name will appear in UI
-            'BC | Last Posts', 
+            'School | Letzte Einträge', 
             // Widget description
             array ( 
-                'description' => 'Last Posts Widget by BananaCoding', 
+                'description' => 'Die letzten Einträge eines Post Types', 
             ) 
         );
     }

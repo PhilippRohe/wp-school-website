@@ -4,7 +4,7 @@
 function school_add_admin_page() {
     add_menu_page(
         'Schule', // page title
-        'Theme Settings', // menu title
+        'Schultheme', // menu title
         'manage_options', // capability
         'school_main_settings', // url the menu leads
         'school_settings', // callable function name
@@ -53,6 +53,15 @@ function school_add_admin_page() {
         'school_footer_settings', // menu slug
         'footer_settings_page' // callable function
     );
+
+    add_submenu_page(
+        'school_main_settings', // parent slug
+        'Hinweis', // page title
+        'Hinweis', // menu title
+        'manage_options', // capability
+        'school_notice_settings', // menu slug
+        'notice_settings_page' // callable function
+    );
 }
 
 /* Actions and call functions only if is admin */
@@ -76,3 +85,6 @@ require get_template_directory() . '/inc/admin-page/page-header.php';
 
 /* Load the footer settings page */
 require get_template_directory() . '/inc/admin-page/page-footer.php';
+
+/* Load the notice settings page */
+require get_template_directory() . '/inc/admin-page/page-notice.php';
