@@ -407,6 +407,15 @@
                 display: none;
             }
         }
+        @include media('<=767px') {
+            .left {
+                a {
+                    img {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
     }
 
     &.single-page {

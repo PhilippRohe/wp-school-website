@@ -37,7 +37,7 @@ class Elementor_Downloads extends Widget_Base {
 
             /* Load teachers subjects */
             $link = get_post_meta(get_the_ID(), '_download_link_value', true);
-            $categories = wp_get_post_terms( get_the_ID(), $categories_slug, array( 'fields' => 'names' ) );
+            $categories = wp_get_post_terms( get_the_ID(), $categories_slug, array( 'fields' => 'all' ) );
 
             $download = [];
             $download[ 'id' ] = get_the_ID();
@@ -118,7 +118,7 @@ class Elementor_Downloads extends Widget_Base {
             <div class="all-downloads row">
                 <?php foreach($downloads as $download) {
                     ?>
-                    <div class="download-box col-12">
+                    <div class="download-box col-12 col-md-12 col-lg-6">
                         <div class="top">
                             <div class="left-side">
                                 <a href="<?php echo $download[ 'download' ]; ?>">
@@ -129,12 +129,13 @@ class Elementor_Downloads extends Widget_Base {
                                 <h2><?php echo $download[ 'title' ]; ?></h2>
                                 <ul class="categories-list">
                                 <?php foreach($download[ 'categories' ] as $categorie) {
+                                    $link = get_category_link($categorie);
                                     ?>
-                                    <li><?php echo $categorie; ?></li>
+                                    <a href="<?php echo $link; ?>"><li><?php echo $categorie->name; ?></li></a>
                                     <?php
                                 } ?>
                                 </ul>
-                                <p class="content"><?php echo $download[ 'content' ]; ?></p>
+                                <p class="content"><?php echo $download[ 'excerpt' ]; ?></p>
                             </div>
                         </div>
                         <div class="bottom">

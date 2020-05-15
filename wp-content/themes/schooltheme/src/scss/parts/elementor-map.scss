@@ -1,11 +1,15 @@
 .map--section {
     padding: 30px 15px;
+    margin-bottom: 30px;
     .row {
         .widget-headline {
             margin-bottom: 30px;
             width: 100%;
+            text-align: center;
         }
         .map-container {
+            padding-left: 0;
+            padding-right: 0;
             .map-embed {
                 overflow: hidden;
                 padding-bottom: 30%;

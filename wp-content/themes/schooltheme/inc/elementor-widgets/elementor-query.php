@@ -8,7 +8,7 @@ class Elementor_Query extends Widget_Base {
 	}
 	
 	public function get_title() {
-		return '[School] Einträge';
+		return '[School] Einträge Box';
 	}
 	
 	public function get_icon() {
@@ -36,9 +36,6 @@ class Elementor_Query extends Widget_Base {
            
         if ($query->have_posts()) : while($query->have_posts()) : $query->the_post();
 
-            /* Load teachers subjects */
-            $subjects = wp_get_post_terms( get_the_ID(), $subject_slug, array( 'fields' => 'names' ) );
-
             $entry = [];
             $entry[ 'id' ] = get_the_ID();
             $entry[ 'title' ] = get_the_title();
@@ -47,7 +44,25 @@ class Elementor_Query extends Widget_Base {
             $entry[ 'thumbnail' ] = strlen(get_the_post_thumbnail_url()) ? get_the_post_thumbnail_url() : 'https://placehold.it/360x200';
             $entry[ 'link' ] = get_permalink();
             if ($post_type === 'teacher') {
-                $entry[ 'subjects' ] = $subjects;
+                /* Load teachers subjects */
+                $subjects = wp_get_post_terms( get_the_ID(), 'subject-teacher', array('fields' => 'all'));
+                $entry[ 'categories' ] = $subjects;
+            }
+            if ($post_type === 'events') {
+                /* Load teachers subjects */
+                $event_cats = wp_get_post_terms( get_the_ID(), 'categories-events', array('fields' => 'all'));
+                $entry[ 'categories' ] = $event_cats;
+            }
+            if ($post_type === 'downloads') {
+                /* Load teachers subjects */
+                $download_cats = wp_get_post_terms( get_the_ID(), 'categories-downloads', array('fields' => 'all'));
+                $entry[ 'categories' ] = $download_cats;
+            }
+            if ($post_type === 'post') {
+                /* Load teachers subjects */
+                $post_cats = get_categories();
+                $post_tags = wp_get_post_terms( get_the_ID(), 'post_tag', array('fields' => 'all'));
+                $entry[ 'categories' ] = $post_cats;
             }
 
             array_push($all_entries, $entry);
@@ -100,6 +115,8 @@ class Elementor_Query extends Widget_Base {
 					'post'  => __( 'Beiträge', 'plugin-domain' ),
 					'page' => __( 'Seiten', 'plugin-domain' ),
 					'teacher' => __( 'Lehrer', 'plugin-domain' ),
+					'events' => __( 'Events', 'plugin-domain' ),
+					'downloads' => __( 'Downloads', 'plugin-domain' ),
 				],
 			]
 		);
@@ -168,14 +185,14 @@ class Elementor_Query extends Widget_Base {
             <div class="row all-entries">
                 <?php foreach($all_entries as $entry) {
                     ?>
-                    <a href="<?php echo $entry[ 'link' ]; ?>" class="entry-box col-12 col-sm-6 col-md-4" target="_self">
+                    <a href="<?php echo $entry[ 'link' ]; ?>" class="entry-box col-12 col-sm-12 col-md-4" target="_self">
                         <img class="entry-image" src="<?php echo $entry[ 'thumbnail' ]; ?>" alt="<?php echo $entry[ 'content' ];?> - Bild des <?php echo $post_type; ?>s">
                         <div class="meta-box" aria-hidden="false">
                             <h2 class="title"><?php echo $entry[ 'title' ]; ?></h2>
                             <div class="content">
-                            <?php foreach($entry[ 'subjects' ] as $subject) {
+                            <?php foreach($entry[ 'categories' ] as $categorie) {
                                 ?>
-                                    <p class="content-single"><?php echo $subject; ?></p>
+                                    <p class="content-single"><?php echo $categorie->name; ?></p>
                                 <?php
                             } ?>
                             </div>

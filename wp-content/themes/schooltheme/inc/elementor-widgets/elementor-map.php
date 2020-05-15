@@ -92,7 +92,7 @@ class Elementor_Map extends Widget_Base {
 
         <section class="section map--section w-100 container-fluid">
             <div class="row">
-                <h1 class="section-headline col-12"><?php echo $headline; ?></h1>
+                <h1 class="widget-headline col-12"><?php echo $headline; ?></h1>
             </div>
             <div class="row">
                 <div class="map-container js--map-container col-12">

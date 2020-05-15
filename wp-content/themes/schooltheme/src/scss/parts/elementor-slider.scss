@@ -1,10 +1,12 @@
 .slider--section {
-    padding: 30px 15px;
+    padding: 30px 0px;
+    margin-bottom: 30px;
     .row {
         .widget-headline {
             margin-bottom: 30px;
             width: 100%;
             text-align: center;
+            justify-content: center;
         }
         .slider-container {
             padding: 15px 0;
@@ -42,14 +44,14 @@
 
                 .slick-prev {
                     z-index: 2;
-                    margin-left: 125px;
+                    margin-left: 105px;
                     &::before {
                         font-size: 50px;
                         opacity: .9;
                         border-radius: 50%;
                     }
                     @include media('<=767px') {
-                        margin-left: 15px;
+                        margin-left: 30px;
                     }
                 }
 
@@ -62,7 +64,7 @@
                         border-radius: 50%;
                     }
                     @include media('<=767px') {
-                        margin-right: 30px;
+                        margin-right: 60px;
                     }
                 }
             }

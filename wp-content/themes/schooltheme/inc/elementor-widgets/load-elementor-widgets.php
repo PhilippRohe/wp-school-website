@@ -19,7 +19,7 @@ if ( in_array( $plugin , $pluginList ) ) {
     
         protected function __construct() {
             require_once('elementor-intro.php');
-            require_once('elementor-latest-news.php');
+            require_once('elementor-last.php');
             require_once('elementor-testimonials.php');
             require_once('elementor-query.php');
             require_once('elementor-downloads.php');
@@ -31,7 +31,7 @@ if ( in_array( $plugin , $pluginList ) ) {
     
         public function register_widgets() {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Intro() );
-            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Latest_News() );
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Latest_Widget() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Query() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Downloads() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Wysiwyg() );
