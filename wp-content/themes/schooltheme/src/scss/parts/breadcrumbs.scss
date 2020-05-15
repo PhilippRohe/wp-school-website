@@ -1,11 +1,18 @@
 .bc--breadcrumbs {
     display: flex;
-    height: 30px;
+    height: auto;
+    min-height: 30px;
     background: $topmenu-background;
     .bc--breadcrumbs-navigation {
         align-self: center;
         display: flex;
         flex-direction: row;
+        p {
+            margin: 0;
+            text-decoration: none;
+            color: $white;
+            font-size: 16px;
+        }
         a {
             transition: all .3s ease-in-out;
             text-decoration: none;

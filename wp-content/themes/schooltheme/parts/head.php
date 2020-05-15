@@ -44,12 +44,12 @@ $is_single = (is_single()) ? ' single-page' : '';
     </div>
 
     <div class="bc--navigation row" style="background-image:url('<?php echo $header_background_image; ?>')">
-        <div class="left col-12 col-md-4">
+        <div class="left col-6 col-md-6 col-lg-3 col-xl-4">
             <a href="<?php echo get_home_url(); ?>">
-                <img width="300px" height="100px" class="school-logo" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
+                <img width="300px" height="100px" class="school-logo w-100" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
             </a>
         </div>
-        <div class="right col-12 col-md-8">
+        <div class="right col-12 col-lg-9 col-xl-8">
             <nav class="navigation" role="navigation">
                 <div class="big-navigation" aria-hidden="false">
                     <?php
@@ -62,23 +62,6 @@ $is_single = (is_single()) ? ' single-page' : '';
                         );
                         wp_nav_menu($header_menu_array);
                     ?>
-                </div>
-                <div class="small-navigation" role="navigation" aria-hidden="true">
-                    <?php
-                        $header_menu_array = array(
-                            'theme_location' => 'main',
-                            'menu_class' => 'main-menu',
-                            'menu_id' => 'main-menu',
-                            'depth' => 2,
-                            'walker' => new top_walker_menu(),
-                        );
-                        wp_nav_menu($header_menu_array);
-                    ?>
-                    <div class="meta-nav">
-                        <a href="tel:<?php echo $phone; ?>" class="box box-phone"><span class="logo phone-logo icon-phone"></span></a>
-                        <a href="mailto:<?php echo $email; ?>" class="box box-mail"><span class="logo mail-logo icon-mail"></span></a>
-                        <a href="<?php echo $map; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
-                    </div>
                 </div>
             </nav>
         </div>
@@ -128,6 +111,25 @@ $is_single = (is_single()) ? ' single-page' : '';
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+
+
+    <div class="small-navigation" role="navigation" aria-hidden="true">       
+        <?php
+            $header_menu_array = array(
+                'theme_location' => 'main',
+                'menu_class' => 'main-menu',
+                'menu_id' => 'main-menu',
+                'depth' => 2,
+                'walker' => new top_walker_menu(),
+            );
+            wp_nav_menu($header_menu_array);
+        ?>
+        <div class="meta-nav">
+            <a href="tel:<?php echo $phone; ?>" class="box box-phone"><span class="logo phone-logo icon-phone"></span></a>
+            <a href="mailto:<?php echo $email; ?>" class="box box-mail"><span class="logo mail-logo icon-mail"></span></a>
+            <a href="<?php echo $map; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
         </div>
     </div>
 

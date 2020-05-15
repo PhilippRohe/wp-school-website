@@ -19,7 +19,7 @@
     
     <article class="post-single container-fluid">
         <div class="post-head row">
-            <div class="head-left col-8">
+            <div class="head-left col-12 col-lg-6">
                 <h1 class="article-headline"><?php echo $article[ 'name' ];?></h1>
                 <div class="post-meta-data">
                     <p class="date">Erstellt am <b><?php echo $article[ 'date' ]; ?></b></p>
@@ -50,8 +50,8 @@
                     </div>
                 </div>
             </div>
-            <div class="head-right col-4">
-                <img class="post-image" src="<?php echo $article[ 'thumbnail' ]; ?>" alt="<?php echo $article[ 'alt' ]; ?>">
+            <div class="head-right col-12 col-lg-6">
+                <img class="post-image w-100" src="<?php echo $article[ 'thumbnail' ]; ?>" alt="<?php echo $article[ 'alt' ]; ?>">
             </div>
         </div>
         <div class="content row">

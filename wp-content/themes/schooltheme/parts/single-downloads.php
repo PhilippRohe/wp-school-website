@@ -18,7 +18,7 @@
     
     <article class="post-single container-fluid">
         <div class="post-head row">
-            <div class="head-left col-8">
+            <div class="head-left col-12 col-lg-6">
                 <h1 class="article-headline"><?php echo $article[ 'name' ];?></h1>
                 <div class="post-meta-data">
                     <p class="date">Erstellt am <b><?php echo $article[ 'date' ]; ?></b></p>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="head-right col-4">
+            <div class="head-right col-12 col-lg-6">
                 <span class="download-icon icon-download"></span>
             </div>
         </div>

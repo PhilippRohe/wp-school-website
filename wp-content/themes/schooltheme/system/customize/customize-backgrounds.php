@@ -93,6 +93,7 @@ function customizer_output_background() {
              .bc--breadcrumbs { background: <?php echo get_theme_mod( $prefix . 'breadcrumbs_background', '#3d3d3d'); ?>; }
             body .bc--main { background: <?php echo get_theme_mod( $prefix . 'main_background', '#fff'); ?>; }
              .footer-main { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
+             .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
          </style>
     <?php
 }

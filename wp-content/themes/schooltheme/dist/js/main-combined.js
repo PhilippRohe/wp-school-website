@@ -78,6 +78,23 @@ jQuery(document).ready(function($) {
             dots: true,
             arrows: true,
             centerMode: true,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                  },
+              ]
         });
     }
 

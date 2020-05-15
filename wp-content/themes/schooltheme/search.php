@@ -82,7 +82,7 @@
                     }
                     ?>
                     <a href="<?php echo $link; ?>">
-                        <button class="post-link-button btn btn-success">Ansehen</button>
+                        <button class="post-link-button btn">Ansehen</button>
                     </a>
                 </div>
             </div>

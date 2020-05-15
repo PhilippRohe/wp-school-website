@@ -1,4 +1,5 @@
 .footer-main {
+    overflow-x: hidden;
     background: $footer-background;
     .row {
         .footer-content {
@@ -142,12 +143,13 @@
                     }
                 }
             }
-            @include media('<=767px') {
+            @include media('<=991px') {
                 transform: scale(.75);
                 .row {
                     flex-direction: column-reverse;
                     .left-copy {
                         margin-bottom: 10px;
+                        text-align: center;
                     }
                     .right-copy {
                         margin-bottom: 10px;

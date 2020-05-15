@@ -22,7 +22,7 @@ class bc_last_posts extends WP_Widget {
         return $all_types;
     }
 
-    public function get_all_posts_from_post_type($type, $number) {
+    public function get_all_posts_from_post_type($type, $number, $sort) {
 
         $result = array();
 
@@ -30,7 +30,7 @@ class bc_last_posts extends WP_Widget {
             'post_type' => $type,
             'post_status' => 'publish',
             'posts_per_page' => $number,
-            'orderby' => 'title',
+            'orderby' => $sort,
             'order' => 'ASC'
         );
 
@@ -68,12 +68,13 @@ class bc_last_posts extends WP_Widget {
         $title = apply_filters( 'widget_title', $instance['title'] );
         $post_type = apply_filters( 'widget_post_type', $instance['post_type'] );
         $number = apply_filters( 'widget_number', $instance['number'] );
+        $sort = apply_filters( 'widget_number', $instance['sort'] );
         
         // before and after widget arguments are defined by themes
         echo $args['before_widget'];
         
         // This is where you run the code and display the output
-        $posts = $this->get_all_posts_from_post_type($post_type, $number);
+        $posts = $this->get_all_posts_from_post_type($post_type, $number, $sort);
         ?>
         <section class="bc-footer--last-posts">
             <?php if ( ! empty( $title ) ) echo $args['before_title'] . $title . $args['after_title']; ?>
@@ -118,7 +119,7 @@ class bc_last_posts extends WP_Widget {
             $title = $instance[ 'title' ];
         }
         else {
-            $title = __( 'Put your title here', 'wpb_widget_domain' );
+            $title = __( 'Titel hier einfügen' );
         }
 
         // Set post type
@@ -137,8 +138,20 @@ class bc_last_posts extends WP_Widget {
             $number = 5;
         }
 
-        $post_types = $this->get_all_post_types();
+        // Set sort
+        if ( isset( $instance[ 'sort' ] ) ) {
+            $sort = $instance[ 'sort' ];
+        }
+        else {
+            $sort = __( 'Sortierung wählen' );
+        }
 
+        $post_types = $this->get_all_post_types();
+        $sort_list = array(
+            'title' => 'Titel',
+            'date' => 'Datum',
+            'rand' => 'Zufall',
+        );
         // Widget admin form output
         ?>
         <p>
@@ -148,7 +161,7 @@ class bc_last_posts extends WP_Widget {
 
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Choose Post Type:' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'post_type' ); ?>"><?php _e( 'Post Type wählen:' ); ?></label>
             <select class="widefat" name="<?php echo $this->get_field_name( 'post_type' ); ?>" id="<?php echo $this->get_field_id( 'post_type' ); ?>"> <?php
             foreach ($post_types as $type) {
                 ?>
@@ -166,6 +179,21 @@ class bc_last_posts extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number:' ); ?></label>
             <input min="1" max="10" class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" value="<?php echo esc_attr( $number ); ?>" />
         </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id( 'sort' ); ?>"><?php _e( 'Sortierung wählen:' ); ?></label>
+            <select class="widefat" name="<?php echo $this->get_field_name( 'sort' ); ?>" id="<?php echo $this->get_field_id( 'sort' ); ?>"> <?php
+            foreach ($sort_list as $key => $sorting) {
+                ?>
+                <?php if ($key === $sort) {
+                    ?> <option selected value="<?php echo $key; ?>"><?php echo $sorting; ?></option> <?php
+                } else {
+                    ?> <option value="<?php echo $key; ?>"><?php echo $sorting; ?></option> <?php
+                } ?>
+                <?php
+            } ?>
+            </select>
+        </p>
         <?php 
     }
         
@@ -175,6 +203,7 @@ class bc_last_posts extends WP_Widget {
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['post_type'] = ( ! empty( $new_instance['post_type'] ) ) ? strip_tags( $new_instance['post_type'] ) : '';
         $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
+        $instance['sort'] = ( ! empty( $new_instance['sort'] ) ) ? strip_tags( $new_instance['sort'] ) : '';
         return $instance;
     }
 }

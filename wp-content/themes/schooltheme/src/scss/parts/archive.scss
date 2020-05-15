@@ -12,6 +12,8 @@
                     border-radius: 5px;
                     color: #fff;
                     font-weight: 900;
+                    min-width: 25px;
+                    margin-left: 15px;
                 }
             }
             article {
@@ -114,11 +116,16 @@
                     }
 
                     &:hover, &.active {
-                        background: $hover-color;
+                        background: $topmenu-background;
                         a {
                             color: $white;
                         }
                     }
+                }
+            }
+            @include media('<=375px') {
+                h1 {
+                    font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (575 - 320)));
                 }
             }
         }

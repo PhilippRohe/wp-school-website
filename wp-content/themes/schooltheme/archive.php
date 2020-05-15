@@ -6,9 +6,16 @@
             <h1>
                 <?php
                     $term = get_queried_object();
-                    $word = ($term->label) ? $term->label : '';
-                    $word = ($word == '') ? $term->name : '';
-                    $word = ($word == '') ? $term->label : '';
+                    $word = $term->label;
+                    if ($word == '') {
+                        $word = $term->name;
+                    }
+                    if ($word == '') {
+                        $word = $term->label;
+                    }
+                    if ($word == '') {
+                        $word = $term->cat_name;
+                    }
                     if ( is_day() ) :
                         printf( __( 'Tagesarchiv: %s' ), get_the_date() );
                     elseif ( is_month() ) :

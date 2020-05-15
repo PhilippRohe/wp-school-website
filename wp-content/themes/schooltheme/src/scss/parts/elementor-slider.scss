@@ -48,6 +48,9 @@
                         opacity: .9;
                         border-radius: 50%;
                     }
+                    @include media('<=767px') {
+                        margin-left: 15px;
+                    }
                 }
 
                 .slick-next {
@@ -57,6 +60,9 @@
                         font-size: 50px;
                         opacity: .9;
                         border-radius: 50%;
+                    }
+                    @include media('<=767px') {
+                        margin-right: 30px;
                     }
                 }
             }

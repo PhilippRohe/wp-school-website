@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="page-container container-fluid">
+    <div class="page-container front-page container-fluid">
         <?php
         if (have_posts()) : while (have_posts()) : the_post();
             ?>

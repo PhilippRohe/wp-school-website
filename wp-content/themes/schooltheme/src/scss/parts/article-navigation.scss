@@ -1,5 +1,4 @@
 .article-navigation {
-    border-top: 1px solid #888;
     padding: 30px 30px;
     .row {
         .article-navigation-headline {
@@ -42,7 +41,7 @@
                         }
                     }
                     &:hover {
-                        background: $hover-color;
+                        opacity: .75;
                         a {
                             color: $white;
                         }
@@ -71,10 +70,18 @@
                         }
                     }
                     &:hover {
-                        background: $hover-color;
+                        opacity: .75;
                         a {
                             color: $white;
                         }
+                    }
+                }
+                @include media('<=1199px') {
+                    max-width: unset;
+                    width: 100%;
+                    .nav-previous, .nav-next {
+                        max-width: unset;
+                        width: 100%;
                     }
                 }
             }

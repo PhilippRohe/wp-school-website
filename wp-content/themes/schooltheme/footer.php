@@ -25,7 +25,7 @@ if ( $count_footer > 0 ) {
 } else {
     $col_number = $col_number / 1;
 }
-$column_size = "col-md-" . $col_number;
+$column_size = "col-lg-" . $col_number;
 ?>
 
         </main> <!-- END OF MAIN -->
@@ -38,28 +38,28 @@ $column_size = "col-md-" . $col_number;
                     <div class="footer-widgets row"  role="complementary">
                         <!-- Check for Footer Widgets 1 -->
                         <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
-                            <aside class="footer-col footer-level-one footer-widget-column widget-area col-12 <?php echo $column_size; ?>">
+                            <aside class="footer-col footer-level-one footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?> ">
                                 <?php dynamic_sidebar( 'footer-one' ); ?>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 2 -->
                         <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
-                            <aside class="footer-col footer-level-two footer-widget-column widget-area col-12 <?php echo $column_size; ?>">
+                            <aside class="footer-col footer-level-two footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
                                 <?php dynamic_sidebar( 'footer-two' ); ?>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 3 -->
                         <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
-                            <aside class="footer-col footer-level-three footer-widget-column widget-area col-12 <?php echo $column_size; ?>">
+                            <aside class="footer-col footer-level-three footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
                                 <?php dynamic_sidebar( 'footer-three' ); ?>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 4 -->
                         <?php if ( is_active_sidebar( 'footer-four' ) ) : ?>
-                            <aside class="footer-col footer-level-four footer-widget-column widget-area col-12 <?php echo $column_size; ?>">
+                            <aside class="footer-col footer-level-four footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
                                 <?php dynamic_sidebar( 'footer-four' ); ?>
                             </aside>
                         <?php endif; ?>
@@ -68,8 +68,8 @@ $column_size = "col-md-" . $col_number;
 
                 <div class="footer-copyright container">
                     <div class="row">
-                        <div class="left-copy col-12 col-sm-6"><?php echo $footer_text; ?> - Theme made for Schools | <?php echo date("Y"); ?> &copy;</div>
-                        <div class="right-copy col-12 col-sm-6">
+                        <div class="left-copy col-12 col-lg-6"><?php echo $footer_text; ?> - Theme made for Schools | <?php echo date("Y"); ?> &copy;</div>
+                        <div class="right-copy col-12 col-lg-6">
                         <?php
                             wp_nav_menu( array(
                                 'theme_location'  => 'footer',

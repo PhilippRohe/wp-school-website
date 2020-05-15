@@ -4,7 +4,7 @@
     <?php
         /* Get all datas */
         $subjects_slug = 'subject-teacher';
-        $subjects = wp_get_post_terms( get_the_ID(), $subjects_slug, array( 'fields' => 'names' ) );
+        $subjects = wp_get_post_terms( get_the_ID(), $subjects_slug, array( 'fields' => 'all' ) );
         $image_alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
 
         /* Save teacher data here */
@@ -22,18 +22,19 @@
     <article class="teacher-single container-fluid">
         <h1 class="article-headline row"><?php echo $teacher[ 'name' ];?></h1>
         <div class="content row">
-            <div class="content-left col-5">
-                <img class="teacher-image" src="<?php echo $teacher[ 'thumbnail' ]; ?>" alt="<?php echo $teacher[ 'alt' ]; ?>">
+            <div class="content-left col-12 col-lg-5">
+                <img class="teacher-image w-100" src="<?php echo $teacher[ 'thumbnail' ]; ?>" alt="<?php echo $teacher[ 'alt' ]; ?>">
                 <h2 class="teacher-name"><?php echo $teacher[ 'name' ]; ?></h2>
                 <ul class="subject-list">
                 <?php foreach($teacher[ 'subjects' ] as $subject) {
+                    $link = get_category_link($subject);
                     ?>
-                    <li><?php echo $subject; ?></li>
+                    <a href="<?php echo $link; ?>"><li><?php echo $subject->name; ?></li></a>
                     <?php
                 } ?>
                 </ul>
             </div>
-            <div class="content-right col-12">
+            <div class="content-right col-12 col-lg-12">
                 <p class="content-text"><?php echo $teacher[ 'content' ]; ?></p>
             </div>
         </div>

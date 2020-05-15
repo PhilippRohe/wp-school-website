@@ -44,6 +44,15 @@
 
         form {
             p {
+                input {
+                    border: 1px solid #b9b9b9;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px 0 #aaa;
+                    margin-right: 10px;
+                    @include media('<=767px') {
+                        width: 100%;
+                    }
+                }
                 a {
                     font-weight: 700;
                     color: $hover-color;

@@ -6,12 +6,7 @@ function schooltheme_customize_register_highlight( $wp_customize ) {
 
     /* Add the settings here */
     $wp_customize->add_setting( $prefix . 'highlight_background' , array(
-        'default'   => '#fff',
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_setting( $prefix . 'highlight_contrast' , array(
-        'default'   => '#fff',
+        'default'   => '#4dcc82',
         'transport' => 'refresh',
     ));
 
@@ -28,12 +23,6 @@ function schooltheme_customize_register_highlight( $wp_customize ) {
         'section'    => $prefix . 'schooltheme_section_highlight',
         'settings'   => $prefix . 'highlight_background',
     )));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_contrast', array(
-        'label'      => __( 'Highlight-Farbe Kontrastfarbe', 'schooltheme' ),
-        'section'    => $prefix . 'schooltheme_section_highlight',
-        'settings'   => $prefix . 'highlight_contrast',
-    )));
 }
 
 add_action( 'customize_register', 'schooltheme_customize_register_highlight' );
@@ -46,7 +35,44 @@ function customizer_output_highlight() {
     /* The custom CSS */
     ?>
          <style type="text/css">
-             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li .subitem-link { color: <?php echo get_theme_mod( $prefix . 'navigation_color', '#fff'); ?>; }
+            .bc--header .bc--topmenu .left .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--topmenu .right .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-search--form .search-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-search--form .search-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .corner-container { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-phone .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-address .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-mail .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .top-arrow-container:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--topmenu .right .top-menu ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--last-posts .bc-footer--post:hover .bc--foter-post-right h3 { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .action-boxes .row .box:hover .right-box i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            ::selection { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .a, .footer-main .row .footer-content .footer-widgets .footer-col .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .footer-main .row .footer-copyright .row .right-copy .footer-menu .menu li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .small-navigation .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .action-boxes .row .box:hover .left-box p:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-address:hover address a span:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-mail:hover a p { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc-footer--company .company-widget--body .company-phone:hover a p { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .small-navigation .menu-hauptmenue-container ul li:hover a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--breadcrumbs .bc--breadcrumbs-navigation a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .comment-container .row form p .comment-send-button:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .post-single .post-head .head-right .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .teacher-single .content .content-left .subject-list li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .container--search-results .container--search-results-head h1 b { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .archive-container .row .archive--inner h1 b { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .archive-container .row .archive--inner article .post-inner a .view-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .small-navigation .menu-hauptmenue-container ul li.open a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .comment-container .row .comments-headline span { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .container--search-results .container--search-results-body .search--results-content .search--results-single .box-body a .post-link-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .teacher-single .content .content-left .subject-list a:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            
          </style>
     <?php
 }

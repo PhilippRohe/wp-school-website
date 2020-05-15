@@ -5,6 +5,7 @@ body {
     .bc--main {
         padding: 0;
         margin: 0 auto;
+        overflow-x: hidden;
     }
     &:not(.elementor-page) {
         .bc--main {
@@ -15,6 +16,12 @@ body {
                 box-shadow: 0 0 4px 0 #aaa;
             }
         }
+    }
+}
+
+@include media('<=767px') {
+    .container {
+        max-width: 100%;
     }
 }
 
@@ -76,8 +83,8 @@ input:-webkit-autofill:active  {
     box-shadow: 0 0 3px 0 $white;
     cursor: pointer;
     position: fixed;
-    right: 2%;
-    bottom: 2%;
+    right: 4%;
+    bottom: 4%;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -93,7 +100,7 @@ input:-webkit-autofill:active  {
         transform: rotate(180deg);
         color: white;
         text-align: center;
-        margin-bottom: 7px;
+        margin-bottom: 8px;
     }
     &:hover {
         background: $hover-color;
@@ -106,6 +113,7 @@ input:-webkit-autofill:active  {
 
 /* The corner container */
 .corner-container {
+    z-index: 1000;
     transition: all .3s ease-in-out;
     max-height: 45px;
     max-width: 45px;
