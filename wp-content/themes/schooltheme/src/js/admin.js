@@ -1,11 +1,18 @@
 /* Admin JavaScript file */
 jQuery(document).ready(function($) {
     $(document).ready(function($) {
+        delete_admin_image();
         color_picker();
         media_opener();
         admin_settings_media_picker();
         console.log('%cLoad and initialize admin file', 'background: black; color: red; font-size: 24px; padding: 5px;', 'admin.js');
     });
+
+    function delete_admin_image() {
+        $('.js--delete-admin-image').on('click', function() {
+            $(this).siblings().find('input[type~="hidden"]').val('');
+        });
+    }
 
     function color_picker() {
         if ( jQuery.isFunction( jQuery.fn.wpColorPicker ) ) {
@@ -33,6 +40,7 @@ jQuery(document).ready(function($) {
             mediaUploader.on('select', function() {
                 attachment = mediaUploader.state().get('selection').first().toJSON();
                 input_field.siblings('input').val(attachment.url);
+                input_field.siblings('img').attr('src', attachment.url);
             });
     
             mediaUploader.open();

@@ -2,7 +2,6 @@
 jQuery(document).ready(function($) {
 
     $(document).ready(function($) {
-        custom_function();
         mobile_menu();
         active_search_box();
         to_top_arrow(300);
@@ -11,10 +10,6 @@ jQuery(document).ready(function($) {
         init_single_view_slick();
         console.log('%cLoaded and initialized JavaScript file', 'background: black; color: lightgreen; font-size: 24px; padding: 5px;', 'main.js');
     });
-
-
-    let custom_function = function() {
-    }
     
     /* Handle the mobile hamburger menu */
     let mobile_menu = function() {

@@ -54,6 +54,7 @@ function main_theme_options_render_logo() {
     echo '<input type="button" class="button-primary admin_upload_menu_logo" value="Upload Menu Image" id="admin_upload_menu_logo">
     <input class="bc-menu-logo-input" type="hidden" name="bc_menu_logo" value="' . $menu_logo . '" />';
     echo '</div>';
+    echo '<input type="submit" class="button js--delete-admin-image" value="Bild entfernen" />';
 }
 
 function main_theme_options_enable_breadcrumbs() {

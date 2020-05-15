@@ -65,6 +65,7 @@ function style_theme_options_header_background() {
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_header_background" value="<?php echo $header_background_image; ?>" />
     </div>
+    <input type="submit" class="button js--delete-admin-image" value="Bild entfernen" />
     <?php
 }
 
@@ -104,6 +105,7 @@ function style_theme_options_login_background() {
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_background" value="<?php echo $login_background; ?>" />
     </div>
+    <input type="submit" class="button js--delete-admin-image" value="Bild entfernen" />
     <?php
 }
 
@@ -118,5 +120,6 @@ function style_theme_options_login_image() {
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_image" value="<?php echo $login_image; ?>" />
     </div>
+    <input type="submit" class="button js--delete-admin-image" value="Bild entfernen" />
     <?php
 }
