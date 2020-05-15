@@ -46,6 +46,9 @@ function main_theme_main_options_render() {
 
 function main_theme_options_render_logo() {
     $menu_logo = esc_attr(get_option( 'bc_menu_logo' ));
+    if ($menu_logo == '') {
+        $menu_logo = get_template_directory_uri() . '/dist/img/placeholder.png';
+    }
     echo '<div class="bc-admin--logo-section" style="display: flex; flex-direction: column; max-width:384px;">';
     echo '<img style="object-fit: contain;" width="384" height="216" src="' . $menu_logo . '">';
     echo '<input type="button" class="button-primary admin_upload_menu_logo" value="Upload Menu Image" id="admin_upload_menu_logo">
@@ -66,7 +69,7 @@ function main_theme_options_enable_breadcrumbs() {
 function main_theme_options_render_font_awesome() {
     $font_awesome_code = esc_attr(get_option( 'bc_enable_font_awesome' ));
     ?>
-    <input style="width: 100%;" style="width: 500px;" type="text" placeholder="Your Font Awesome Code" name="bc_enable_font_awesome" value="<?php echo $font_awesome_code; ?>" />
+    <input style="width: 100%;" style="width: 500px;" type="text" placeholder="Ihr Font Awesome Code" name="bc_enable_font_awesome" value="<?php echo $font_awesome_code; ?>" />
     <p>Zur Nutzung vieler Icons Registrierung auf fontawesome.com, dann Code hier eintragen (zum Beispiel: https://kit.fontawesome.com/<b style="color: red;"><u>xxxxxxxxxx</u></b>.js | Nur den Teil: xxxxxxxxxx schreiben), um die Icons sehen zu können</p>
     <?php
 }

@@ -56,6 +56,9 @@ function style_theme_main_options_render_login() {
 
 function style_theme_options_header_background() {
     $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
+    if ($header_background_image == '') {
+        $header_background_image = get_template_directory_uri() . '/dist/img/placeholder.png';
+    }
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
         <img style="object-fit: contain;" width="384" height="216" src="<?php echo $header_background_image; ?>">
@@ -92,6 +95,9 @@ function style_theme_options_login_color() {
 
 function style_theme_options_login_background() {
     $login_background = esc_attr(get_option( 'style_settings_login_background' ));
+    if ($login_background == '') {
+        $login_background = get_template_directory_uri() . '/dist/img/placeholder.png';
+    }
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
         <img style="object-fit: contain;" width="384" height="216" src="<?php echo $login_background; ?>">
@@ -103,6 +109,9 @@ function style_theme_options_login_background() {
 
 function style_theme_options_login_image() {
     $login_image = esc_attr(get_option( 'style_settings_login_image' ));
+    if ($login_image == '') {
+        $login_image = get_template_directory_uri() . '/dist/img/placeholder.png';
+    }
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
         <img style="object-fit: contain;" width="384" height="216" src="<?php echo $login_image; ?>">
