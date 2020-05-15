@@ -14,8 +14,8 @@ $map = esc_attr(get_option( 'contact_settings_map' ));
 <div class="corner-container js--sidecontainer">
     <span class="corner-container-toggle icon-info-circle"></span>
     <ul class="sidecontainer-list">
-        <a class="corner-container-link" href="tel:<?php echo $phone; ?>"><li><span class="icon-phone"></span></li></a>
-        <a class="corner-container-link" href="mailto:<?php echo $mail; ?>"><li><span class="icon-mail"></span></li></a>
-        <a class="corner-container-link" href="<?php echo $map; ?>"><li><span class="icon-map"></span></li></a>
+        <li><a class="corner-container-link" href="tel:<?php echo $phone; ?>"><span class="icon-phone"></span></a></li>
+        <li><a class="corner-container-link" href="mailto:<?php echo $mail; ?>"><span class="icon-mail"></span></a></li>
+        <li><a class="corner-container-link" href="<?php echo $map; ?>"><span class="icon-map"></span></a></li>
     </ul>
 </div>

@@ -6,104 +6,107 @@
             padding: 50px 0;
             .footer-widgets {
                 .footer-col {
-                    .widget {
-                        padding: 15px 0;
-                        list-style: none;
-                        .widgettitle {
-                            color: $white;
-                            font-weight: 800;
-                        }
-                        ul {
+                    ul {
+                        padding: 0;
+                        .widget {
+                            padding: 15px 0;
                             list-style: none;
-                            margin: 0;
-                            padding: 0;
-                            li {
-                                transition: all .3s ease-in-out;
-                                padding: 5px 0;
-                                padding-left: 5px;
-                                border-bottom: 1px solid grey;
+                            .widgettitle {
                                 color: $white;
-                                a {
-                                    width: 100%;
+                                font-weight: 800;
+                            }
+                            ul {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                                li {
+                                    transition: all .3s ease-in-out;
+                                    padding: 5px 0;
+                                    padding-left: 5px;
+                                    border-bottom: 1px solid grey;
                                     color: $white;
-                                    text-decoration: none;
-                                }
-                                .sub-menu {
-                                    background: $footer-background;
-                                    padding-left: 15px;
-                                    li {
-                                        border: unset;
-                                        a {
-                                            width: 100%;
-                                            transition: all .3s ease-in-out;
-                                            color: $white;
-                                        }
-                                        &:hover {
-                                            background: $hover-color;
+                                    a {
+                                        width: 100%;
+                                        color: $white;
+                                        text-decoration: none;
+                                    }
+                                    .sub-menu {
+                                        background: $footer-background;
+                                        padding-left: 15px;
+                                        li {
+                                            border: unset;
                                             a {
-                                                color: $white !important;
+                                                width: 100%;
+                                                transition: all .3s ease-in-out;
+                                                color: $white;
+                                            }
+                                            &:hover {
+                                                background: $hover-color;
+                                                a {
+                                                    color: $white !important;
+                                                }
                                             }
                                         }
                                     }
+                                    &:hover {
+                                        background-color: $hover-color;
+                                        a {
+                                            color: $white;
+                                        }
+                                        .sub-menu {
+                                            li {
+                                                a {
+                                                    color: $white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:last-child {
+                                        border: unset;
+                                    }
+                                    &:first-child {
+                                        border-bottom: 1px solid grey;
+                                    }
+                                    &.menu-item-has-children {
+                                        padding: 5px 0 0 0;
+                                    }
                                 }
-                                &:hover {
-                                    background-color: $hover-color;
-                                    a {
+                            }
+                            form {
+                                label {
+                                    display: none;
+                                }
+                                select {
+                                    width: 100%;
+                                    padding: 5px;
+                                    border-radius: 10px;
+                                    option {
+                                        background-color: $footer-background;
                                         color: $white;
                                     }
-                                    .sub-menu {
-                                        li {
-                                            a {
+                                }
+                            }
+                            .calendar_wrap {
+                                width: 100%;
+                                table {
+                                    width: 100%;
+                                    caption {
+                                        color: $white;
+                                    }
+                                    thead {
+                                        tr {
+                                            th {
                                                 color: $white;
                                             }
                                         }
                                     }
-                                }
-                                &:last-child {
-                                    border: unset;
-                                }
-                                &:first-child {
-                                    border-bottom: 1px solid grey;
-                                }
-                                &.menu-item-has-children {
-                                    padding: 5px 0 0 0;
-                                }
-                            }
-                        }
-                        form {
-                            label {
-                                display: none;
-                            }
-                            select {
-                                width: 100%;
-                                padding: 5px;
-                                border-radius: 10px;
-                                option {
-                                    background-color: $footer-background;
-                                    color: $white;
-                                }
-                            }
-                        }
-                        .calendar_wrap {
-                            width: 100%;
-                            table {
-                                width: 100%;
-                                caption {
-                                    color: $white;
-                                }
-                                thead {
-                                    tr {
-                                        th {
-                                            color: $white;
-                                        }
-                                    }
-                                }
-                                tbody, tfoot {
-                                    tr {
-                                        td {
-                                            color: $white;
-                                            a {
-                                                color: $hover-color;
+                                    tbody, tfoot {
+                                        tr {
+                                            td {
+                                                color: $white;
+                                                a {
+                                                    color: $hover-color;
+                                                }
                                             }
                                         }
                                     }
@@ -116,6 +119,7 @@
         }
     
         .footer-copyright {
+            margin-bottom: 15px;
             .row {
                 justify-content: space-between;
                 .left-copy {

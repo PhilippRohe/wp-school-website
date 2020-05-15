@@ -485,6 +485,7 @@
 
 
     .small-navigation {
+        display: none;
         opacity: 0;
         max-height: 0;
         height: 0;
@@ -602,6 +603,9 @@
             visibility: unset;
             height: auto;
             max-height: 1000px;
+        }
+        @include media('<=767px') {
+            display: flex;
         }
     }
 

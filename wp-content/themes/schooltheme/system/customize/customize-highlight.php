@@ -44,7 +44,7 @@ function customizer_output_highlight() {
             .bc-footer--company .company-widget--body .company-address .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--company .company-widget--body .company-mail .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .top-arrow-container:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--topmenu .right .top-menu ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--last-posts .bc-footer--post:hover .bc--foter-post-right h3 { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .action-boxes .row .box:hover .right-box i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
@@ -52,9 +52,9 @@ function customizer_output_highlight() {
             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             ::selection { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
-            .footer-main .row .footer-content .footer-widgets .footer-col .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-copyright .row .right-copy .footer-menu .menu li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
-            .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .small-navigation .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .action-boxes .row .box:hover .left-box p:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--company .company-widget--body .company-address:hover address a span:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }

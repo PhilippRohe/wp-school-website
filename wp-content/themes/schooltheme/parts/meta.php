@@ -1,6 +1,5 @@
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+<meta http-equiv="Content-Type" />
 <meta name="format-detection" content="telephone=yes">
 <!--[if lt IE 8]>Please update your browser to use this website<![endif]-->
 <!-- SEO Meta Tags -->
@@ -28,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="" />
 <meta property="og:site_name" content="WordPress School education Theme" />
-<meta property=“og:description“ content="WordPress School education Theme" />
+<meta property="og:description" content="WordPress School education Theme" />
 <!-- Twitter -->
 <meta name="twitter:card" content="WordPress School education Theme" />
 <meta name="twitter:title" content="WordPress School education Theme" />

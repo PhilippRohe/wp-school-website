@@ -25,12 +25,14 @@ if ( in_array( $plugin , $pluginList ) ) {
             require_once('elementor-downloads.php');
             require_once('elementor-wysiwyg.php');
             require_once('elementor-slider.php');
+            require_once('elementor-start-image.php');
             require_once('elementor-map.php');
             add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
         }
     
         public function register_widgets() {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Intro() );
+            \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Start_Image() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Latest_Widget() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Query() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor\Elementor_Downloads() );

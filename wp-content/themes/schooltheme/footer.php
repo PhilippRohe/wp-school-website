@@ -39,28 +39,36 @@ $column_size = "col-lg-" . $col_number;
                         <!-- Check for Footer Widgets 1 -->
                         <?php if ( is_active_sidebar( 'footer-one' ) ) : ?>
                             <aside class="footer-col footer-level-one footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?> ">
-                                <?php dynamic_sidebar( 'footer-one' ); ?>
+                                <ul class="footer-one-list">
+                                    <?php dynamic_sidebar( 'footer-one' ); ?>
+                                </ul>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 2 -->
                         <?php if ( is_active_sidebar( 'footer-two' ) ) : ?>
                             <aside class="footer-col footer-level-two footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
-                                <?php dynamic_sidebar( 'footer-two' ); ?>
+                                <ul class="footer-two-list">
+                                    <?php dynamic_sidebar( 'footer-two' ); ?>
+                                </ul>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 3 -->
                         <?php if ( is_active_sidebar( 'footer-three' ) ) : ?>
                             <aside class="footer-col footer-level-three footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
-                                <?php dynamic_sidebar( 'footer-three' ); ?>
+                            <ul class="footer-three-list">
+                                    <?php dynamic_sidebar( 'footer-three' ); ?>
+                                </ul>
                             </aside>
                         <?php endif; ?>
                         
                         <!-- Check for Footer Widgets 4 -->
                         <?php if ( is_active_sidebar( 'footer-four' ) ) : ?>
                             <aside class="footer-col footer-level-four footer-widget-column widget-area col-12 col-md-6 <?php echo $column_size; ?>">
-                                <?php dynamic_sidebar( 'footer-four' ); ?>
+                                <ul class="footer-four-list">
+                                    <?php dynamic_sidebar( 'footer-four' ); ?>
+                                </ul>
                             </aside>
                         <?php endif; ?>
                     </div>

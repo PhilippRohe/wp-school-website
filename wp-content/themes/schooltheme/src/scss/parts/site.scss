@@ -54,7 +54,7 @@ h3 {
 }
 
 /* Remove basic outline */
-.btn:focus, .btn, input, input:focus, select, select:focus, img:focus, img, textarea, textarea:focus, a, a:focus {
+.btn:focus, .btn, .btn:active, input, input:focus, input:active, select, select:focus, select:active, img:focus, img, img:active, textarea, textarea:focus, textarea:active, a, a:focus, a:active {
     outline-style:none;
     box-shadow:none;
     border-color:transparent;
@@ -145,13 +145,13 @@ input:-webkit-autofill:active  {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        a {
-            cursor: pointer;
-            text-decoration: none;
-            align-self: center;
-            color: $white;
-            width: 100%;
-            li {
+        li {
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                align-self: center;
+                color: $white;
+                width: 100%;
                 padding: 5px 0;
                 width: 100%;
                 display: flex;
@@ -160,9 +160,9 @@ input:-webkit-autofill:active  {
                     text-align: center;
                     font-size: 20px;
                 }
-            }
-            &:hover {
-                background: $topmenu-background;
+                &:hover {
+                    background: $topmenu-background;
+                }
             }
         }
     }

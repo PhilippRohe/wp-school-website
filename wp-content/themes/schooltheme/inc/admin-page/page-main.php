@@ -47,7 +47,7 @@ function main_theme_main_options_render() {
 function main_theme_options_render_logo() {
     $menu_logo = esc_attr(get_option( 'bc_menu_logo' ));
     echo '<div class="bc-admin--logo-section" style="display: flex; flex-direction: column; max-width:384px;">';
-    echo '<img style="object-fit: contain;" width="384px" height="216px" src="' . $menu_logo . '">';
+    echo '<img style="object-fit: contain;" width="384" height="216" src="' . $menu_logo . '">';
     echo '<input type="button" class="button-primary admin_upload_menu_logo" value="Upload Menu Image" id="admin_upload_menu_logo">
     <input class="bc-menu-logo-input" type="hidden" name="bc_menu_logo" value="' . $menu_logo . '" />';
     echo '</div>';

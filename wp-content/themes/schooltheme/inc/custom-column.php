@@ -31,7 +31,7 @@ function downloads_custom_column( $column, $post_id ) {
             echo $value;
             break;
         case 'icon':
-            echo '<a href="' . $value . '"><img width="25px" height="25px" src="' . $download_icon . '"></a>';
+            echo '<a href="' . $value . '"><img width="25" height="25" src="' . $download_icon . '"></a>';
             break;
     }
 }
@@ -89,7 +89,7 @@ function teacher_custom_column( $column, $post_id ) {
     $image = get_the_post_thumbnail_url( $post_id );
     switch($column) {
         case 'image':
-            echo '<img src="' . $image . '" width="75px" height="75px">';
+            echo '<img src="' . $image . '" width="75" height="75">';
             break;
     }
 }

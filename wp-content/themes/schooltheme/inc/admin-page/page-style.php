@@ -58,7 +58,7 @@ function style_theme_options_header_background() {
     $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
-        <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $header_background_image; ?>">
+        <img style="object-fit: contain;" width="384" height="216" src="<?php echo $header_background_image; ?>">
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_header_background" value="<?php echo $header_background_image; ?>" />
     </div>
@@ -94,7 +94,7 @@ function style_theme_options_login_background() {
     $login_background = esc_attr(get_option( 'style_settings_login_background' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
-        <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $login_background; ?>">
+        <img style="object-fit: contain;" width="384" height="216" src="<?php echo $login_background; ?>">
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_background" value="<?php echo $login_background; ?>" />
     </div>
@@ -105,7 +105,7 @@ function style_theme_options_login_image() {
     $login_image = esc_attr(get_option( 'style_settings_login_image' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
-        <img style="object-fit: contain;" width="384px" height="216px" src="<?php echo $login_image; ?>">
+        <img style="object-fit: contain;" width="384" height="216" src="<?php echo $login_image; ?>">
         <input type="button" class="button-primary admin_upload_menu_logo" value="Upload Background Image" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_login_image" value="<?php echo $login_image; ?>" />
     </div>
