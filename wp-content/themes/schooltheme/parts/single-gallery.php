@@ -56,6 +56,5 @@
                 } ?>
             </div>
         </div>
-        <?php the_content(); ?>
     </article>
 </div>

@@ -1,11 +1,14 @@
 <?php
 $slider_id = esc_attr(get_option( 'style_settings_header_slider' ));
 $images = load_images_from_slider($slider_id);
+$headline = get_post_meta($slider_id, '_gallery_headline_value', true);
+$text = ($headline == '') ? '' : '<h2 class="free-slider-text">' . esc_attr($headline) . '</h2>';
 ?>
 <!-- Top image carousel -->
 <div class="top-image-slider">
     <div id="topcarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            <?php echo $text; ?>
             <?php foreach($images as $key => $image) {
                 ?>
                 <div class="carousel-item<?php if ($key === 0) { echo ' active'; } ?>">

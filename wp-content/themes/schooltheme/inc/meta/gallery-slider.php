@@ -16,6 +16,7 @@ function load_meta_boxes_gallery() {
          'normal',
          'high' 
      );
+     add_meta_box('gallery_headline_text', esc_html__( 'Gallery Headline' ), 'gallery_headline_function', 'gallery', 'normal', 'high');
  }
   
  /*
@@ -77,3 +78,47 @@ function load_meta_boxes_gallery() {
 
 add_action( 'load-post.php', 'load_meta_boxes_gallery' );
 add_action( 'load-post-new.php', 'load_meta_boxes_gallery' );
+
+
+
+
+/* Add the meta for a specific post type */
+
+/* Save the value from the fields */
+function save_meta_boxes_field_headline( $post_id ) {
+    if ( !isset($_POST['gallery_headline_nonce'] )) {
+        return;
+    }
+
+    if (!wp_verify_nonce($_POST['gallery_headline_nonce'], 'save_meta_boxes_fields')) {
+        return;
+    }
+
+    if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) {
+        return;
+    }  
+
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    if ( !isset($_POST['gallery_headline_field']) ) {
+        return;
+    }
+
+    $download_link = sanitize_text_field($_POST['gallery_headline_field']);
+
+    update_post_meta($post_id, '_gallery_headline_value', $download_link);
+}
+
+/* Function for download meta field */
+function gallery_headline_function( $post ) {
+    wp_nonce_field('save_meta_boxes_fields', 'gallery_headline_nonce');
+    $value = get_post_meta($post->ID, '_gallery_headline_value', true);
+    ?>
+    <p>Hier eine Headline eintragen, die über dem Slider stehen wird, wenn dieser im Header eingebunden wird:</p>
+    <input style="width: 100%;" type="text" name="gallery_headline_field" value="<?php echo esc_attr($value); ?>" />
+    <?php
+}
+
+add_action( 'save_post', 'save_meta_boxes_field_headline', 10, 2 );

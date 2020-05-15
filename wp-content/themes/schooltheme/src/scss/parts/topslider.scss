@@ -3,6 +3,28 @@
     height: 350px;
     .carousel {
         .carousel-inner {
+            display: flex;
+            justify-content: center;
+            .free-slider-text {
+                border-radius: 15px;
+                word-spacing: 30px;
+                max-width: 775px;
+                font-size: 60px;
+                text-transform: uppercase;
+                margin-top: 90px;
+                color: $white;
+                background: rgba(0, 0, 0, 0.35 );
+                width: fit-content;
+                padding: 10px;
+                align-self: center;
+                z-index: 10;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: 0;
+            }
             .carousel-item {
                 img {
                     height: 348px;

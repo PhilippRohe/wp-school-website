@@ -54,6 +54,5 @@
                 <p class="content-text"><?php echo $article[ 'content' ]; ?></p>
             </div>
         </div>
-        <?php the_content(); ?>
     </article>
 </div>

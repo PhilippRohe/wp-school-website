@@ -38,6 +38,5 @@
                 <p class="content-text"><?php echo $teacher[ 'content' ]; ?></p>
             </div>
         </div>
-        <?php the_content(); ?>
     </article>
 </div>

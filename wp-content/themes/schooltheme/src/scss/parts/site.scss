@@ -77,6 +77,18 @@ input:-webkit-autofill:active  {
 }
 
 
+/* Slick slider dots */
+.slick-dots {
+    > li {
+        button {
+            &::before {
+                font-size: 14px !important;
+            }
+        }
+    }
+}
+
+
 /* The to top arrow */
 .top-arrow-container {
     transition: all .3s ease-in-out;
