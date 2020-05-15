@@ -142,9 +142,9 @@ input:-webkit-autofill:active  {
 .corner-container {
     z-index: 1000;
     transition: all .3s ease-in-out;
-    max-height: 45px;
-    max-width: 45px;
-    width: 45px;
+    max-height: 55px;
+    max-width: 55px;
+    width: 55px;
     height: auto;
     position: fixed;
     right: 0;
@@ -161,7 +161,7 @@ input:-webkit-autofill:active  {
         text-align: center;
         align-self: center;
         color: $white;
-        font-size: 28px;
+        font-size: 36px;
     }
     .sidecontainer-list {
         transition: all .4s ease-in-out;
@@ -195,7 +195,7 @@ input:-webkit-autofill:active  {
     }
     &:hover {
         max-height: 500px;
-        height: 181px;
+        height: 194px;
         .sidecontainer-list {
             opacity: 1;
             width: auto;

@@ -1,4 +1,5 @@
 .bc--header {
+    transition: all .3s ease-in-out;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -155,7 +156,7 @@
                     .school-logo {
                         width: 200px;
                         height: 75px;
-                        object-fit: cover;
+                        object-fit: contain;
                     }
                 }
             }
@@ -485,6 +486,8 @@
 
 
     .small-navigation {
+        width: 108%;
+        margin-left: -4%;
         display: none;
         opacity: 0;
         max-height: 0;
@@ -509,7 +512,6 @@
                     height: auto;
                     display: flex;
                     justify-content: center;
-                    background: $topmenu-background;
                     width: 100%;
                     border-bottom: 2px solid $white;
                     flex-direction: column;
