@@ -118,7 +118,7 @@ class Elementor_Latest_Widget extends Widget_Base {
 				'label' => __( 'Anzahl', 'plugin-domain' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
-				'max' => 5,
+				'max' => 50,
 				'step' => 1,
 				'default' => 3,
 			]
