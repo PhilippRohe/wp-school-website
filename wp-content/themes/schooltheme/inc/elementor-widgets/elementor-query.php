@@ -186,7 +186,7 @@ class Elementor_Query extends Widget_Base {
                 <?php foreach($all_entries as $entry) {
                     ?>
                     <a href="<?php echo $entry[ 'link' ]; ?>" class="entry-box col-12 col-sm-12 col-md-4" target="_self">
-                        <img class="entry-image" src="<?php echo $entry[ 'thumbnail' ]; ?>" alt="<?php echo $entry[ 'content' ];?> - Bild des <?php echo $post_type; ?>s">
+                        <img class="entry-image" src="<?php echo $entry[ 'thumbnail' ]; ?>" alt="<?php $entry[ 'content' ];?> - Bild des <?php echo $post_type; ?>s">
                         <div class="meta-box" aria-hidden="false">
                             <h2 class="title"><?php echo $entry[ 'title' ]; ?></h2>
                             <div class="content">
