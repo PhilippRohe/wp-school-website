@@ -174,7 +174,7 @@
                 .big-navigation {
                     display: flex;
                     align-self: center;
-                    .menu-hauptmenue-container {
+                    > div {
                         .main-menu {
                             display: flex;
                             justify-content: center;
