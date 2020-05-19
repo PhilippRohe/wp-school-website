@@ -108,7 +108,7 @@ class Elementor_Slider extends Widget_Base {
 
         <section class="section slider--section w-100 container-fluid">
             <div class="row">
-                <h2 class="widget-headline"></h2>
+                <h2 class="widget-headline"><?php echo $headline; ?></h2>
             </div>
             <div class="row">
                 <div class="slider-container col-12">
