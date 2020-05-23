@@ -46,9 +46,6 @@
                     </div>
                     <div class="list">
                         <p>Datum der Veranstaltung:</p>
-                        <?php $date_event = date("d.m.y");
-                        $date_event = $article[ 'date' ];
-                        ?>
                         <span><?php echo $article[ 'date' ]; ?></span>
                     </div>
                 </div>

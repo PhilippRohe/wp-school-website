@@ -53,7 +53,7 @@ function customizer_output_highlight() {
             .bc--header .bc--navigation .right .navigation .big-navigation>div .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             ::selection { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
-            .footer-main .row .footer-copyright .row .right-copy .footer-menu .menu li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .footer-main .row .footer-copyright .row .right-copy>div ul li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .children li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .small-navigation .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }

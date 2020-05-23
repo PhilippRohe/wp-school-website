@@ -70,7 +70,7 @@
                             <?php } ?>
                         </ul>
                         <ul class="<?php echo $type; ?>-navigation" role="navigation">
-                            <p>Alle Orte:</p>
+                            <p>Orte:</p>
                             <?php foreach($event_location as $location) { ?>
                                 <?php $link = get_category_link($location); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $location->name; ?></li></a>

@@ -2,7 +2,7 @@
 
 <div class="container--search-results row">
     <div class="container--search-results-head col-lg-6 col-12">
-        <h1>Die Suchergebnisse für Ihre Suche: <b><?php echo htmlspecialchars($_GET["s"]); ?></b></h1>
+        <h1>Die Suchergebnisse für Ihre Suche: <br><b><?php echo htmlspecialchars($_GET["s"]); ?></b></h1>
         <div class="bc-search--container">
             <?php get_search_form(); ?>
         </div>
