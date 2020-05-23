@@ -84,7 +84,7 @@ h3 {
 }
 
 /* Remove basic outline */
-.btn:focus, .btn, .btn:active, input, input:focus, input:active, select, select:focus, select:active, img:focus, img, img:active, textarea, textarea:focus, textarea:active, a, a:focus, a:active {
+.btn:focus, .btn, .btn:active, input, input:focus, input:active, select, select:focus, select:active, img:focus, img, img:active, textarea, textarea:focus, textarea:active, a, a:focus, a:active, div, div:focus, div:active {
     outline-style:none;
     box-shadow:none;
     border-color:transparent;

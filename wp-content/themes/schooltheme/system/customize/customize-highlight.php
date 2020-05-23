@@ -45,7 +45,7 @@ function customizer_output_highlight() {
             .bc-footer--company .company-widget--body .company-mail .icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .top-arrow-container:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .bc--header .bc--topmenu .right .top-menu ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--topmenu .right>div ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--last-posts .bc-footer--post:hover .bc--foter-post-right h3 { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .action-boxes .row .box:hover .right-box i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .right .navigation .big-navigation>div .main-menu li:hover .subitem-link { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}

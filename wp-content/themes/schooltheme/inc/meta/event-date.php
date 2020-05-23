@@ -44,10 +44,9 @@ function save_meta_boxes_fields_events( $post_id ) {
 function event_date_function( $post ) {
     wp_nonce_field('save_meta_boxes_fields_events', 'event_date_nonce');
     $value = get_post_meta($post->ID, '_event_date_value', true);
-    $today = date("d/m/Y");
     ?>
     <p>Hier das Datum zu dem Event einfügen</p>
-    <input min="<?php echo $today; ?>" style="width: 100%;" type="date" name="event_date_field" value="<?php echo esc_attr($value); ?>" />
+    <input style="width: 100%;" type="text" name="event_date_field" value="<?php echo esc_attr($value); ?>" />
     <?php
 }
 

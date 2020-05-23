@@ -109,7 +109,7 @@
                     li {
                         display: flex;
                         height: 40px;
-                        padding: 3px;
+                        padding: 6px;
                         transition: all .2s ease-in-out;
                         align-self: center;
                         a {
@@ -167,7 +167,7 @@
             display: flex;
             justify-content: flex-end;
             .navigation {
-                margin-top: 15px;
+                margin-top: 30px;
                 display: flex;
                 width: 100%;
                 justify-content: flex-end;
@@ -176,6 +176,7 @@
                     align-self: center;
                     > div {
                         .main-menu {
+                            flex-wrap: wrap;
                             display: flex;
                             justify-content: center;
                             flex-direction: row;

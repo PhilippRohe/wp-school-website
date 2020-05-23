@@ -19,7 +19,7 @@
     
     <article class="post-single container-fluid">
         <div class="post-head row">
-            <div class="head-left col-12 col-lg-6">
+            <div class="head-left col-12 col-lg-4">
                 <h1 class="article-headline"><?php echo $article[ 'name' ];?></h1>
                 <div class="post-meta-data">
                     <p class="date">Erstellt am <b><?php echo $article[ 'date' ]; ?></b></p>
@@ -46,11 +46,14 @@
                     </div>
                     <div class="list">
                         <p>Datum der Veranstaltung:</p>
+                        <?php $date_event = date("d.m.y");
+                        $date_event = $article[ 'date' ];
+                        ?>
                         <span><?php echo $article[ 'date' ]; ?></span>
                     </div>
                 </div>
             </div>
-            <div class="head-right col-12 col-lg-6">
+            <div class="head-right col-12 col-lg-8">
                 <img class="post-image w-100" src="<?php echo $article[ 'thumbnail' ]; ?>" alt="<?php echo $article[ 'alt' ]; ?>">
             </div>
         </div>
