@@ -20,6 +20,8 @@ function custom_login_logo() { ?>
 		body.login div#login h1 a {
 			background-image: url(<?php echo $login_image; ?>);
             padding-bottom: 30px;
+            width: 100%;
+            background-size: contain;
         }
         body.login{
             background-image: url(<?php echo $login_background; ?>);

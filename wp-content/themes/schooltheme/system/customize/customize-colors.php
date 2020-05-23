@@ -24,6 +24,10 @@ function schooltheme_customize_register_font_colors( $wp_customize ) {
         'default'   => 'unset',
         'transport' => 'refresh',
     ));
+    $wp_customize->add_setting( $prefix . 'menu_color' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
 
 
     /* Add the section here */
@@ -56,6 +60,12 @@ function schooltheme_customize_register_font_colors( $wp_customize ) {
         'section'    => $prefix . 'schooltheme_section_colors',
         'settings'   => $prefix . 'link_color',
     )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_menu', array(
+        'label'      => __( 'Menü Schriftfarbe', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_colors',
+        'settings'   => $prefix . 'menu_color',
+    )));
 }
 
 add_action( 'customize_register', 'schooltheme_customize_register_font_colors' );
@@ -79,6 +89,8 @@ function customizer_output_colors() {
              body .bc--main { color: <?php echo get_theme_mod( $prefix . 'main_color', 'rgb(33, 37, 41)'); ?>; }
 
              body .bc--main a { color: <?php echo get_theme_mod( $prefix . 'link_color', 'unset'); ?>!important; }
+
+             .bc--header .bc--navigation .right .navigation .big-navigation > div .main-menu li .subitem-link { color: <?php echo get_theme_mod( $prefix . 'menu_color', 'unset'); ?> ; }
          </style>
     <?php
 }
