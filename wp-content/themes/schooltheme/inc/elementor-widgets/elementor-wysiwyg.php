@@ -12,7 +12,7 @@ class Elementor_Wysiwyg extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-spell-check';
 	}
 	
 	public function get_categories() {
@@ -80,7 +80,7 @@ class Elementor_Wysiwyg extends Widget_Base {
                 <<?php echo $headline_type; ?> class="section-headline col-12"><?php echo $headline; ?></<?php echo $headline_type; ?>>
             </div>
             <div class="row">
-                <p class="content col-12"><?php echo $editor; ?></p>
+                <?php echo $editor; ?>
             </div>
         </section>
 

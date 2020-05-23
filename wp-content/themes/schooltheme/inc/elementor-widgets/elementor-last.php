@@ -12,7 +12,7 @@ class Elementor_Latest_Widget extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-database';
 	}
 	
 	public function get_categories() {

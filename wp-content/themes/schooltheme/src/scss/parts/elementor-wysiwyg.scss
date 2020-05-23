@@ -3,14 +3,19 @@
     width: 100%;
     padding: 30px 15px;
     .row {
+        width: 100%;
+        justify-content: center;
         .section-headline {
             margin: 0;
             padding: 0;
         }
-
-        .content {
-            p {
-                a {
+        p {
+            width: 100%;
+            a {
+                color: $hover-color;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    opacity: .8;
                 }
             }
         }

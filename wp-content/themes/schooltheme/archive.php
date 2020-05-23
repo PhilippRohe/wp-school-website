@@ -6,15 +6,17 @@
             <h1>
                 <?php
                     $term = get_queried_object();
-                    $word = $term->label;
-                    if ($word == '') {
-                        $word = $term->name;
-                    }
-                    if ($word == '') {
+                    if ($term != NULL) {
                         $word = $term->label;
-                    }
-                    if ($word == '') {
-                        $word = $term->cat_name;
+                        if ($word == '') {
+                            $word = $term->name;
+                        }
+                        if ($word == '') {
+                            $word = $term->label;
+                        }
+                        if ($word == '') {
+                            $word = $term->cat_name;
+                        }
                     }
                     if ( is_day() ) :
                         printf( __( 'Tagesarchiv: %s' ), get_the_date() );

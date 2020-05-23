@@ -11,7 +11,7 @@
             <?php if(is_user_logged_in()) { ?>
                 <div class="alert alert-info notice-container">
                     <p class="h4"><?php _e('Hinweis für Administrator (Sie sind eingeloggt)'); ?></p>
-                    <p><?php _e('Solltest du vermehrt 404-Fehler bekommen, hilft es die Permalinks unter <strong>Einstellungen</strong> - <strong>Permalinks</strong> neu zu speichern. Sie sehen diese Nachricht nur, weil Sie eingeloggt sind.'); ?></p>
+                    <p><?php _e('Sollten Sie vermehrt 404-Fehler bekommen, hilft es die Permalinks unter <strong>Einstellungen</strong> - <strong>Permalinks</strong> neu zu speichern. Sie sehen diese Nachricht nur, weil Sie eingeloggt sind.'); ?></p>
                 </div>
             <?php } else {
                 ?>

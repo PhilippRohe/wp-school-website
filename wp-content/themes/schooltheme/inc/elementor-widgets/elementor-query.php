@@ -12,7 +12,7 @@ class Elementor_Query extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-list-ul';
 	}
 	
 	public function get_categories() {

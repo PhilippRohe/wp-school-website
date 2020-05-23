@@ -12,7 +12,7 @@ class Elementor_Testimonials extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-users';
 	}
 	
 	public function get_categories() {
@@ -158,10 +158,10 @@ class Elementor_Testimonials extends Widget_Base {
             </div>
             <div class="row">
                 <?php foreach($testimonials as $testimonial) {
-                    $link_open = $testimonial['link']['url'] ? '<div class="head">' : '<a class="head" href="' . $testimonial['link'] . '">';
-                    $link_close = $testimonial['link']['url'] ? '</div>' : '</a>';
+                    $link_open = ($testimonial['link']['url'] == '') ? '<div class="head">' : '<a class="head" href="' . $testimonial['link']['url'] . '">';
+                    $link_close = ($testimonial['link']['url'] == '') ? '</div>' : '</a>';
                     ?>
-                    <div class="testimonial col-4">
+                    <div class="testimonial col-sm-12 col-lg-6">
                         <?php echo $link_open; ?>
                             <div class="left">
                                 <img src="<?php echo $testimonial['image']['url']; ?>" alt="Testimonial profile logo">

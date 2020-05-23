@@ -12,7 +12,7 @@ class Elementor_Map extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-map-marker';
 	}
 	
 	public function get_categories() {

@@ -79,6 +79,22 @@ $column_size = "col-lg-" . $col_number;
                         <div class="left-copy col-12 col-lg-6"><?php echo $footer_text; ?> - Theme made for Schools | <?php echo date("Y"); ?> &copy;</div>
                         <div class="right-copy col-12 col-lg-6">
                         <?php
+                        $facebook = esc_attr(get_option( 'contact_settings_facebook' ));
+                        $instagram = esc_attr(get_option( 'contact_settings_instagram' ));
+                        $set_fb = ($facebook != '') ? true : false;
+                        $set_in = ($instagram != '') ? true : false;
+                        if ( $set_fb ) {
+                            ?>
+                            <a rel="nofollow" target="_blank" href="<?php echo $facebook; ?>"><i class="fab fa-facebook"></i></a>
+                            <?php
+                        }
+                        if ( $set_in ) {
+                            ?>
+                            <a rel="nofollow" target="_blank" href="<?php echo $instagram; ?>"><i class="fab fa-instagram-square"></i></a>
+                            <?php
+                        }
+                        ?>
+                        <?php
                             wp_nav_menu( array(
                                 'theme_location'  => 'footer',
                                 'container'       => 'div',

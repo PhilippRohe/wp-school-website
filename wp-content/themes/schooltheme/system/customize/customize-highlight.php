@@ -48,19 +48,20 @@ function customizer_output_highlight() {
             .bc--header .bc--topmenu .right .top-menu ul li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--last-posts .bc-footer--post:hover .bc--foter-post-right h3 { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .action-boxes .row .box:hover .right-box i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
-            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .subitem-link span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .right .navigation .big-navigation>div .main-menu li:hover .subitem-link { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
+            .bc--header .bc--navigation .right .navigation .big-navigation>div .main-menu li:hover .subitem-link span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .bc--navigation .right .navigation .big-navigation>div .main-menu li:hover .sub-menu-container .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             ::selection { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget .calendar_wrap table tfoot tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-copyright .row .right-copy .footer-menu .menu li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>;}
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .sub-menu li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .children li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .small-navigation .meta-nav .box:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .bc--navigation .action-boxes .row .box:hover .left-box p:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--company .company-widget--body .company-address:hover address a span:first-child { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--company .company-widget--body .company-mail:hover a p { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc-footer--company .company-widget--body .company-phone:hover a p { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .bc--header .small-navigation .menu-hauptmenue-container ul li:hover a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .small-navigation>div ul li:hover a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--breadcrumbs .bc--breadcrumbs-navigation a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .comment-container .row form p .comment-send-button:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .single-content-area .post-single .post-head .head-right .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
@@ -68,7 +69,7 @@ function customizer_output_highlight() {
             .container--search-results .container--search-results-head h1 b { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .archive-container .row .archive--inner h1 b { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .archive-container .row .archive--inner article .post-inner a .view-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .bc--header .small-navigation .menu-hauptmenue-container ul li.open a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .bc--header .small-navigation>div ul li.open a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .comment-container .row .comments-headline span { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .container--search-results .container--search-results-body .search--results-content .search--results-single .box-body a .post-link-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .single-content-area .teacher-single .content .content-left .subject-list a:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
@@ -78,6 +79,9 @@ function customizer_output_highlight() {
             #cookie-law-info-again { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?> !important; }
             .wpcf7 form p input[type~="submit"] { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             body::-webkit-scrollbar-thumb { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            figcaption::-webkit-scrollbar-thumb { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .wysiwyg--section .row p a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-copyright .row .right-copy a i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             
          </style>
     <?php

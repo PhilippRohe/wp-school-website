@@ -9,6 +9,7 @@
             margin-bottom: 40px;
         }
         .testimonial {
+            margin-bottom: 30px;
             .head {
                 margin-bottom: 10px;
                 display: flex;
@@ -19,8 +20,8 @@
                     width: 40%;
                     align-self: center;
                     img {
-                        height: 100px;
-                        width: 100px;
+                        height: 125px;
+                        width: 125px;
                         object-fit: cover;
                         border-radius: 50%;
                     }
@@ -58,9 +59,12 @@
                 p {
                     text-align: justify;
                     font-style: italic;
+                    &::before, &::after {
+                        content: '\0022';
+                    }
                 }
                 &::before, &::after {
-                    content: '';
+                    display: none;
                 }
             }
         }

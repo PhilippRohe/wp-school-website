@@ -12,7 +12,7 @@ class Elementor_Slider extends Widget_Base {
 	}
 	
 	public function get_icon() {
-		return 'fas fa-quote-right';
+		return 'fas fa-images';
 	}
 	
 	public function get_categories() {
