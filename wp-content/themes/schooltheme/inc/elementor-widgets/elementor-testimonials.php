@@ -149,6 +149,7 @@ class Elementor_Testimonials extends Widget_Base {
         $headline = $settings['headline'];
         $color_bg = $settings['color_bg'] ? 'background: ' . $settings['color_bg'] . '; ' : '';
         $color_font = $settings['color_font'] ? 'color: ' . $settings['color_font'] . '; ' : '';
+        $count_testimonials = sizeof($testimonials);
 
         ?>
 
@@ -160,8 +161,9 @@ class Elementor_Testimonials extends Widget_Base {
                 <?php foreach($testimonials as $testimonial) {
                     $link_open = ($testimonial['link']['url'] == '') ? '<div class="head">' : '<a class="head" href="' . $testimonial['link']['url'] . '">';
                     $link_close = ($testimonial['link']['url'] == '') ? '</div>' : '</a>';
+                    $size = ( $count_testimonials < 2 ) ? ' col-lg-4' : ' col-lg-6';
                     ?>
-                    <div class="testimonial col-sm-12 col-lg-6">
+                    <div class="testimonial col-sm-12<?php echo $size; ?>">
                         <?php echo $link_open; ?>
                             <div class="left">
                                 <img src="<?php echo $testimonial['image']['url']; ?>" alt="Testimonial profile logo">

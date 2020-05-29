@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
         slider_modal_image();
         init_slick_slider();
         init_single_view_slick();
-        console.log('%cLoaded and initialized JavaScript file', 'background: black; color: lightgreen; font-size: 24px; padding: 5px;', 'main.js');
+        console.log('%cSchooltheme loaded: Loaded and initialized JavaScript file successfully', 'background: black; color: lightgreen; font-size: 18px; padding: 5px;', 'main.js');
     });
     
     /* Handle the mobile hamburger menu */

@@ -30,6 +30,16 @@ function schooltheme_customize_register_header( $wp_customize ) {
         'transport' => 'refresh',
     ));
 
+    $wp_customize->add_setting( $prefix . 'border_bottom_color' , array(
+        'default'   => 'rgb(61, 61, 61)',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_setting( $prefix . 'post_header_background' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
+
     /*
     $wp_customize->add_setting( $prefix . 'navigation_box_transparency' , array(
         'default'   => '75',
@@ -75,6 +85,18 @@ function schooltheme_customize_register_header( $wp_customize ) {
         'settings'   => $prefix . 'navigation_box_color',
     )));
 
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_border_bottom', array(
+        'label'      => __( 'Rahmenfarbe unten', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_header',
+        'settings'   => $prefix . 'border_bottom_color',
+    )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_post_background', array(
+        'label'      => __( 'Header Beitragsseiten Hintergrund', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_header',
+        'settings'   => $prefix . 'post_header_background',
+    )));
+
     /*
     $wp_customize->add_control( 'transparency_navigation_box',
     array(
@@ -117,6 +139,9 @@ function customizer_output_header() {
              .bc--header .bc--navigation .action-boxes .row .box p  { color: <?php echo get_theme_mod( $prefix . 'navigation_box_color', '#fff'); ?>; }
              .bc--header .bc--navigation .action-boxes .row .box span  { color: <?php echo get_theme_mod( $prefix . 'navigation_box_color', '#fff'); ?>; }
              .bc--header .bc--navigation .action-boxes .row .box  { border-color: <?php echo get_theme_mod( $prefix . 'navigation_box_color', '#fff'); ?>; }
+         
+             .bc--header .bc--navigation { border-color: <?php echo get_theme_mod( $prefix . 'border_bottom_color', 'rgb(61, 61, 61)'); ?>; }
+             .bc--header.single-page .bc--navigation { background: <?php echo get_theme_mod( $prefix . 'post_header_background', '#fff'); ?>; }
          </style>
     <?php
 }

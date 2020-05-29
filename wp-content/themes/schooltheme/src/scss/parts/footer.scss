@@ -123,10 +123,12 @@
             .row {
                 justify-content: space-between;
                 .left-copy {
+                    align-self: center;
                     padding: 0;
                     color: $white;
                 }
                 .right-copy {
+                    align-self: center;
                     padding: 0;
                     color: $white;
                     text-align: right;

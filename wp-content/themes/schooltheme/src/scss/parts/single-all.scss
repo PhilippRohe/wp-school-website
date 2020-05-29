@@ -5,6 +5,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 15px;
             .head-left {
                 .article-headline {
                     margin: 0;
@@ -14,57 +15,10 @@
                     display: flex;
                     flex-direction: row;
                     p {
+                        font-size: 12px;
+                        line-height: 14px;
                         &:last-child {
                             margin-left: 5px;
-                        }
-                    }
-                }
-                .post-meta-list {
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                    .list {
-                        display: flex;
-                        flex-direction: row;
-                        ul {
-                            flex-wrap: wrap;
-                            margin-left: 10px;
-                            padding: 0;
-                            list-style: none;
-                            display: flex;
-                            flex-direction: row;
-                            margin-bottom: 0;
-                            a {
-                                transition: all .2s ease-in-out;
-                                color: #888;
-                                font-style: italic;
-                                text-decoration: none;
-                                li {
-                                    &::after {
-                                        content: '-';
-                                        margin: 0 5px;
-                                    }
-                                }
-                                &:last-child {
-                                    li {
-                                        &::after {
-                                            display: none;
-                                        }
-                                    }
-                                }
-                                &:hover {
-                                    color: $hover-color;
-                                }
-                            }
-                        }
-                        p {
-                            margin: 0;
-                        }
-                        span {
-                            font-style: italic;
-                            margin: 0;
-                            margin-left: 10px;
-                            color: #888;
                         }
                     }
                 }
@@ -93,8 +47,72 @@
         .content {
             margin-top: 30px;
             margin-bottom: 30px;
+            .post-meta-list {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                .list {
+                    display: flex;
+                    flex-direction: row;
+                    ul {
+                        flex-wrap: wrap;
+                        margin-left: 10px;
+                        padding: 0;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 0;
+                        a {
+                            align-self: center;
+                            transition: all .2s ease-in-out;
+                            color: #888;
+                            font-style: italic;
+                            text-decoration: none;
+                            li {
+                                font-size: 12px;
+                                line-height: 14px;
+                                &::after {
+                                    content: '-';
+                                    margin: 0 5px;
+                                }
+                            }
+                            &:last-child {
+                                li {
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                    p {
+                        margin: 0;
+                    }
+                    span {
+                        font-style: italic;
+                        margin: 0;
+                        margin-left: 10px;
+                        color: #888;
+                    }
+                }
+            }
             .content-text {
                 margin-top: 15px;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            ul {
+                li {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            a {
+                font-size: 20px;
+                line-height: 28px;
             }
             .slider-single-container {
                 padding: 15px 0;

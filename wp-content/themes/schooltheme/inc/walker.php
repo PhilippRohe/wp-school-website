@@ -26,7 +26,7 @@ class top_walker_menu extends Walker {
         $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
         $class_names = $class_names ? ' class="container ' . esc_attr( $class_names ) . '"' : '';
  
-        $output .= "{$n}{$indent}</span><div class='sub-menu-container'><ul$class_names>{$n}";
+        $output .= "{$n}{$indent}</span><div class='sub-menu-container js--submenu'><ul$class_names>{$n}";
     }
  
     public function end_lvl( &$output, $depth = 0, $args = array() ) {
@@ -58,6 +58,9 @@ class top_walker_menu extends Walker {
 
         $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
         $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        if (in_array("menu-item-has-children", $classes)) {
+            $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . ' with-icon"' : '';
+        }
  
         $id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
@@ -90,11 +93,15 @@ class top_walker_menu extends Walker {
         $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
  
         $item_output  = $args->before;
+
+        $item_output .= '<a' . $attributes . ' class="subitem-link">';
+        /* Make menu item with subitems not clicakble / linkable
         if (!in_array("menu-item-has-children", $classes)) {
             $item_output .= '<a' . $attributes . ' class="subitem-link">';
         } else {
             $item_output .= '<a class="subitem-link">';
         }
+        */
         $item_output .= $args->link_before . $title . $args->link_after;
         if (in_array("menu-item-has-children", $classes)) {
             $item_output .='<span class="icon-down">';

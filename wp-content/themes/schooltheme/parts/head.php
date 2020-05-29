@@ -46,7 +46,7 @@ $is_single = (is_single()) ? ' single-page' : '';
     <div class="bc--navigation row" style="background-image:url('<?php echo $header_background_image; ?>')">
         <div class="left col-6 col-md-6 col-lg-3 col-xl-3">
             <a href="<?php echo get_home_url(); ?>">
-                <img width="300" height="100" class="school-logo w-100" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
+                <img width="300" height="100" class="school-logo" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
             </a>
         </div>
         <div class="right col-12 col-lg-9 col-xl-9">

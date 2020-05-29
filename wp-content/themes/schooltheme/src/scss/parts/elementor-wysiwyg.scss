@@ -10,6 +10,8 @@
             padding: 0;
         }
         p {
+            font-size: 20px;
+            line-height: 28px;
             width: 100%;
             a {
                 color: $hover-color;
@@ -18,6 +20,14 @@
                     opacity: .8;
                 }
             }
+        }
+        li {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        a {
+            font-size: 20px;
+            line-height: 28px;
         }
     }
 }

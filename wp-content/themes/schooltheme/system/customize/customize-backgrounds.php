@@ -37,6 +37,11 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
         'transport' => 'refresh',
     ));
 
+    $wp_customize->add_setting( $prefix . 'post_slider_background' , array(
+        'default'   => '#3d3d3d',
+        'transport' => 'refresh',
+    ));
+
 
     /* Add the section here */
     $wp_customize->add_section( $prefix . 'schooltheme_section_backgrounds' , array(
@@ -86,6 +91,12 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
         'section'    => $prefix . 'schooltheme_section_backgrounds',
         'settings'   => $prefix . 'mobile_menu_background',
     )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_post_slider', array(
+        'label'      => __( 'Beitragsseite Slider Hintergrundfarbe', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_backgrounds',
+        'settings'   => $prefix . 'post_slider_background',
+    )));
 }
 
 add_action( 'customize_register', 'schooltheme_customize_register_background_colors' );
@@ -103,6 +114,7 @@ function customizer_output_background() {
              .bc--header { background: <?php echo get_theme_mod( $prefix . 'header_background', '#3d3d3d'); ?>; }
              .bc--breadcrumbs { background: <?php echo get_theme_mod( $prefix . 'breadcrumbs_background', '#3d3d3d'); ?>; }
             body .bc--main { background: <?php echo get_theme_mod( $prefix . 'main_background', '#fff'); ?>; }
+            body .top-image-slider { background: <?php echo get_theme_mod( $prefix . 'main_background', '#3d3d3d'); ?>; }
              .footer-main { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
              .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
              .bc--header .small-navigation.show { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }

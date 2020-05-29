@@ -25,7 +25,6 @@
                 }
                 .article-body {
                     min-height: 240px;
-                    max-height: 240px;
                     padding-top: 15px;
                     display: flex;
                     justify-content: space-between;
@@ -33,6 +32,7 @@
                     height: 100%;
                     .categories-navigation {
                         ul {
+                            flex-wrap: wrap;
                             list-style: none;
                             display: flex;
                             flex-direction: row;
@@ -50,6 +50,7 @@
                     .excerpt {
                         text-align: justify;
                         align-self: flex-start;
+                        min-height: 100px;
                     }
                     .link {
                         width: 100%;
