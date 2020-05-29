@@ -14,6 +14,8 @@ body {
                 padding: 10px;
                 border-radius: 0px;
                 box-shadow: 0 0 1px 0 #aaa;
+                border-top: unset;
+                border-bottom: unset;
             }
         }
     }
@@ -52,6 +54,18 @@ figcaption::-webkit-scrollbar-thumb {
 @include media('<=767px') {
     .container {
         max-width: 100%;
+    }
+}
+
+
+h1 {
+    @include media('<=575px') {
+        font-size: calc(28px + (40 - 28) * ((100vw - 320px) / (575 - 320)));
+    }
+}
+h1 {
+    @include media('<=575px') {
+        font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (575 - 320)));
     }
 }
 

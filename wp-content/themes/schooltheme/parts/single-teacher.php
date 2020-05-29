@@ -24,17 +24,17 @@
         <div class="content row">
             <div class="content-left col-12 col-lg-5">
                 <img class="teacher-image w-100" src="<?php echo $teacher[ 'thumbnail' ]; ?>" alt="<?php echo $teacher[ 'alt' ]; ?>">
-                <h2 class="teacher-name"><?php echo $teacher[ 'name' ]; ?></h2>
-                <ul class="subject-list">
-                <?php foreach($teacher[ 'subjects' ] as $subject) {
-                    $link = get_category_link($subject);
-                    ?>
-                    <a href="<?php echo $link; ?>"><li><?php echo $subject->name; ?></li></a>
-                    <?php
-                } ?>
-                </ul>
             </div>
             <div class="content-right col-12 col-lg-12">
+                <h2 class="teacher-name">Das ist <?php echo $teacher[ 'name' ]; ?></h2>
+                <ul class="subject-list">
+                    <?php foreach($teacher[ 'subjects' ] as $subject) {
+                        $link = get_category_link($subject);
+                        ?>
+                        <a href="<?php echo $link; ?>"><li><?php echo $subject->name; ?></li></a>
+                        <?php
+                    } ?>
+                </ul>
                 <p class="content-text"><?php echo $teacher[ 'content' ]; ?></p>
             </div>
         </div>

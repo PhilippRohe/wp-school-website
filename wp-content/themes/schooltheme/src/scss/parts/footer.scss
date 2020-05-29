@@ -193,6 +193,9 @@
                     }
                 }
             }
+            @include media('<=575px') {
+                padding: 0;
+            }
         }
     }
 }

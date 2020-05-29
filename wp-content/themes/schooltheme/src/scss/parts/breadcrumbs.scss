@@ -12,12 +12,18 @@
             text-decoration: none;
             color: $white;
             font-size: 16px;
+            @include media('<=575px') {
+                font-size: 12px;
+            }
         }
         a {
             transition: all .3s ease-in-out;
             text-decoration: none;
             color: $hover-color;
             font-size: 16px;
+            @include media('<=575px') {
+                font-size: 12px;
+            }
             &:hover {
                 opacity: .75;
             }
@@ -26,10 +32,16 @@
             color: $white;
             margin: 0px 10px;
             font-size: 16px;
+            @include media('<=575px') {
+                font-size: 12px;
+            }
         }
         .bc--breadcrumbs-page {
             color: $white;
             font-size: 16px;
+            @include media('<=575px') {
+                font-size: 12px;
+            }
         }
     }
 }

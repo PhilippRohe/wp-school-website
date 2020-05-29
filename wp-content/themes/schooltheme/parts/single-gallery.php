@@ -13,7 +13,7 @@
         $article[ 'thumbnail' ] = strlen(get_the_post_thumbnail_url()) ? get_the_post_thumbnail_url() : 'https://placehold.it/360x200';
         $article[ 'link' ] = get_permalink();
         $article[ 'alt' ] = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
-        $article[ 'categories' ] = wp_get_post_terms( get_the_ID(), 'categories-gallery', array('fields' => 'names'));
+        $article[ 'categories' ] = wp_get_post_terms( get_the_ID(), 'categories-gallery', array('fields' => 'all'));
         $article[ 'slider' ] = load_images_from_slider(get_the_ID());
     ?>
     

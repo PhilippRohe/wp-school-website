@@ -45,6 +45,14 @@
                         margin: 0;
                     }
                 }
+                @include media('<=575px') {
+                    .left {
+                        width: 100%;
+                    }
+                    .right {
+                        width: 100%;
+                    }
+                }
             }
             .body {
                 clear: both;

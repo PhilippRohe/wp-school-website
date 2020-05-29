@@ -1,5 +1,10 @@
 <?php
 
+/**
+ *
+ * @package schooltheme
+ */
+
 /* Do not allow direct access to this file */
 if ( !(defined('ABSPATH')) ) exit('No direct access allowed');
 
@@ -66,13 +71,13 @@ require get_template_directory() . '/inc/sidebar.php';
 require get_template_directory() . '/inc/cpt.php';
 
 // Load the custom meta
-require get_template_directory() . '/inc/meta.php';
+require get_template_directory() . '/system/meta.php';
 
 // Load the custom column
 require get_template_directory() . '/inc/custom-column.php';
 
 // Load the admin pages
-require get_template_directory() . '/inc/admin.php';
+require get_template_directory() . '/system/admin.php';
 
 // Load the system functions
 require get_template_directory() . '/system/load.php';

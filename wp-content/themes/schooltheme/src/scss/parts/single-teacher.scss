@@ -27,14 +27,18 @@
                     transition: all .2s ease-in-out;
                     align-self: center;
                     width: 400px;
-                    height: 250px;
+                    height: 400px;
                     object-fit: cover;
                     border-radius: 5px;
+                    object-position: top;
                 }
+            }
+            .content-right {
                 .teacher-name {
                     align-self: center;
                     margin-top: 15px;
                     text-transform: uppercase;
+                    text-align: center;
                 }
                 .subject-list {
                     align-self: center;
@@ -43,7 +47,6 @@
                     flex-direction: row;
                     margin: 0;
                     padding: 0;
-                    width: 100%;
                     margin-top: 15px;
                     a {
                         transition: background .3s ease-in-out;
@@ -66,8 +69,6 @@
                         }
                     }
                 }
-            }
-            .content-right {
                 .content-text {
                     text-align: justify;
                 }

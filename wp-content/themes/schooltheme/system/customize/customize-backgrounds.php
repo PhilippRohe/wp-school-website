@@ -9,14 +9,22 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
         'default'   => '#fff',
         'transport' => 'refresh',
     ));
+
+    $wp_customize->add_setting( $prefix . 'body_background_post' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
+
     $wp_customize->add_setting( $prefix . 'topbar_background' , array(
         'default'   => '#3d3d3d',
         'transport' => 'refresh',
     ));
+
     $wp_customize->add_setting( $prefix . 'header_background' , array(
         'default'   => '#3d3d3d',
         'transport' => 'refresh',
     ));
+    
     $wp_customize->add_setting( $prefix . 'breadcrumbs_background' , array(
         'default'   => '#3d3d3d',
         'transport' => 'refresh',
@@ -42,6 +50,11 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
         'transport' => 'refresh',
     ));
 
+    $wp_customize->add_setting( $prefix . 'post_header_background' , array(
+        'default'   => '#fff',
+        'transport' => 'refresh',
+    ));
+
 
     /* Add the section here */
     $wp_customize->add_section( $prefix . 'schooltheme_section_backgrounds' , array(
@@ -51,9 +64,15 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
     
     /* Add the controls here */
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_body', array(
-        'label'      => __( 'Body Hintergrundfarbe', 'schooltheme' ),
+        'label'      => __( 'Body Hintergrundfarbe (Elementor Seite)', 'schooltheme' ),
         'section'    => $prefix . 'schooltheme_section_backgrounds',
         'settings'   => $prefix . 'body_background',
+    )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_body_post', array(
+        'label'      => __( 'Body Hintergrundfarbe (Normale Seite)', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_backgrounds',
+        'settings'   => $prefix . 'body_background_post',
     )));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_topbar', array(
@@ -97,6 +116,12 @@ function schooltheme_customize_register_background_colors( $wp_customize ) {
         'section'    => $prefix . 'schooltheme_section_backgrounds',
         'settings'   => $prefix . 'post_slider_background',
     )));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'background_post_header', array(
+        'label'      => __( 'Beitragsseite Header Hintergrundfarbe', 'schooltheme' ),
+        'section'    => $prefix . 'schooltheme_section_backgrounds',
+        'settings'   => $prefix . 'post_header_background',
+    )));
 }
 
 add_action( 'customize_register', 'schooltheme_customize_register_background_colors' );
@@ -117,7 +142,9 @@ function customizer_output_background() {
             body .top-image-slider { background: <?php echo get_theme_mod( $prefix . 'main_background', '#3d3d3d'); ?>; }
              .footer-main { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
              .footer-main .row .footer-content .footer-widgets .footer-col .widget ul li .sub-menu { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
-             .bc--header .small-navigation.show { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
+             .bc--header .small-navigation.show { background: <?php echo get_theme_mod( $prefix . 'post_slider_background', '#3d3d3d'); ?>; }
+             .bc--header.single-page .bc--navigation { background: <?php echo get_theme_mod( $prefix . 'post_header_background', '#fff'); ?> !important; }
+            body:not(.elementor-page) { background: <?php echo get_theme_mod( $prefix . 'body_background_post', '#fff'); ?> !important; }
          </style>
     <?php
 }

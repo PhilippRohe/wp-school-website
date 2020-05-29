@@ -90,7 +90,7 @@ function customizer_output_colors() {
 
              body .bc--main a { color: <?php echo get_theme_mod( $prefix . 'link_color', 'unset'); ?>!important; }
 
-             .bc--header .bc--navigation .right .navigation .big-navigation > div .main-menu li .subitem-link { color: <?php echo get_theme_mod( $prefix . 'menu_color', 'unset'); ?> ; }
+             .bc--header .bc--navigation .right .navigation .big-navigation > div .main-menu li .subitem-link { color: <?php echo get_theme_mod( $prefix . 'menu_color', 'unset'); ?> !important; }
          </style>
     <?php
 }

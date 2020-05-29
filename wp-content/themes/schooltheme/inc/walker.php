@@ -94,14 +94,12 @@ class top_walker_menu extends Walker {
  
         $item_output  = $args->before;
 
-        $item_output .= '<a' . $attributes . ' class="subitem-link">';
-        /* Make menu item with subitems not clicakble / linkable
         if (!in_array("menu-item-has-children", $classes)) {
             $item_output .= '<a' . $attributes . ' class="subitem-link">';
         } else {
             $item_output .= '<a class="subitem-link">';
         }
-        */
+
         $item_output .= $args->link_before . $title . $args->link_after;
         if (in_array("menu-item-has-children", $classes)) {
             $item_output .='<span class="icon-down">';

@@ -82,7 +82,7 @@ function customizer_output_highlight() {
             figcaption::-webkit-scrollbar-thumb { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .wysiwyg--section .row p a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .footer-main .row .footer-copyright .row .right-copy a i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            
+            div.wpcf7-validation-errors { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
          </style>
     <?php
 }

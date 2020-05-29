@@ -135,6 +135,7 @@ class Elementor_Latest_Widget extends Widget_Base {
         $post_type = $settings['post_type'];
         $order = $settings['order'];
         $sort = $settings['sort'];
+        $size = (12 / $number);
 
         $all_arcticles = $this->load_last_articles($post_type, $number, $order, $sort);
 
@@ -149,7 +150,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                     <div class="row">
                         <?php foreach($all_arcticles as $article) {
                             ?>
-                            <div class="single-article col-sm-12 col-lg-<?php echo (12 / $number); ?> align-self-center">
+                            <div class="single-article col-sm-12 col-lg-<?php echo $size; ?> align-self-center">
                                 <div class="article-head">
                                     <img src="<?php echo $article['thumbnail']; ?>" alt="">
                                 </div>
@@ -170,13 +171,13 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 <ul class="<?php echo $type; ?>-navigation categories" role="navigation">
                                                     <?php foreach($post_cats as $post) { ?>
                                                         <?php $link = get_category_link($post); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $post->name; ?></li></a>
+                                                        <a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $post->name; ?></li></a>
                                                     <?php } ?>
                                                 </ul>
                                                 <ul class="<?php echo $type; ?>-navigation tags" role="navigation">
                                                     <?php foreach($post_tags as $tag) { ?>
                                                         <?php $link = get_category_link($tag); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $tag->name; ?></li></a>
+                                                        <a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $tag->name; ?></li></a>
                                                     <?php } ?>
                                                 </ul>
                                                 <?php
