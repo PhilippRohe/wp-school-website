@@ -1,6 +1,6 @@
 .last-news--section {
     padding: 30px 15px;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     .row {
         display: flex;
         justify-content: center;
@@ -44,14 +44,14 @@
                             flex-direction: row;
                             justify-content: flex-start;
                             padding: 0;
-                            a {
+                            li {
                                 transition: all .3s ease-in-out;
-                                li {
+                                a {
                                     font-style: italic;
-                                    margin: 0 15px;
-                                    &:first-child {
-                                        margin-left: 0;
-                                    }
+                                    margin-right: 15px;
+                                }
+                                &:last-child {
+                                    margin-right: 0;
                                 }
                                 &:hover {
                                     opacity: .75;
@@ -62,11 +62,12 @@
                     .excerpt {
                         text-align: justify;
                         align-self: flex-start;
+                        min-height: 100px;
                     }
                     .link {
                         width: 100%;
                         align-self: flex-start;
-                        button {
+                        div {
                             transition: all .3s ease-in-out;
                             background-color: $hover-color;
                             color: $white;

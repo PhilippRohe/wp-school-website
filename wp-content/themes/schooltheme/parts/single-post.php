@@ -40,7 +40,7 @@
                             foreach($article[ 'categories' ] as $categorie) {
                                 $link = get_home_url() . '/' . $categorie->taxonomy . '/' . $categorie->slug;
                                 ?>
-                                <a href="<?php echo $link;?>" target="_self"><li class="item-categorie"><?php echo $categorie->name; ?></li></a>
+                                <li class="item-categorie"><a href="<?php echo $link;?>" target="_self"><?php echo $categorie->name; ?></a></li>
                                 <?php
                             }
                         } else {
@@ -58,7 +58,7 @@
                             foreach($article[ 'tags' ] as $tag) {
                                 $link = get_home_url() . '/' . $tag->taxonomy . '/' . $tag->slug;
                                 ?>
-                                <a href="<?php echo $link;?>" target="_self"><li class="item-tag"><?php echo $tag->name; ?></li></a>
+                                <li class="item-tag"><a href="<?php echo $link;?>" target="_self"><?php echo $tag->name; ?></a></li>
                                 <?php
                             }
                         } else {

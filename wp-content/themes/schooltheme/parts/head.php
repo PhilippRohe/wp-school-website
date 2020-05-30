@@ -44,7 +44,7 @@ $is_single = (is_single()) ? ' single-page' : '';
     </div>
 
     <div class="bc--navigation row" style="background-image:url('<?php echo $header_background_image; ?>')">
-        <div class="left col-6 col-md-6 col-lg-3 col-xl-3">
+        <div class="left col-6 col-sm-6 col-md-12 col-lg-3 col-xl-3">
             <a href="<?php echo get_home_url(); ?>">
                 <img width="300" height="100" class="school-logo" src="<?php echo $menu_logo; ?>" alt="Schule Webseiten Logo">
             </a>
@@ -56,7 +56,7 @@ $is_single = (is_single()) ? ' single-page' : '';
                         $header_menu_array = array(
                             'theme_location' => 'main',
                             'menu_class' => 'main-menu',
-                            'menu_id' => 'main-menu',
+                            'menu_id' => 'main-menu-big',
                             'depth' => 2,
                             'walker' => new top_walker_menu(),
                         );
@@ -120,7 +120,7 @@ $is_single = (is_single()) ? ' single-page' : '';
             $header_menu_array = array(
                 'theme_location' => 'main',
                 'menu_class' => 'main-menu',
-                'menu_id' => 'main-menu',
+                'menu_id' => 'main-menu-small',
                 'depth' => 2,
                 'walker' => new top_walker_menu(),
             );

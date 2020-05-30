@@ -98,7 +98,7 @@ class Elementor_Map extends Widget_Base {
                 <div class="map-container js--map-container col-12">
                 <?php
                 printf(
-                    '<div class="map-embed" style="min-height: ' . $min_height . 'px;"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=%s&amp;t=m&amp;z=%d&amp;output=embed&amp;iwloc=near" aria-label="%s"></iframe></div>',
+                    '<div class="map-embed" style="min-height: ' . $min_height . 'px;"><iframe src="https://maps.google.com/maps?q=%s&amp;t=m&amp;z=%d&amp;output=embed&amp;iwloc=near" aria-label="%s"></iframe></div>',
                     rawurlencode( $address ),
                     absint( $zoom['size'] ),
                     esc_attr( $address )

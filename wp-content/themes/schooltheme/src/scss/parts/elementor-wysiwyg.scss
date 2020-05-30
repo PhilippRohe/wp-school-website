@@ -1,16 +1,20 @@
 .wysiwyg--section {
-    margin-bottom: 30px;
     width: 100%;
     padding: 30px 15px;
+    margin-bottom: 15px;
     .row {
         width: 100%;
         justify-content: center;
         .section-headline {
             margin: 0;
             padding: 0;
+            margin-bottom: 15px;
+        }
+        h2, h3, h4, h5, h6 {
+            width: 100%;
         }
         p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 28px;
             width: 100%;
             a {
@@ -21,23 +25,23 @@
                 }
             }
             @include media('<=575px') {
-                font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                 line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
             }
         }
         li {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 28px;
             @include media('<=575px') {
-                font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                 line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
             }
         }
         a {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 28px;
             @include media('<=575px') {
-                font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                 line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
             }
         }

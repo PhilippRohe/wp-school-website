@@ -72,19 +72,19 @@ if ( is_admin() ) {
 
 
 /* Load the main settings page */
-require get_template_directory() . '/inc/admin-page/page-main.php';
+require get_template_directory() . '/system/admin-page/page-main.php';
 
 /* Load the style settings page */
-require get_template_directory() . '/inc/admin-page/page-style.php';
+require get_template_directory() . '/system/admin-page/page-style.php';
 
 /* Load the contact settings page */
-require get_template_directory() . '/inc/admin-page/page-contact.php';
+require get_template_directory() . '/system/admin-page/page-contact.php';
 
 /* Load the header settings page */
-require get_template_directory() . '/inc/admin-page/page-header.php';
+require get_template_directory() . '/system/admin-page/page-header.php';
 
 /* Load the footer settings page */
-require get_template_directory() . '/inc/admin-page/page-footer.php';
+require get_template_directory() . '/system/admin-page/page-footer.php';
 
 /* Load the notice settings page */
-require get_template_directory() . '/inc/admin-page/page-notice.php';
+require get_template_directory() . '/system/admin-page/page-notice.php';

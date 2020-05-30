@@ -168,16 +168,16 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 $post_cats = get_categories();
                                                 $post_tags = wp_get_post_terms( $article[ 'id' ], 'post_tag', array('fields' => 'all'));
                                                 ?>
-                                                <ul class="<?php echo $type; ?>-navigation categories" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation categories">
                                                     <?php foreach($post_cats as $post) { ?>
                                                         <?php $link = get_category_link($post); ?>
-                                                        <a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $post->name; ?></li></a>
+                                                        <li class="item"><a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $post->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
-                                                <ul class="<?php echo $type; ?>-navigation tags" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation tags">
                                                     <?php foreach($post_tags as $tag) { ?>
                                                         <?php $link = get_category_link($tag); ?>
-                                                        <a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $tag->name; ?></li></a>
+                                                        <li class="item"><a class="cat-link" rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $tag->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                 <?php
@@ -187,14 +187,14 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 $event_location = wp_get_post_terms( $article[ 'id' ], 'locations-events', array('fields' => 'all'));
                                                 $event_date = get_post_meta( $article[ 'id' ], '_event_date_value', true);
                                                 ?>
-                                                <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation">
                                                     <p>Alle Kategorien:</p>
                                                     <?php foreach($event_cats as $eventcat) { ?>
                                                         <?php $link = get_category_link($eventcat); ?>
                                                         <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $eventcat->name; ?></li></a>
                                                     <?php } ?>
                                                 </ul>
-                                                <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation">
                                                     <p>Alle Orte:</p>
                                                     <?php foreach($event_location as $location) { ?>
                                                         <?php $link = get_category_link($location); ?>
@@ -205,7 +205,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                             case 'teacher':
                                                 $subjects = wp_get_post_terms( $article[ 'id' ], 'subject-teacher', array('fields' => 'all'));
                                                 ?>
-                                                <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($subjects as $subject) { ?>
                                                         <?php $link = get_category_link($subject); ?>
                                                         <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $subject->name; ?></li></a>
@@ -215,7 +215,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                             case 'downloads':
                                                 $download_cats = wp_get_post_terms( $article[ 'id' ], 'categories-downloads', array('fields' => 'all'));
                                                 ?>
-                                                <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                                                <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($download_cats as $download) { ?>
                                                         <?php $link = get_category_link($download); ?>
                                                         <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $download->name; ?></li></a>
@@ -230,7 +230,7 @@ class Elementor_Latest_Widget extends Widget_Base {
 
 
                                     <p class="excerpt"><?php echo $article['excerpt']; ?></p>
-                                    <a href="<?php echo $article['link']; ?>" class="link"><button class="btn">Beitrag ansehen</button></a>
+                                    <a href="<?php echo $article['link']; ?>" class="link"><div class="btn">Beitrag ansehen</div></a>
                                 </div>
                             </div>
                             <?php

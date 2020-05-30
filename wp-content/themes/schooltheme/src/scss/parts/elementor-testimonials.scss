@@ -1,5 +1,6 @@
 .testimonials--section {
-    padding: 100px 15px;
+    padding: 30px 15px;
+    margin-bottom: 15px;
     .row {
         justify-content: center;
         flex-wrap: wrap;
@@ -45,12 +46,12 @@
                         margin: 0;
                     }
                 }
-                @include media('<=575px') {
+                @include media('<=991px') {
                     .left {
-                        width: 100%;
+                        width: unset;
                     }
                     .right {
-                        width: 100%;
+                        width: unset;
                     }
                 }
             }

@@ -46,13 +46,13 @@
                 switch ($type) {
                     case 'post':
                         ?>
-                        <ul class="<?php echo $type; ?>-navigation categories" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation categories">
                             <?php foreach($post_cats as $post) { ?>
                                 <?php $link = get_category_link($post); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $post->name; ?></li></a>
                             <?php } ?>
                         </ul>
-                        <ul class="<?php echo $type; ?>-navigation tags" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation tags">
                             <?php foreach($post_tags as $tag) { ?>
                                 <?php $link = get_category_link($tag); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $tag->name; ?></li></a>
@@ -62,14 +62,14 @@
                         break;
                     case 'events':
                         ?>
-                        <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation">
                             <p>Alle Kategorien:</p>
                             <?php foreach($event_cats as $eventcat) { ?>
                                 <?php $link = get_category_link($eventcat); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $eventcat->name; ?></li></a>
                             <?php } ?>
                         </ul>
-                        <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation">
                             <p>Orte:</p>
                             <?php foreach($event_location as $location) { ?>
                                 <?php $link = get_category_link($location); ?>
@@ -79,7 +79,7 @@
                         break;
                     case 'teacher':
                         ?>
-                        <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation">
                             <?php foreach($subjects as $subject) { ?>
                                 <?php $link = get_category_link($subject); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $subject->name; ?></li></a>
@@ -88,7 +88,7 @@
                         break;
                     case 'downloads':
                         ?>
-                        <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation">
                             <?php foreach($download_cats as $download) { ?>
                                 <?php $link = get_category_link($download); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $download->name; ?></li></a>
@@ -97,7 +97,7 @@
                         break;
                     case 'gallery':
                         ?>
-                        <ul class="<?php echo $type; ?>-navigation" role="navigation">
+                        <ul class="<?php echo $type; ?>-navigation">
                             <?php foreach($gallery_cats as $gallery) { ?>
                                 <?php $link = get_category_link($gallery); ?>
                                 <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $gallery->name; ?></li></a>

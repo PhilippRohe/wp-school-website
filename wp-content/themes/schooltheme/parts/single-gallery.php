@@ -34,7 +34,7 @@
                                 foreach($article[ 'categories' ] as $categorie) {
                                     $link = get_home_url() . '/' . $categorie->taxonomy . '/' . $categorie->slug;
                                     ?>
-                                    <a href="<?php echo $link;?>" target="_self"><li class="item-categorie"><?php echo $categorie->name; ?></li></a>
+                                    <li class="item-categorie"><a href="<?php echo $link;?>" target="_self"><?php echo $categorie->name; ?></a></li>
                                     <?php
                                 }
                             } else {

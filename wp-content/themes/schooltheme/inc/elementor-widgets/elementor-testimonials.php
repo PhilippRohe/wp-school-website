@@ -160,6 +160,7 @@ class Elementor_Testimonials extends Widget_Base {
             </div>
             <div class="row">
                 <?php foreach($testimonials as $testimonial) {
+                    $text = $testimonial['content'];
                     $link_open = ($testimonial['link']['url'] == '') ? '<div class="head">' : '<a class="head" href="' . $testimonial['link']['url'] . '">';
                     $link_close = ($testimonial['link']['url'] == '') ? '</div>' : '</a>';
                     $size = ( $count_testimonials < 2 ) ? ' col-lg-4' : ' col-lg-' . $size;
@@ -176,7 +177,7 @@ class Elementor_Testimonials extends Widget_Base {
                         <?php echo $link_close; ?>
                         <q class="body" cite="<?php echo $testimonial['link']['url']; ?>">
                             <i class="icon icon-quote"></i>
-                            <?php echo $testimonial['content']; ?>
+                            <?php echo $text; ?>
                         </q>
                     </div>
                     <?php

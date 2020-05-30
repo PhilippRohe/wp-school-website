@@ -18,6 +18,65 @@ class Elementor_Downloads extends Widget_Base {
 	public function get_categories() {
 		return [ 'Schulplugins' ];
     }
+
+    protected function load_download_list() {
+
+        $all_downloads = [];
+        $args = array(
+            'post_type' => 'downloads',
+            'posts_per_page' => '-1',
+            'orderby' => 'date',
+            'order' => 'ASC',
+        );
+
+
+        $query = new \WP_Query($args); 
+           
+        if ($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+
+            $all_downloads[get_the_ID()] = get_the_title();
+
+        endwhile; else : ?>
+        <?php endif; wp_reset_postdata();
+
+        return $all_downloads;
+    }
+
+
+    protected function load_download_by_id( $id ) {
+        $all_downloads = [];
+        $args = array(
+            'p' => $id,
+            'post_type' => 'downloads',
+        );
+
+        $query = new \WP_Query($args); 
+
+        $categories_slug = 'categories-downloads';
+           
+        if ($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+
+            /* Load teachers subjects */
+            $link = get_post_meta(get_the_ID(), '_download_link_value', true);
+            $categories = wp_get_post_terms( get_the_ID(), $categories_slug, array( 'fields' => 'all' ) );
+
+            $download = [];
+            $download[ 'id' ] = get_the_ID();
+            $download[ 'title' ] = get_the_title();
+            $download[ 'excerpt' ] = get_the_excerpt();
+            $download[ 'content' ] = get_the_content();
+            $download[ 'thumbnail' ] = strlen(get_the_post_thumbnail_url()) ? get_the_post_thumbnail_url() : 'https://placehold.it/360x200';
+            $download[ 'link' ] = get_permalink();
+            $download[ 'download' ] = $link;
+            $download[ 'categories' ] = $categories;
+
+            array_push($all_downloads, $download);
+
+        endwhile; else : ?>
+        <?php endif; wp_reset_postdata();
+
+        return $all_downloads;
+    }
     
     protected function load_downloads() {
 
@@ -52,7 +111,6 @@ class Elementor_Downloads extends Widget_Base {
             array_push($all_downloads, $download);
 
         endwhile; else : ?>
-            <p>Keine Beiträge gefunden</p>
         <?php endif; wp_reset_postdata();
 
         return $all_downloads;
@@ -73,7 +131,8 @@ class Elementor_Downloads extends Widget_Base {
 				'label' => __( 'Überschrift', 'elementor' ),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'Überschrift',
-				'placeholder' => 'Überschrift',
+                'placeholder' => 'Überschrift',
+                'label_block' => true,
 			]
         );
 
@@ -84,23 +143,23 @@ class Elementor_Downloads extends Widget_Base {
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => __( 'Ja', 'your-plugin' ),
 				'label_off' => __( 'Nein', 'your-plugin' ),
-				'return_value' => TRUE,
-				'default' => FALSE,
+				'return_value' => 'true',
+                'default' => 'false',
+                'label_block' => true,
 			]
-		);
-
+        );
+        
         $this->add_control(
-			'download_id',
+			'single_download',
 			[
-				'label' => __( 'Download ID', 'plugin-domain' ),
-				'type' => Controls_Manager::NUMBER,
-				'min' => 0,
-				'max' => 10000,
-				'step' => 1,
-                'default' => 1,
-                'require' => array(
-                    'choose_one' => TRUE
-                )
+				'label' => __( 'Spezifischer Download', 'plugin-domain' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'solid',
+                'options' => $this->load_download_list(),
+                'condition' => [
+					'choose_one' => 'true'
+                ],
+                'label_block' => true,
 			]
 		);
 
@@ -110,15 +169,18 @@ class Elementor_Downloads extends Widget_Base {
 	protected function render() {
         $settings = $this->get_settings_for_display();
         $headline = $settings['headline'];
-        $downloads = $this->load_downloads();
+        $choose_one = $settings['choose_one'];
+        $single_download = $settings['single_download'];
+        $downloads = ($choose_one == 'true') ? $this->load_download_by_id($single_download) : $this->load_downloads();
         ?>
 
         <section class="section downloads--section w-100 container-fluid">
             <h1 class="widget-headline row"><?php echo $headline; ?></h1>
             <div class="all-downloads row">
                 <?php foreach($downloads as $download) {
+                    $size = ($choose_one == 'true') ? ' col-12' : ' col-12 col-md-12 col-lg-6';
                     ?>
-                    <div class="download-box col-12 col-md-12 col-lg-6">
+                    <div class="download-box<?php echo $size; ?>">
                         <div class="top">
                             <div class="left-side">
                                 <a href="<?php echo $download[ 'download' ]; ?>">
@@ -131,7 +193,7 @@ class Elementor_Downloads extends Widget_Base {
                                 <?php foreach($download[ 'categories' ] as $categorie) {
                                     $link = get_category_link($categorie);
                                     ?>
-                                    <a href="<?php echo $link; ?>"><li><?php echo $categorie->name; ?></li></a>
+                                    <li><a href="<?php echo $link; ?>"><?php echo $categorie->name; ?></a></li>
                                     <?php
                                 } ?>
                                 </ul>
@@ -140,7 +202,7 @@ class Elementor_Downloads extends Widget_Base {
                         </div>
                         <div class="bottom">
                             <a class="download-container" href="<?php echo $download[ 'download' ]; ?>" target="_blank">
-                                <button class="btn download-button">Jetzt downloaden</button>
+                                <div class="btn download-button">Jetzt downloaden</div>
                             </a>
                         </div>
                     </div>

@@ -102,7 +102,7 @@ class top_walker_menu extends Walker {
 
         $item_output .= $args->link_before . $title . $args->link_after;
         if (in_array("menu-item-has-children", $classes)) {
-            $item_output .='<span class="icon-down">';
+            $item_output .='<span class="icon-down"></span>';
         }
         $item_output .= '</a>';
         $item_output .= $args->after;

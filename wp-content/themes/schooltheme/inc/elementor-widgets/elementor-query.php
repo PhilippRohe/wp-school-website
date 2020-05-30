@@ -170,6 +170,18 @@ class Elementor_Query extends Widget_Base {
 				'step' => 10,
 				'default' => 350,
 			]
+        );
+        
+        $this->add_control(
+			'max-height',
+			[
+				'label' => __( 'Maximalhöhe', 'plugin-domain' ),
+				'type' => Controls_Manager::NUMBER,
+				'min' => 250,
+				'max' => 800,
+				'step' => 10,
+				'default' => 800,
+			]
 		);
 
 		$this->end_controls_section();
@@ -187,6 +199,7 @@ class Elementor_Query extends Widget_Base {
         $sort = $settings['sort'];
 
         $min_height = $settings['min-height'] ? $settings['min-height'] : 350;
+        $max_height = $settings['max-height'] ? $settings['max-height'] : 800;
 
         $all_entries = $this->load_last_entries($post_type, $number, $order, $sort);
 
@@ -199,7 +212,7 @@ class Elementor_Query extends Widget_Base {
             <div class="row all-entries">
                 <?php foreach($all_entries as $entry) {
                     ?>
-                    <a href="<?php echo $entry[ 'link' ]; ?>" class="entry-box col-12 col-sm-12 col-md-4" target="_self" style="min-height: <?php echo $min_height; ?>px">
+                    <a href="<?php echo $entry[ 'link' ]; ?>" class="entry-box col-12 col-sm-12 col-md-4" target="_self" style="min-height: <?php echo $min_height; ?>px; max-height: <?php echo $max_height; ?>px;">
                         <img class="entry-image" src="<?php echo $entry[ 'thumbnail' ]; ?>" alt="<?php $entry[ 'content' ];?> - Bild des <?php echo $post_type; ?>s">
                         <div class="meta-box" aria-hidden="false">
                             <h2 class="title"><?php echo $entry[ 'title' ]; ?></h2>

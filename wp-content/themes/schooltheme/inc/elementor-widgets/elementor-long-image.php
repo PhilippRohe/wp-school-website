@@ -1,14 +1,14 @@
 <?php
 namespace Elementor;
 
-class Elementor_Start_Image extends Widget_Base {
+class Elementor_Long_Image extends Widget_Base {
 	
 	public function get_name() {
 		return 'elementor-start-image-widget';
 	}
 	
 	public function get_title() {
-		return '[School] Start Bild';
+		return '[School] Langes Bild';
 	}
 	
 	public function get_icon() {
@@ -94,7 +94,7 @@ class Elementor_Start_Image extends Widget_Base {
 
         ?>
 
-        <section class="section image-start--section w-100 container-fluid">
+        <section class="section image-long--section w-100 container-fluid">
             <p style="margin-top: <?php echo $font_margin; ?>px; color: <?php echo $font_color; ?>" class="start-image-title"><?php echo $title; ?></p>
             <img style="max-height: <?php echo $height; ?>px;" class="start-image w-100" src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image_alt; ?>">
         </section>

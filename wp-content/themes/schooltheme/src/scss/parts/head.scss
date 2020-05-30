@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 100%;
     background: $topmenu-background;
+    overflow-x: hidden;
     .bc--topmenu {
         display: flex;
         height: 40px;
@@ -156,7 +157,11 @@
                     align-self: center;
                 }
             }
+            @include media('<=991px') {
+                justify-content: center;
+            }
             @include media('<=767px') {
+                justify-content: flex-start;
                 height: 90px;
                 a {
                     .school-logo {
@@ -215,7 +220,7 @@
                                     transition: all .2s ease-in-out;
                                     margin-top: 30px;
                                     position: absolute;
-                                    margin-left: -25px;
+                                    margin-left: -50px;
                                     max-height: 0;
                                     height: auto;
                                     overflow: hidden;
@@ -375,7 +380,7 @@
                             p {
                                 font-size: calc(17px + (26 - 17) * ((100vw - 768px) / (1199 - 768)));
                                 &.small {
-                                    font-size: calc(12px + (14 - 12) * ((100vw - 768px) / (1199 - 768)));
+                                    font-size: calc(11px + (14 - 11) * ((100vw - 768px) / (1199 - 768)));
                                 }
                             }
                         }

@@ -37,29 +37,28 @@
                             display: flex;
                             flex-direction: row;
                             margin-bottom: 0;
-                            a {
+                            li {
                                 align-self: center;
-                                transition: all .2s ease-in-out;
-                                color: #888;
-                                font-style: italic;
-                                text-decoration: none;
-                                li {
+                                a {
+                                    transition: all .2s ease-in-out;
                                     font-size: 12px;
-                                    line-height: 14px;
+                                    color: #888;
+                                    font-style: italic;
+                                    text-decoration: none;
                                     &::after {
                                         content: '-';
                                         margin: 0 5px;
                                     }
+                                    &:hover {
+                                        color: $hover-color;
+                                    }
                                 }
                                 &:last-child {
-                                    li {
+                                    a {
                                         &::after {
                                             display: none;
                                         }
                                     }
-                                }
-                                &:hover {
-                                    color: $hover-color;
                                 }
                             }
                         }
@@ -114,34 +113,34 @@
                         display: flex;
                         flex-direction: row;
                         margin-bottom: 0;
-                        a {
+                        li {
                             align-self: center;
-                            transition: all .2s ease-in-out;
-                            color: #888;
-                            font-style: italic;
-                            text-decoration: none;
-                            li {
+                            a {
+                                transition: all .2s ease-in-out;
                                 font-size: 12px;
-                                line-height: 14px;
+                                color: #888;
+                                font-style: italic;
+                                text-decoration: none;
                                 &::after {
                                     content: '-';
                                     margin: 0 5px;
                                 }
+                                &:hover {
+                                    color: $hover-color;
+                                }
                             }
                             &:last-child {
-                                li {
+                                a {
                                     &::after {
                                         display: none;
                                     }
                                 }
                             }
-                            &:hover {
-                                color: $hover-color;
-                            }
                         }
                     }
                     p {
                         margin: 0;
+                        align-self: center;
                     }
                     span {
                         font-style: italic;
@@ -153,28 +152,28 @@
             }
             .content-text {
                 margin-top: 15px;
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 28px;
                 @include media('<=575px') {
-                    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                     line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
                 }
             }
             ul {
                 li {
-                    font-size: 20px;
+                    font-size: 18px;
                     line-height: 28px;
                     @include media('<=575px') {
-                        font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                         line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
                     }
                 }
             }
             a {
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 28px;
                 @include media('<=575px') {
-                    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (575 - 320)));
+                    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
                     line-height: calc(16px + (28 - 16) * ((100vw - 320px) / (575 - 320)));
                 }
             }

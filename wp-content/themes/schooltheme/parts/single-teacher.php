@@ -31,7 +31,7 @@
                     <?php foreach($teacher[ 'subjects' ] as $subject) {
                         $link = get_category_link($subject);
                         ?>
-                        <a href="<?php echo $link; ?>"><li><?php echo $subject->name; ?></li></a>
+                        <li><a href="<?php echo $link; ?>"><?php echo $subject->name; ?></a></li>
                         <?php
                     } ?>
                 </ul>

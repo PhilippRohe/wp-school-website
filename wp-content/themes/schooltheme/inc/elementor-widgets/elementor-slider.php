@@ -83,8 +83,20 @@ class Elementor_Slider extends Widget_Base {
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => __( 'Ja', 'your-plugin' ),
 				'label_off' => __( 'Nein', 'your-plugin' ),
-				'return_value' => true,
-				'default' => true,
+				'return_value' => 'true',
+				'default' => 'true',
+			]
+        );
+        
+        $this->add_control(
+			'show_dots',
+			[
+				'label' => __( 'Punkte anzeigen?', 'plugin-domain' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Ja', 'your-plugin' ),
+				'label_off' => __( 'Nein', 'your-plugin' ),
+				'return_value' => 'true',
+				'default' => 'true',
 			]
 		);
 
@@ -96,13 +108,14 @@ class Elementor_Slider extends Widget_Base {
         $headline = $settings['headline'];
         $slider_id = ($settings['slider'] === -1) ? 'Bitte Slider auswählen' : $settings['slider'];
         $gallery = load_images_from_slider($slider_id);
-        $zoom = $settings['zoom'] ? ' js--image-title' : '';
+        $zoom = ($settings['zoom'] == 'true') ? ' js--image-title' : '';
+        $dots = ($settings['show_dots'] == 'true') ? '' : ' no-dots';
 
         ?>
 
         <div class="image-slider-modal js--modal">
             <div class="window">
-                <img class="modal-image js--modal-image" src="" alt="Empty image">
+                <img class="modal-image js--modal-image" src="https://www.placehold.it/800x800" alt="Empty image">
             </div>
         </div>
 
@@ -117,7 +130,7 @@ class Elementor_Slider extends Widget_Base {
                     <p class="empty-slider">Bitte wählen Sie einen Slider aus</p>
                     <?php
                 }  else { ?>
-                    <div class="image-slider js--image-slider">
+                    <div class="image-slider js--image-slider<?php echo $dots; ?>">
                     <?php foreach($gallery as $key => $image) {
                         ?>
                         <div data-id="<?php echo $image[ 'id' ]; ?>" class="carousel-item">

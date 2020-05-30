@@ -73,16 +73,27 @@ function header_theme_options_box_one() {
     </div>
     <div class="field" style="margin-bottom: 15px; display: flex; flex-direction: column;">
         <label for="box_one_link">Seite zur Verlinkung auswählen: </label>
-        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_one_link" id="header_settings_box_one_link">
+        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_one_link">
             <?php foreach($all_posts as $post) {
+                $id = $post["id"];
+                $link = $post["link"];
+                $title = $post["title"];
+                if ($box_one_link == $id) {
+                    ?>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <?php
+                }
                 ?>
-                <option <?php if ($box_one_link == $post['link']) { echo 'selected';} ?> data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
                 <?php
             } ?>
         </select>
     </div>
     <div class="field">
-        <label for="box-one-icon">Icon auswählen (bitte Font Awesome Code eingeben (z.B. fas fa-columns):</label>
+        <label for="box-one-icon">Icon auswählen (bitte Font Awesome Code eingeben, z.B. fas fa-columns):</label>
         <input style="width: 100%;" id="box-one-icon" type="text" name="header_settings_box_one_icon" value="<?php echo $box_one_icon; ?>" />
     </div>
     <?php
@@ -107,16 +118,18 @@ function header_theme_options_box_two() {
     </div>
     <div class="field" style="margin-bottom: 15px; display: flex; flex-direction: column;">
         <label for="box_two_link">Seite zur Verlinkung auswählen: </label>
-        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_two_link" id="header_settings_box_two_link">
+        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_two_link">
             <?php foreach($all_posts as $post) {
+                $id = $post["id"];
                 $link = $post["link"];
-                if ($box_two_link == $post["link"]) {
+                $title = $post["title"];
+                if ($box_two_link == $id) {
                     ?>
-                    <option selected data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>
@@ -125,7 +138,7 @@ function header_theme_options_box_two() {
         </select>
     </div>
     <div class="field">
-        <label for="box-two-icon">Icon auswählen (bitte Font Awesome Code eingeben (z.B. fas fa-columns):</label>
+        <label for="box-two-icon">Icon auswählen (bitte Font Awesome Code eingeben, z.B. fas fa-columns):</label>
         <input style="width: 100%;" id="box-two-icon" type="text" name="header_settings_box_two_icon" value="<?php echo $box_two_icon; ?>" />
     </div>
     <?php
@@ -150,16 +163,28 @@ function header_theme_options_box_three() {
     </div>
     <div class="field" style="margin-bottom: 15px; display: flex; flex-direction: column;">
         <label for="box_three_link">Seite zur Verlinkung auswählen: </label>
-        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_three_link" id="header_settings_box_three_link">
-            <?php foreach($all_posts as $post) {
+        <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_three_link">
+        <?php foreach($all_posts as $post) {
+                var_dump($post);
+                $id = $post["id"];
+                $link = $post["link"];
+                $title = $post["title"];
+                if ($box_three_link == $id) {
+                    ?>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <?php
+                }
                 ?>
-                <option <?php if ($box_three_link == $post['link']) { echo 'selected';} ?> data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
                 <?php
             } ?>
         </select>
     </div>
     <div class="field">
-        <label for="box-three-icon">Icon auswählen (bitte Font Awesome Code eingeben (z.B. fas fa-columns):</label>
+        <label for="box-three-icon">Icon auswählen (bitte Font Awesome Code eingeben, z.B. fas fa-columns):</label>
         <input style="width: 100%;" id="box-three-icon" type="text" name="header_settings_box_three_icon" value="<?php echo $box_three_icon; ?>" />
     </div>
     <?php

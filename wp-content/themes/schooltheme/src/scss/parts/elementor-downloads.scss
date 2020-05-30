@@ -1,6 +1,6 @@
 .downloads--section {
     padding: 30px 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     .widget-headline {
         width: 100%;
         margin-bottom: 30px;
@@ -46,11 +46,16 @@
                         flex-direction: row;
                         margin: 0;
                         padding: 0;
-                        a {
-                            text-decoration: none;
+                        li {
                             margin: 0 10px;
-                            li {
+                            a {
+                                transition: all .3s ease-in-out;
+                                color: rgb(184, 184, 184);
+                                text-decoration: none;
                                 font-size: 12px;
+                                &:hover {
+                                    color: $hover-color;
+                                }
                             }
                             &:first-child {
                                 margin-left: 0px;

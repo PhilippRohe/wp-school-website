@@ -40,7 +40,7 @@
                             foreach($article[ 'location' ] as $location) {
                                 $link = get_home_url() . '/' . $location->taxonomy . '/' . $location->slug;
                                 ?>
-                                <a href="<?php echo $link;?>" target="_self"><li class="item-location"><?php echo $location->name; ?></li></a>
+                                <li class="item-location"><a href="<?php echo $link;?>" target="_self"><?php echo $location->name; ?></a></li>
                                 <?php
                             }
                         } else {

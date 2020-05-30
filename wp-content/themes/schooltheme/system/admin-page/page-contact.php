@@ -75,16 +75,18 @@ function contact_theme_options_map() {
     $all_posts = bc_get_all_posts($types); ?>
     <div class="admin--contact-map" style="display: flex; flex-direction: column;">
         <label for="admin_contact_map">Seite mit Karte und Standortinformationen auswählen: </label>
-        <select style="width: 100%;" class="admin-input admin-contact-map" name="contact_settings_map" id="contact_settings_map">
+        <select style="width: 100%;" class="admin-input admin-contact-map" name="contact_settings_map">
             <?php foreach($all_posts as $post) {
+                $title = $post["title"];
+                $id = $post["id"];
                 $link = $post["link"];
-                if ($map == $post["link"]) {
+                if ($map == $id) {
                     ?>
-                    <option selected data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-id="<?php echo $post['id']; ?>" value="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></option>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>

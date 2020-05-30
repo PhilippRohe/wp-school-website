@@ -69,6 +69,8 @@ function bc_get_all_posts($types) {
     foreach($types as $type) {
         $args = array(
             'post_type'=> $type,
+            'posts_per_page' => '-1',
+            'orderby' => 'title',
         );              
     
         $query = new WP_Query( $args );

@@ -70,9 +70,6 @@
 
 /* Elementor widgets and WordPress widgets */
 
-// Import the intro widget
-@import 'parts/elementor-intro';
-
 // Import the last news widget
 @import 'parts/elementor-last';
 
@@ -95,7 +92,7 @@
 @import 'parts/elementor-map';
 
 // Import elementor start image
-@import 'parts/elementor-start-image';
+@import 'parts/elementor-long-image';
 
 
 

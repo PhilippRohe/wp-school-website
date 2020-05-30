@@ -1,5 +1,4 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta http-equiv="Content-Type" />
 <meta name="format-detection" content="telephone=yes">
 <!--[if lt IE 8]>Please update your browser to use this website<![endif]-->
 <!-- SEO Meta Tags -->

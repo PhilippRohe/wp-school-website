@@ -73,7 +73,7 @@ function customizer_output_highlight() {
             .comment-container .row .comments-headline span { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .container--search-results .container--search-results-body .search--results-content .search--results-single .box-body a .post-link-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .single-content-area .teacher-single .content .content-left .subject-list a:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .last-news--section .row .articles .single-article .article-body .link button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .last-news--section .row .articles .single-article .article-body .link div { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .last-news--section .row .articles .single-article .article-head { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .downloads--section .all-downloads .download-box .top .left-side a .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             #cookie-law-info-again { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?> !important; }
@@ -83,6 +83,8 @@ function customizer_output_highlight() {
             .wysiwyg--section .row p a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .footer-main .row .footer-copyright .row .right-copy a i { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             div.wpcf7-validation-errors { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .post-single .content .post-meta-list .list ul li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .downloads--section .all-downloads .download-box .top .right-side .categories-list li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
          </style>
     <?php
 }

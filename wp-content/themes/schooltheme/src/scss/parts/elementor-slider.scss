@@ -1,6 +1,6 @@
 .slider--section {
     padding: 30px 0px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     .row {
         .widget-headline {
             margin-bottom: 30px;
@@ -65,6 +65,12 @@
                     }
                     @include media('<=767px') {
                         margin-right: 60px;
+                    }
+                }
+
+                &.no-dots {
+                    .slick-dots {
+                        display: none !important;
                     }
                 }
             }
