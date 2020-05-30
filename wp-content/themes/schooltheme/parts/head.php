@@ -134,4 +134,4 @@ $is_single = (is_single()) ? ' single-page' : '';
         </div>
     </div>
 
-</?header>
+</header>
