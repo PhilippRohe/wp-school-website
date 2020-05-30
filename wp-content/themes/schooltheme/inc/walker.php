@@ -26,7 +26,7 @@ class top_walker_menu extends Walker {
         $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
         $class_names = $class_names ? ' class="container ' . esc_attr( $class_names ) . '"' : '';
  
-        $output .= "{$n}{$indent}</span><div class='sub-menu-container js--submenu'><ul$class_names>{$n}";
+        $output .= "{$n}{$indent}<div class='sub-menu-container js--submenu'><ul$class_names>{$n}";
     }
  
     public function end_lvl( &$output, $depth = 0, $args = array() ) {

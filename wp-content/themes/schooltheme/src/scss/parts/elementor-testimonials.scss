@@ -57,6 +57,15 @@
             }
             .body {
                 clear: both;
+                text-align: justify;
+                font-style: italic;
+                p {
+                    text-align: justify;
+                    font-style: italic;
+                    &::before, &::after {
+                        content: '\0022';
+                    }
+                }
                 .icon {
                     text-align: center;
                     margin: 0 25px 10px 0;
@@ -64,13 +73,6 @@
                     font-size: 32px;
                     color: $arrow-color;
                     height: 15px;
-                }
-                p {
-                    text-align: justify;
-                    font-style: italic;
-                    &::before, &::after {
-                        content: '\0022';
-                    }
                 }
                 &::before, &::after {
                     display: none;

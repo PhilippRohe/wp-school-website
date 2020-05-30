@@ -175,10 +175,10 @@ class Elementor_Testimonials extends Widget_Base {
                                 <p class="details"><?php echo $testimonial['details']; ?></p>
                             </div>
                         <?php echo $link_close; ?>
-                        <q class="body" cite="<?php echo $testimonial['link']['url']; ?>">
+                        <div class="body">
                             <i class="icon icon-quote"></i>
                             <?php echo $text; ?>
-                        </q>
+                        </div>
                     </div>
                     <?php
                 } ?>

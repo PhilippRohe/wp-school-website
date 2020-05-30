@@ -43,7 +43,7 @@ class Elementor_Wysiwyg extends Widget_Base {
 			[
 				'label' => __( 'Überschrift Typ', 'plugin-domain' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'h1',
+				'default' => 'h2',
 				'options' => [
 					'h1'  => __( 'H1', 'plugin-domain' ),
 					'h2'  => __( 'H2', 'plugin-domain' ),

@@ -207,7 +207,7 @@ class Elementor_Query extends Widget_Base {
 
         <section class="section query--section w-100 container-fluid <?php echo $style; ?>">
             <div class="row">
-                <h1 class="section-headline"><?php echo $headline; ?></h1>
+                <h2 class="section-headline"><?php echo $headline; ?></h2>
             </div>
             <div class="row all-entries">
                 <?php foreach($all_entries as $entry) {

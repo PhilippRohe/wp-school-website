@@ -6,6 +6,7 @@ $header_background_image = esc_attr(get_option( 'style_settings_header_backgroun
 $menu_logo = esc_attr(get_option( 'bc_menu_logo' )) ? esc_attr(get_option( 'bc_menu_logo' )) : 'https://www.placehold.it/250x75';
 $is_single = (is_single()) ? ' single-page' : '';
 ?>
+
 <header class="bc--header container-fluid<?php echo $is_single; ?>">
 
     <!-- Mobile toggle -->
@@ -133,4 +134,4 @@ $is_single = (is_single()) ? ' single-page' : '';
         </div>
     </div>
 
-</header>
+</?header>

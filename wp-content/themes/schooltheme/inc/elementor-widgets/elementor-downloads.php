@@ -175,7 +175,7 @@ class Elementor_Downloads extends Widget_Base {
         ?>
 
         <section class="section downloads--section w-100 container-fluid">
-            <h1 class="widget-headline row"><?php echo $headline; ?></h1>
+            <h2 class="widget-headline row"><?php echo $headline; ?></h2>
             <div class="all-downloads row">
                 <?php foreach($downloads as $download) {
                     $size = ($choose_one == 'true') ? ' col-12' : ' col-12 col-md-12 col-lg-6';
