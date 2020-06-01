@@ -82,4 +82,12 @@
     @include media('>767px') {
         display: none;
     }
+
+    &.single, &.single-page {
+        .menu--toggle {
+            span {
+                background: #000;
+            }
+        }
+    }
 }

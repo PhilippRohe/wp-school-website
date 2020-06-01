@@ -29,6 +29,9 @@
                     font-size: calc(14px + (55 - 14) * ((100vw - 575px) / (1440 - 575)));
                     margin-top: calc(155px + (125 - 155) * ((100vw - 575px) / (1440 - 575)));
                 }
+                @include media('<=575px') {
+                    display: none;
+                }
             }
             .carousel-item {
                 img {

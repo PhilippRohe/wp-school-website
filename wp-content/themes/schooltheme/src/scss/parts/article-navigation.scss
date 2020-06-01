@@ -86,6 +86,9 @@
                         width: 100%;
                     }
                 }
+                @include media('<=575px') {
+                    flex-direction: column;
+                }
             }
         }
     }

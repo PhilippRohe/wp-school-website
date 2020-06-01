@@ -230,4 +230,13 @@ input:-webkit-autofill:active  {
             width: auto;
         }
     }
+    @include media('<=575px') {
+        transform: scale(.7);
+        margin-right: -10px;
+    }
+}
+
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
 }

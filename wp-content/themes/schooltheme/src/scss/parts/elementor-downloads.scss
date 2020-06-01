@@ -41,11 +41,15 @@
                     h2 {
                         text-transform: uppercase;
                         min-height: 76px;
+                        @include media('<=575px') {
+                            font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (575 - 320)));
+                        }
                     }
                     .categories-list {
                         list-style: none;
                         display: flex;
                         flex-direction: row;
+                        flex-wrap: wrap;
                         margin: 0;
                         padding: 0;
                         li {
@@ -100,6 +104,7 @@
             }
             @include media('<=991px') {
                 padding: 30px 0;
+                margin-bottom: 45px;
             }
         }
     }

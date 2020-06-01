@@ -14,6 +14,7 @@
         font-weight: 800;
         @include media('<=767px') {
             font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (767 - 320)));
+            margin-top: calc(80px + (115 - 80) * ((100vw - 320px) / (767 - 320))) !important;
         }
     }
     .start-image {

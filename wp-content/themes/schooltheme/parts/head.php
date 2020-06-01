@@ -4,13 +4,14 @@ $phone = esc_attr(get_option( 'contact_settings_phone' ));
 $map = esc_attr(get_option( 'contact_settings_map' ));
 $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
 $menu_logo = esc_attr(get_option( 'bc_menu_logo' )) ? esc_attr(get_option( 'bc_menu_logo' )) : 'https://www.placehold.it/250x75';
-$is_single = (is_single()) ? ' single-page' : '';
+$is_single = (is_single()) ? ' single' : '';
+$is_page = (is_page()) ? ' single-page' : '';
 ?>
 
 <header class="bc--header container-fluid<?php echo $is_single; ?>">
 
     <!-- Mobile toggle -->
-    <div class="nav-menu mobile-menu js--mobile-menu">
+    <div class="nav-menu mobile-menu js--mobile-menu<?php echo $is_single; ?><?php echo $is_page; ?>">
         <div class="menu--toggle">
             <span></span>
             <span></span>
