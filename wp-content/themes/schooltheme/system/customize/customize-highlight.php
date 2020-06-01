@@ -65,14 +65,14 @@ function customizer_output_highlight() {
             .bc--breadcrumbs .bc--breadcrumbs-navigation a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .comment-container .row form p .comment-send-button:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .single-content-area .post-single .post-head .head-right .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .single-content-area .teacher-single .content .content-left .subject-list li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .teacher-single .content .content-right .subject-list li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .container--search-results .container--search-results-head h1 b { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .archive-container .row .archive--inner h1 b { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .archive-container .row .archive--inner article .post-inner a .view-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .bc--header .small-navigation>div ul li.open a span { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .comment-container .row .comments-headline span { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .container--search-results .container--search-results-body .search--results-content .search--results-single .box-body a .post-link-button { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
-            .single-content-area .teacher-single .content .content-left .subject-list a:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .single-content-area .teacher-single .content .content-right .subject-list li:hover { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .last-news--section .row .articles .single-article .article-body .link div { background: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .last-news--section .row .articles .single-article .article-head { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .downloads--section .all-downloads .download-box .top .left-side a .download-icon { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
@@ -85,6 +85,7 @@ function customizer_output_highlight() {
             div.wpcf7-validation-errors { border-color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .single-content-area .post-single .content .post-meta-list .list ul li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .downloads--section .all-downloads .download-box .top .right-side .categories-list li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget .calendar_wrap table tbody tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
          </style>
     <?php
 }

@@ -5,7 +5,6 @@
         display: flex;
         justify-content: center;
         .headline {
-            text-transform: uppercase;
             text-align: center;
             margin-bottom: 40px;
         }
@@ -62,7 +61,7 @@
                     .excerpt {
                         text-align: justify;
                         align-self: flex-start;
-                        min-height: 100px;
+                        min-height: 125px;
                     }
                     .link {
                         width: 100%;
@@ -77,13 +76,13 @@
                             }
                         }
                     }
-                    @include media('<=991px') {
+                    @include media('<=1199px') {
                         max-height: unset !important;
                         min-height: unset !important;
                         height: auto;
                     }
                 }
-                @include media('<=991px') {
+                @include media('<=1199px') {
                     margin-bottom: 30px;
                     height: unset !important;
                 }

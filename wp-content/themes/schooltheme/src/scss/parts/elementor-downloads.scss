@@ -11,7 +11,6 @@
         display: flex;
         justify-content: flex-start;
         .download-box {
-            padding: 30px 15px;
             align-self: center;
             width: 100%;
             display: flex;
@@ -96,7 +95,7 @@
             &:last-child {
                 padding-bottom: 0;
             }
-            @include media('<=767px') {
+            @include media('<=991px') {
                 padding: 30px 0;
             }
         }

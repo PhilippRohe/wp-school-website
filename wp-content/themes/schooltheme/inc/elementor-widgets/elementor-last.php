@@ -150,7 +150,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                     <div class="row">
                         <?php foreach($all_arcticles as $article) {
                             ?>
-                            <div class="single-article col-sm-12 col-lg-<?php echo $size; ?> align-self-center">
+                            <div class="single-article col-sm-12 col-xl-<?php echo $size; ?> align-self-center">
                                 <div class="article-head">
                                     <img src="<?php echo $article['thumbnail']; ?>" alt="">
                                 </div>
