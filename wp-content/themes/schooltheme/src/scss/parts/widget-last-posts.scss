@@ -10,7 +10,7 @@
         justify-content: flex-start;
         border-bottom: 1px outset grey;
         color: white;
-        .bc--foter-post-left {
+        .bc--footer-post-left {
             margin: 0px;
             align-self: center;
             img {
@@ -29,11 +29,11 @@
             }
         }
 
-        .bc--foter-post-right {
+        .bc--footer-post-right {
             transition: .3s ease-in-out;
             margin: 0px 10px;
             align-self: center;
-            margin-right: 50px;
+            margin-right: 40px;
             h3 {
                 font-weight: 600;
                 margin: 0;
@@ -57,7 +57,7 @@
             transition: .3s ease-in-out;
             align-self: center;
             position: absolute;
-            right: 40px;
+            right: 15px;
             transform: rotate(270deg);
         }
 
@@ -66,7 +66,7 @@
             .icon {
                 right: 30px;
             }
-            .bc--foter-post-right {
+            .bc--footer-post-right {
                 h3 {
                     color: $hover-color; 
                 }

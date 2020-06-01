@@ -145,6 +145,7 @@ function customizer_output_background() {
              .bc--header .small-navigation.show { background: <?php echo get_theme_mod( $prefix . 'post_slider_background', '#3d3d3d'); ?>; }
              .bc--header.single-page .bc--navigation { background: <?php echo get_theme_mod( $prefix . 'post_header_background', '#fff'); ?> !important; }
             body:not(.elementor-page) { background: <?php echo get_theme_mod( $prefix . 'body_background_post', '#fff'); ?> !important; }
+            .footer-main .row .footer-content .footer-widgets .footer-col ul .widget ul li .sub-menu { background: <?php echo get_theme_mod( $prefix . 'footer_background', '#3d3d3d'); ?>; }
          </style>
     <?php
 }

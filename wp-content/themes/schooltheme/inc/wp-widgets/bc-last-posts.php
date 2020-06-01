@@ -81,7 +81,7 @@ class bc_last_posts extends WP_Widget {
             <?php foreach($posts as $single) {
                 ?>
                 <a class="bc-footer--post" href="<?php echo $single['link']; ?>">
-                    <div class="bc--foter-post-left">
+                    <div class="bc--footer-post-left">
                         <?php 
                         if ($single['image']) {
                             echo $single['image'];
@@ -89,9 +89,9 @@ class bc_last_posts extends WP_Widget {
                             ?> <div class="image-placeholder"></div> <?php
                         } ?>   
                     </div>
-                    <div class="bc--foter-post-right">
+                    <div class="bc--footer-post-right">
                         <h3><?php echo $single['title']; ?></h3>
-                        <?php if ($single['type'] != 'downloads') {
+                        <?php if ( ($single['type'] != 'downloads') && ($single['type'] != 'teacher') && ( $single['type'] != 'events' ) ) {
                             echo $single['excerpt'];
                         } ?>
                         <?php if ($single['type'] == 'teacher') {

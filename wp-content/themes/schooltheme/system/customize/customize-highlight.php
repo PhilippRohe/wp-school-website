@@ -86,6 +86,7 @@ function customizer_output_highlight() {
             .single-content-area .post-single .content .post-meta-list .list ul li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .downloads--section .all-downloads .download-box .top .right-side .categories-list li a:hover { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
             .footer-main .row .footer-content .footer-widgets .footer-col ul .widget .calendar_wrap table tbody tr td a { color: <?php echo get_theme_mod( $prefix . 'highlight_background', '#4dcc82'); ?>; }
+         
          </style>
     <?php
 }

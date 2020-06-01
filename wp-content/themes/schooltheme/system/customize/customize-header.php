@@ -132,6 +132,7 @@ function customizer_output_header() {
              .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li .subitem-link span  { color: <?php echo get_theme_mod( $prefix . 'navigation_color_arrow', '#fff'); ?>; }
 
              .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li:hover .sub-menu-container  { background: <?php echo get_theme_mod( $prefix . 'navigation_background_submenu', '#3d3d3d'); ?>; }
+             .bc--header .bc--navigation .right .navigation .big-navigation .menu-hauptmenue-container .main-menu li .sub-menu-container  { background: <?php echo get_theme_mod( $prefix . 'navigation_background_submenu', '#3d3d3d'); ?>; }
              
              .bc--header .bc--navigation .action-boxes .row .box  { background: <?php echo get_theme_mod( $prefix . 'navigation_box_background', '#3d3d3d'); ?>80; }
              .bc--header .bc--navigation .action-boxes .row .box:hover  { background: <?php echo get_theme_mod( $prefix . 'navigation_box_background', '#3d3d3d'); ?>; }
