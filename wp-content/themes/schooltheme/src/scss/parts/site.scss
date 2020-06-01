@@ -215,9 +215,6 @@ input:-webkit-autofill:active  {
                 span {
                     text-align: center;
                     font-size: 18px;
-                    @include media('<=575px') {
-                        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (575 - 320)));
-                    }
                 }
                 &:hover {
                     background: $topmenu-background;

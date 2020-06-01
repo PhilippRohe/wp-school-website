@@ -155,7 +155,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                     <img src="<?php echo $article['thumbnail']; ?>" alt="">
                                 </div>
                                 <div class="article-body">
-                                    <a href="<?php echo $article['link']; ?>"><h2 class="title"><?php echo $article['title']; ?></h2></a>
+                                    <a href="<?php echo $article['link']; ?>"><h3 class="title"><?php echo $article['title']; ?></h3></a>
 
 
                                     <?php
