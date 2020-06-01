@@ -72,19 +72,22 @@ $is_single = (is_single()) ? ' single-page' : '';
                 $box_one_text_small = esc_attr(get_option( 'header_settings_box_one_text_small' ));
                 $box_one_link = esc_attr(get_option( 'header_settings_box_one_link' ));
                 $box_one_icon = esc_attr(get_option( 'header_settings_box_one_icon' ));
+                $link_one = get_permalink( $box_one_link );
 
                 $box_two_text_big = esc_attr(get_option( 'header_settings_box_two_text_big' ));
                 $box_two_text_small = esc_attr(get_option( 'header_settings_box_two_text_small' ));
                 $box_two_link = esc_attr(get_option( 'header_settings_box_two_link' ));
                 $box_two_icon = esc_attr(get_option( 'header_settings_box_two_icon' ));
+                $link_two = get_permalink( $box_two_link );
 
                 $box_three_text_big = esc_attr(get_option( 'header_settings_box_three_text_big' ));
                 $box_three_text_small = esc_attr(get_option( 'header_settings_box_three_text_small' ));
                 $box_three_link = esc_attr(get_option( 'header_settings_box_three_link' ));
                 $box_three_icon = esc_attr(get_option( 'header_settings_box_three_icon' ));
+                $link_three = get_permalink( $box_three_link );
             ?>
             <div class="row">
-                <a href="<?php echo $box_one_link; ?>" class="box col-4">
+                <a href="<?php echo $link_one; ?>" class="box col-4">
                     <div class="left-box">
                         <p><?php echo $box_one_text_big; ?></p>
                         <p class="small"><?php echo $box_one_text_small; ?></p>
@@ -93,7 +96,7 @@ $is_single = (is_single()) ? ' single-page' : '';
                         <i class="<?php echo $box_one_icon; ?>"></i>
                     </div>
                 </a>
-                <a href="<?php echo $box_two_link; ?>" class="box col-4">
+                <a href="<?php echo $link_two; ?>" class="box col-4">
                     <div class="left-box">
                         <p><?php echo $box_two_text_big; ?></p>
                         <p class="small"><?php echo $box_two_text_small; ?></p>
@@ -102,7 +105,7 @@ $is_single = (is_single()) ? ' single-page' : '';
                         <i class="<?php echo $box_two_icon; ?>"></i>
                     </div>
                 </a>
-                <a href="<?php echo $box_three_link; ?>" class="box col-4">
+                <a href="<?php echo $link_three; ?>" class="box col-4">
                     <div class="left-box">
                         <p><?php echo $box_three_text_big; ?></p>
                         <p class="small"><?php echo $box_three_text_small; ?></p>

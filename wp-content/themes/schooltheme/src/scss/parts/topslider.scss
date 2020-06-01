@@ -8,9 +8,9 @@
             .free-slider-text {
                 border-radius: 15px;
                 word-spacing: 30px;
-                font-size: 36px;
+                font-size: 55px;
                 text-transform: uppercase;
-                margin-top: 145px;
+                margin-top: 125px;
                 color: $white;
                 background: rgba(0, 0, 0, 0.35 );
                 width: fit-content;
@@ -26,7 +26,8 @@
                 font-weight: 900;
                 top: 0;
                 @include media('<=1440px') {
-                    font-size: calc(14px + (36 - 14) * ((100vw - 575px) / (1440 - 575)));
+                    font-size: calc(14px + (55 - 14) * ((100vw - 575px) / (1440 - 575)));
+                    margin-top: calc(155px + (125 - 155) * ((100vw - 575px) / (1440 - 575)));
                 }
             }
             .carousel-item {

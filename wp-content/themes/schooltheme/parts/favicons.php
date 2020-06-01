@@ -6,7 +6,6 @@ $favicon_low = esc_attr(get_option( 'style_settings_favicon_low' ));
 
 <!-- Favicon -->
 <?php if ( $favicon_high != '' ) {
-    echo $favicon_high;
     ?>
     <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $favicon_high; ?>">
     <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $favicon_high; ?>">
@@ -41,7 +40,6 @@ $favicon_low = esc_attr(get_option( 'style_settings_favicon_low' ));
     <?php
 }
 if ( $favicon_low != '' ) {
-    echo 'hallo123';
     ?>
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $favicon_low; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon_low; ?>">

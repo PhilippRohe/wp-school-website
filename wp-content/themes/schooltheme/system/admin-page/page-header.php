@@ -73,18 +73,19 @@ function header_theme_options_box_one() {
     </div>
     <div class="field" style="margin-bottom: 15px; display: flex; flex-direction: column;">
         <label for="box_one_link">Seite zur Verlinkung auswählen: </label>
+        <?php echo $box_one_link; ?>
         <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_one_link">
             <?php foreach($all_posts as $post) {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_one_link == $link) {
+                if ($box_one_link == $id) {
                     ?>
-                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>
@@ -123,13 +124,13 @@ function header_theme_options_box_two() {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_two_link == $link) {
+                if ($box_two_link == $id) {
                     ?>
-                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>
@@ -169,13 +170,13 @@ function header_theme_options_box_three() {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_three_link == $link) {
+                if ($box_three_link == $id) {
                     ?>
-                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
+                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>

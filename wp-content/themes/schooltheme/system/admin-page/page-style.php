@@ -26,8 +26,8 @@ function style_custom_theme_settings() {
     add_settings_field('style-settings-login-background', 'Hintergrundbild Login Seite', 'style_theme_options_login_background', 'school_style_settings_login', 'style_theme_options');
     add_settings_field('style-settings-login-image', 'Logo Login Seite', 'style_theme_options_login_image', 'school_style_settings_login', 'style_theme_options');
     
-    add_settings_field('style-settings-favicon-high', 'Favicon Retina', 'style_theme_options_favicon_high', 'school_style_settings', 'style_theme_options');
-    add_settings_field('style-settings-favicon-low', 'Favicon Klein', 'style_theme_options_favicon_low', 'school_style_settings', 'style_theme_options');
+    add_settings_field('style-settings-favicon-high', 'Favicon Retina (.PNG Datei)', 'style_theme_options_favicon_high', 'school_style_settings', 'style_theme_options');
+    add_settings_field('style-settings-favicon-low', 'Favicon Klein (.ICO Datei)', 'style_theme_options_favicon_low', 'school_style_settings', 'style_theme_options');
     
 }
 
@@ -79,7 +79,7 @@ function style_theme_options_favicon_high() {
     $favicon_high = esc_attr(get_option( 'style_settings_favicon_high' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
-        <img style="object-fit: contain;" width="128" height="128" src="<?php echo $favicon_high; ?>">
+        <img style="object-fit: contain;" width="64" height="64" src="<?php echo $favicon_high; ?>">
         <input type="button" class="button-primary admin_upload_menu_logo" value="Favicon hochladen" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_favicon_high" value="<?php echo $favicon_high; ?>" />
     </div>
@@ -91,17 +91,7 @@ function style_theme_options_favicon_low() {
     $favicon_low = esc_attr(get_option( 'style_settings_favicon_low' ));
     ?>
     <div class="admin--style-header-background" style="display: flex; flex-direction: column; max-width:384px;">
-        <?php
-        if ($favicon_low != '') {
-            ?>
-            <p>Favicon wurde gesetzt</p>
-            <?php
-        } else {
-            ?>
-            <p>Favicon noch nicht ausgewählt</p>
-            <?php
-        }
-        ?>
+        <img style="object-fit: contain;" width="64" height="64" src="<?php echo $favicon_low; ?>">
         <input type="button" class="button-primary admin_upload_menu_logo" value="Favicon hochladen" id="admin_upload_menu_logo">
         <input class="bc-menu-logo-input" type="hidden" name="style_settings_favicon_low" value="<?php echo $favicon_low; ?>" />
     </div>

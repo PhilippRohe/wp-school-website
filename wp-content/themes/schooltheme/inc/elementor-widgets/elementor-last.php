@@ -188,7 +188,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 $event_date = get_post_meta( $article[ 'id' ], '_event_date_value', true);
                                                 ?>
                                                 <ul class="<?php echo $type; ?>-navigation">
-                                                    <li class="item"><?php echo $event_date; ?></li>
+                                                    <li class="item"><p>Datum: <?php echo $event_date; ?></p></li>
                                                 </ul>
                                                 <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($event_cats as $eventcat) { ?>

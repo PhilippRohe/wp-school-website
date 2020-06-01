@@ -25,6 +25,16 @@ function notice_settings_page() {
             <h2>Hinweise zur Erstellung</h2>
             <p>Dieses WordPress Theme wurde im Rahmen einer Projektarbeit an der Universität des Saarlandes erstellt.</p>
         </li>
+        <li>
+            <h2>Theme Lizenz</h2>
+            <p>Lizenz: GNU General Public License v2 or later. Schooltheme is free software: you can redistribute it and/or modify it under 
+                the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or 
+                any later version. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a></p>
+        </li>
+        <li>
+            <h2>Kontakt</h2>
+            <p><a href="mailto:philrohe94@web.de">Philipp Rohe</a></p>
+        </li>
     </ul>
     <?php
 }

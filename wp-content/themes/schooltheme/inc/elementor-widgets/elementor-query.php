@@ -53,6 +53,11 @@ class Elementor_Query extends Widget_Base {
                 $event_cats = wp_get_post_terms( get_the_ID(), 'categories-events', array('fields' => 'all'));
                 $entry[ 'categories' ] = $event_cats;
             }
+            if ($post_type === 'gallery') {
+                /* Load teachers subjects */
+                $gallery_cats = wp_get_post_terms( get_the_ID(), 'categories-gallery', array('fields' => 'all'));
+                $entry[ 'categories' ] = $gallery_cats;
+            }
             if ($post_type === 'downloads') {
                 /* Load teachers subjects */
                 $download_cats = wp_get_post_terms( get_the_ID(), 'categories-downloads', array('fields' => 'all'));

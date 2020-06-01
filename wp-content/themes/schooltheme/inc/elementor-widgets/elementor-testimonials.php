@@ -64,7 +64,7 @@ class Elementor_Testimonials extends Widget_Base {
 			[
 				'label' => __( 'Link', 'plugin-domain' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'plugin-domain' ),
+				'placeholder' => __( 'https://dein-link.de', 'plugin-domain' ),
 				'show_external' => true,
 				'default' => [
 					'url' => '',

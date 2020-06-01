@@ -45,8 +45,14 @@
                             padding: 0;
                             li {
                                 transition: all .3s ease-in-out;
-                                a {
+                                p {
+                                    font-weight: 900;
                                     font-size: 12px;
+                                    text-decoration: none;
+                                    font-style: italic;
+                                    margin-right: 15px;
+                                }
+                                a {
                                     text-decoration: none;
                                     font-size: 12px;
                                     font-style: italic;
