@@ -14,8 +14,8 @@ require 'plugins/slick-slider.php';
 
 /* Load the customize functions */
 require 'customize/remove.php';
+require 'customize/customize-highlight.php';
 require 'customize/customize-backgrounds.php';
 require 'customize/customize-colors.php';
 require 'customize/customize-header.php';
-require 'customize/customize-highlight.php';
 require 'customize/customize-main.php';

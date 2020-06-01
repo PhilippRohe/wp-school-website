@@ -75,6 +75,18 @@ class Elementor_Slider extends Widget_Base {
 				'options' => $all_slides,
 			]
         );
+
+        $this->add_control(
+			'show_text',
+			[
+				'label' => __( 'Beschreibungstext anzeigen?', 'plugin-domain' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Ja', 'your-plugin' ),
+				'label_off' => __( 'Nein', 'your-plugin' ),
+				'return_value' => 'true',
+				'default' => 'true',
+			]
+		);
         
         $this->add_control(
 			'zoom',
@@ -84,7 +96,10 @@ class Elementor_Slider extends Widget_Base {
 				'label_on' => __( 'Ja', 'your-plugin' ),
 				'label_off' => __( 'Nein', 'your-plugin' ),
 				'return_value' => 'true',
-				'default' => 'true',
+                'default' => 'true',
+                'condition' => [
+					'show_text' => 'true'
+                ],
 			]
         );
         
@@ -98,7 +113,7 @@ class Elementor_Slider extends Widget_Base {
 				'return_value' => 'true',
 				'default' => 'true',
 			]
-		);
+        );
 
 		$this->end_controls_section();
 	}
@@ -110,6 +125,7 @@ class Elementor_Slider extends Widget_Base {
         $gallery = load_images_from_slider($slider_id);
         $zoom = ($settings['zoom'] == 'true') ? ' js--image-title' : '';
         $dots = ($settings['show_dots'] == 'true') ? '' : ' no-dots';
+        $show_text = ($settings['show_text'] == 'true') ? '' : ' no-text';
 
         ?>
 
@@ -130,7 +146,7 @@ class Elementor_Slider extends Widget_Base {
                     <p class="empty-slider">Bitte wählen Sie einen Slider aus</p>
                     <?php
                 }  else { ?>
-                    <div class="image-slider js--image-slider<?php echo $dots; ?>">
+                    <div class="image-slider js--image-slider<?php echo $dots; ?><?php echo $show_text; ?>">
                     <?php foreach($gallery as $key => $image) {
                         ?>
                         <div data-id="<?php echo $image[ 'id' ]; ?>" class="carousel-item">

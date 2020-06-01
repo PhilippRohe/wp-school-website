@@ -73,6 +73,14 @@
                         display: none !important;
                     }
                 }
+
+                &.no-text {
+                    .carousel-item {
+                        .carousel-caption {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }

@@ -31,7 +31,7 @@ function schooltheme_customize_register_font_colors( $wp_customize ) {
     ));
 
     $wp_customize->add_setting( $prefix . 'breadcrumbs_link_color' , array(
-        'default'   => '#93a603',
+        'default'   => '#fff',
         'transport' => 'refresh',
     ));
 
@@ -104,7 +104,7 @@ function customizer_output_colors() {
 
              .bc--header .bc--navigation .right .navigation .big-navigation > div .main-menu li .subitem-link { color: <?php echo get_theme_mod( $prefix . 'menu_color', 'unset'); ?> !important; }
 
-             .bc--breadcrumbs .bc--breadcrumbs-navigation a { color: <?php echo get_theme_mod( $prefix . 'breadcrumbs_link_color', '#93a603'); ?> !important; }
+             .bc--breadcrumbs .bc--breadcrumbs-navigation a { color: <?php echo get_theme_mod( $prefix . 'breadcrumbs_link_color', '#fff'); ?> !important; }
         </style>
     <?php
 }
