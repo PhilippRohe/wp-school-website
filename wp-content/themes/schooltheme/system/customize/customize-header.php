@@ -103,7 +103,7 @@ function schooltheme_customize_register_header( $wp_customize ) {
     )));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $prefix . 'color_header_toggle_menu', array(
-        'label'      => __( 'Header Beitragsseiten Hintergrund', 'schooltheme' ),
+        'label'      => __( 'Toggle Mobile Menü Farbe', 'schooltheme' ),
         'section'    => $prefix . 'schooltheme_section_header',
         'settings'   => $prefix . 'header_toggle_menu_color',
     )));

@@ -231,8 +231,8 @@ input:-webkit-autofill:active  {
         }
     }
     @include media('<=575px') {
-        transform: scale(.7);
-        margin-right: -10px;
+        transform: scale(.8);
+        margin-right: -7px;
     }
 }
 
