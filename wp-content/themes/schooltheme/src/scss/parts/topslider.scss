@@ -8,10 +8,9 @@
             .free-slider-text {
                 border-radius: 15px;
                 word-spacing: 30px;
-                max-width: 800px;
-                font-size: 60px;
+                font-size: 36px;
                 text-transform: uppercase;
-                margin-top: 90px;
+                margin-top: 145px;
                 color: $white;
                 background: rgba(0, 0, 0, 0.35 );
                 width: fit-content;
@@ -24,11 +23,10 @@
                 right: 0;
                 margin-left: auto;
                 margin-right: auto;
+                font-weight: 900;
                 top: 0;
                 @include media('<=1440px') {
-                    font-size: calc(24px + (60 - 24) * ((100vw - 575px) / (1440 - 575)));
-                    max-width: calc(348px + (775 - 348) * ((100vw - 575px) / (1440 - 575)));
-                    margin-top: calc(140px + (90 - 140) * ((100vw - 575px) / (1440 - 575)));
+                    font-size: calc(14px + (36 - 14) * ((100vw - 575px) / (1440 - 575)));
                 }
             }
             .carousel-item {

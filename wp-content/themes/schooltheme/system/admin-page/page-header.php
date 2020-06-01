@@ -78,13 +78,13 @@ function header_theme_options_box_one() {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_one_link == $id) {
+                if ($box_one_link == $link) {
                     ?>
-                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>
@@ -123,13 +123,13 @@ function header_theme_options_box_two() {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_two_link == $id) {
+                if ($box_two_link == $link) {
                     ?>
-                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>
@@ -169,13 +169,13 @@ function header_theme_options_box_three() {
                 $id = $post["id"];
                 $link = $post["link"];
                 $title = $post["title"];
-                if ($box_three_link == $id) {
+                if ($box_three_link == $link) {
                     ?>
-                    <option selected data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option selected data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 } else {
                     ?>
-                    <option data-link="<?php echo $link; ?>" value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                    <option data-id="<?php echo $id; ?>" value="<?php echo $link; ?>"><?php echo $title; ?></option>
                     <?php
                 }
                 ?>

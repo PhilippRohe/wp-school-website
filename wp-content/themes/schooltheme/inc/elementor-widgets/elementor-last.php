@@ -188,17 +188,18 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 $event_date = get_post_meta( $article[ 'id' ], '_event_date_value', true);
                                                 ?>
                                                 <ul class="<?php echo $type; ?>-navigation">
-                                                    <p>Alle Kategorien:</p>
+                                                    <li class="item"><?php echo $event_date; ?></li>
+                                                </ul>
+                                                <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($event_cats as $eventcat) { ?>
                                                         <?php $link = get_category_link($eventcat); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $eventcat->name; ?></li></a>
+                                                        <li class="item"><a rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $eventcat->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                                 <ul class="<?php echo $type; ?>-navigation">
-                                                    <p>Alle Orte:</p>
                                                     <?php foreach($event_location as $location) { ?>
                                                         <?php $link = get_category_link($location); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $location->name; ?></li></a>
+                                                        <li class="item"><a rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $location->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul> <?php
                                                 break;
@@ -208,7 +209,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($subjects as $subject) { ?>
                                                         <?php $link = get_category_link($subject); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $subject->name; ?></li></a>
+                                                        <li class="item"><a rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $subject->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul> <?php
                                                 break;
@@ -218,7 +219,7 @@ class Elementor_Latest_Widget extends Widget_Base {
                                                 <ul class="<?php echo $type; ?>-navigation">
                                                     <?php foreach($download_cats as $download) { ?>
                                                         <?php $link = get_category_link($download); ?>
-                                                        <a rel="follow" href="<?php echo $link; ?>" target="_self"><li class="item"><?php echo $download->name; ?></li></a>
+                                                        <li class="item"><a rel="follow" href="<?php echo $link; ?>" target="_self"><?php echo $download->name; ?></a></li>
                                                     <?php } ?>
                                                 </ul> <?php
                                                 break;

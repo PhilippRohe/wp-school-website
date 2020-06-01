@@ -117,6 +117,7 @@ class Elementor_Query extends Widget_Base {
 					'teacher' => __( 'Lehrer', 'plugin-domain' ),
 					'events' => __( 'Events', 'plugin-domain' ),
 					'downloads' => __( 'Downloads', 'plugin-domain' ),
+					'gallery' => __( 'Galerien', 'plugin-domain' ),
 				],
 			]
 		);
