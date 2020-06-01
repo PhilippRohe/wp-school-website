@@ -73,7 +73,6 @@ function header_theme_options_box_one() {
     </div>
     <div class="field" style="margin-bottom: 15px; display: flex; flex-direction: column;">
         <label for="box_one_link">Seite zur Verlinkung auswählen: </label>
-        <?php echo $box_one_link; ?>
         <select style="width: 100%;" class="admin-input admin-contact-map" name="header_settings_box_one_link">
             <?php foreach($all_posts as $post) {
                 $id = $post["id"];
