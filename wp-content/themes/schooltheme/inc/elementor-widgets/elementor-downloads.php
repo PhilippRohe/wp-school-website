@@ -188,7 +188,7 @@ class Elementor_Downloads extends Widget_Base {
                                 </a>
                             </div>
                             <div class="right-side">
-                                <h2><?php echo $download[ 'title' ]; ?></h2>
+                                <a href="<?php echo $download[ 'link' ]; ?>"><h2><?php echo $download[ 'title' ]; ?></h2></a>
                                 <ul class="categories-list">
                                 <?php foreach($download[ 'categories' ] as $categorie) {
                                     $link = get_category_link($categorie);

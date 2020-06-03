@@ -2,9 +2,11 @@
     overflow-x: hidden;
     background: $footer-background;
     .row {
+        flex-direction: column;
         .footer-content {
             padding: 50px 0;
             .footer-widgets {
+                flex-direction: row;
                 .footer-col {
                     ul {
                         padding: 0;
@@ -130,6 +132,7 @@
         .footer-copyright {
             margin-bottom: 15px;
             .row {
+                flex-direction: row;
                 justify-content: space-between;
                 .left-copy {
                     align-self: center;

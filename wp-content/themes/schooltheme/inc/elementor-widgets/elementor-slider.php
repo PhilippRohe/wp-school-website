@@ -127,9 +127,16 @@ class Elementor_Slider extends Widget_Base {
         $dots = ($settings['show_dots'] == 'true') ? '' : ' no-dots';
         $show_text = ($settings['show_text'] == 'true') ? '' : ' no-text';
 
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < 5; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+
         ?>
 
-        <div class="image-slider-modal js--modal">
+        <div slider-id="<?php echo $randomString; ?>" class="image-slider-modal js--modal">
             <div class="window">
                 <img class="modal-image js--modal-image" src="https://www.placehold.it/800x800" alt="Empty image">
             </div>
@@ -149,7 +156,7 @@ class Elementor_Slider extends Widget_Base {
                     <div class="image-slider js--image-slider<?php echo $dots; ?><?php echo $show_text; ?>">
                     <?php foreach($gallery as $key => $image) {
                         ?>
-                        <div data-id="<?php echo $image[ 'id' ]; ?>" class="carousel-item">
+                        <div slider-id="<?php echo $randomString; ?>" data-id="<?php echo $image[ 'id' ]; ?>" class="carousel-item">
                             <img class="d-block w-100 js--slider-image" src="<?php echo $image[ 'src' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
                             <div class="carousel-caption" aria-hidden="true">
                                 <h3 class="image-title<?php echo $zoom; ?>"><?php echo $image[ 'title' ]; ?></h3>

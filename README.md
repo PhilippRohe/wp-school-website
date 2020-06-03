@@ -7,6 +7,11 @@ Das Theme wurde für WordPress Webseiten erstellt.
 Im GitHub Repository ist eine komplette WordPress Webseite enthalten. Das Theme befindet sich unter "wp-content/themes/schooltheme". Der Order "schooltheme" kann auf jeder beliebigen WordPress Webseite eingefügt und genutzt werden.
 
 
+## Theme
+
+Das Theme für Schulen befindet sich im Verzeichnis "wp-content/themes" mit dem Namen "schooltheme".
+
+
 ## Demo
 
 *Theme demo website* [BananaCoding](https://schule.bananacoding.de/)

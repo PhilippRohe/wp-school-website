@@ -2,6 +2,7 @@
 $email = esc_attr(get_option( 'contact_settings_mail' ));
 $phone = esc_attr(get_option( 'contact_settings_phone' ));
 $map = esc_attr(get_option( 'contact_settings_map' ));
+$map_link = get_permalink( $map );
 $header_background_image = esc_attr(get_option( 'style_settings_header_background' ));
 $menu_logo = esc_attr(get_option( 'bc_menu_logo' )) ? esc_attr(get_option( 'bc_menu_logo' )) : 'https://www.placehold.it/250x75';
 $is_single = (is_single()) ? ' single-page' : '';
@@ -25,7 +26,7 @@ $is_page = (is_page()) ? ' single' : '';
             <div class="meta-nav">
                 <a href="tel:<?php echo $phone; ?>" class="box box-phone"><span class="logo phone-logo icon-phone"></span></a>
                 <a href="mailto:<?php echo $email; ?>" class="box box-mail"><span class="logo mail-logo icon-mail"></span></a>
-                <a href="<?php echo $map; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
+                <a href="<?php echo $map_link; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
             </div>
         </div>
         <div class="right">
@@ -134,7 +135,7 @@ $is_page = (is_page()) ? ' single' : '';
         <div class="meta-nav">
             <a href="tel:<?php echo $phone; ?>" class="box box-phone"><span class="logo phone-logo icon-phone"></span></a>
             <a href="mailto:<?php echo $email; ?>" class="box box-mail"><span class="logo mail-logo icon-mail"></span></a>
-            <a href="<?php echo $map; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
+            <a href="<?php echo $map_link; ?>" class="box box-map"><span class="logo map-logo icon-map"></span></a>
         </div>
     </div>
 

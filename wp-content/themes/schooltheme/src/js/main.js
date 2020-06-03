@@ -54,9 +54,11 @@ jQuery(document).ready(function($) {
         $('.js--image-title').on('click', function() {
             let new_source = $(this).parent().siblings().attr('src');
             let new_alt = $(this).attr('alt');
+            let slider_id = $(this).parent().parent().attr('slider-id');
             $('.js--modal-image').attr('src', new_source);
             $('.js--modal-image').attr('alt', new_alt);
-            $('.js--modal').toggleClass('opened');
+            let modal = $('.js--modal[slider-id*=' + slider_id + ']');
+            modal.toggleClass('opened');
         });
 
         $('.js--modal').on('click', function() {

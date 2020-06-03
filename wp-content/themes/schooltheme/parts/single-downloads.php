@@ -18,14 +18,16 @@
     
     <article class="post-single container-fluid">
         <div class="post-head row">
-            <div class="head-left col-12 col-lg-12">
+            <div class="head-left col-12 col-lg-10">
                 <h1 class="article-headline"><?php echo $article[ 'name' ];?></h1>
                 <div class="post-meta-data">
                     <p class="date">Erstellt am <b><?php echo $article[ 'date' ]; ?></b></p>
                     <p class="author">von <b><?php echo $article[ 'author' ]; ?></b></p>
                 </div>
+                <?php $link = get_post_meta(get_the_ID(), '_download_link_value', true); ?>
+                <a class="download-button btn" href="<?php echo $link; ?>">Jetzt downloaden</a>
             </div>
-            <div class="head-right col-12 col-lg-12">
+            <div class="head-right col-12 col-lg-2">
                 <span class="download-icon icon-download"></span>
             </div>
         </div>
