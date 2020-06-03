@@ -42,7 +42,7 @@ class bc_company extends WP_Widget {
                 </div>
                 <div class="company-phone col-12">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row flex-row">
                             <span class="icon-phone icon col-4"></span>
                             <a href="tel:<?php echo $email; ?>" class="col-8">
                                 <p><?php echo $phone; ?></p>
@@ -53,7 +53,7 @@ class bc_company extends WP_Widget {
                 </div>
                 <div class="company-address col-12">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row flex-row">
                             <span class="icon-map icon col-4"></span>
                             <address class="col-8">
                                 <a href="<?php echo $map; ?>">
@@ -67,7 +67,7 @@ class bc_company extends WP_Widget {
                 </div>
                 <div class="company-mail col-12">
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row flex-row">
                             <span class="icon-mail icon col-4"></span>
                             <a href="mailto:<?php echo $email; ?>" class="col-8">
                                 <p><?php echo $email; ?></p>
